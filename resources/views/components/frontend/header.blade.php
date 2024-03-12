@@ -8,7 +8,9 @@
                 <div class="input-group align-items-center rounded-1">
                     <input type="search" class="form-control me-3 rounded-1" placeholder="Search" aria-label="Search"
                         aria-describedby="search-addon" />
-                    <i class="bx bx-search" style="font-size: 24px; color: #a78478"></i>
+                    <a href="#">
+                        <i class="bx bx-search" style="font-size: 24px; color: #a78478"></i>
+                    </a>
                 </div>
                 <a href="#">
                   <i class="bx bx-cart" style="font-size: 24px; color: #a78478"></i>
