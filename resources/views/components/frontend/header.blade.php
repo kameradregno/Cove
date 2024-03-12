@@ -4,7 +4,7 @@
       style="height: 70px; background-color: #3e423c !important"
     >
       <div class="container-fluid">
-        <a class="navbar-brand text-light ms-3" href="#">Navbar</a>
+        <a class="navbar-brand text-light ms-3" href="#"><img src="/frontend/images/content/logo.png" width="60" height="55" alt=""></a>
         <div class="d-flex ms-auto">
           <div
             class="icon-group d-flex me-3 align-items-center"
