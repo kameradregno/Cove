@@ -10,7 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="/frontend/images/content/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/frontend/images/logo.png" type="image/x-icon">
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -88,7 +88,7 @@
     <div class="container mt-4">
       <div class="row mb-4">
         <div
-          class="card rounded-1 me-4 ms-auto"
+          class="card rounded- me-4 ms-auto"
           style="border: 1.5px solid #a78478; width: 16rem"
           href="#"
         >
@@ -97,7 +97,7 @@
           </div>
         </div>
         <div
-          class="card rounded-1 me-4 ms-auto"
+          class="card rounded- me-4 ms-auto"
           style="border: 1.5px solid #a78478; width: 16rem"
         >
           <div class="card-body fs-5 text-center" style="color: #a78478">
@@ -105,7 +105,7 @@
           </div>
         </div>
         <div
-          class="card rounded-1 me-4 ms-auto"
+          class="card rounded- me-4 ms-auto"
           style="border: 1.5px solid #a78478; width: 16rem"
         >
           <div class="card-body fs-5 text-center" style="color: #a78478">
@@ -113,7 +113,7 @@
           </div>
         </div>
         <div
-          class="card rounded-1 me-2 ms-auto"
+          class="card rounded- me-2 ms-auto"
           style="border: 1.5px solid #a78478; width: 16rem"
         >
           <div class="card-body fs-5 text-center" style="color: #a78478">
@@ -123,7 +123,7 @@
       </div>
       <div class="row mb-4">
         <div
-          class="card rounded-1 me-4 ms-auto"
+          class="card rounded- me-4 ms-auto"
           style="border: 1.5px solid #a78478; width: 16rem"
         >
           <div class="card-body fs-5 text-center" style="color: #a78478">
@@ -131,7 +131,7 @@
           </div>
         </div>
         <div
-          class="card rounded-1 me-4 ms-auto"
+          class="card rounded- me-4 ms-auto"
           style="border: 1.5px solid #a78478; width: 16rem"
         >
           <div class="card-body fs-5 text-center" style="color: #a78478">
@@ -139,7 +139,7 @@
           </div>
         </div>
         <div
-          class="card rounded-1 me-4 ms-auto"
+          class="card rounded- me-4 ms-auto"
           style="border: 1.5px solid #a78478; width: 16rem"
         >
           <div class="card-body fs-5 text-center" style="color: #a78478">
@@ -147,7 +147,7 @@
           </div>
         </div>
         <div
-          class="card rounded-1 me-2 ms-auto"
+          class="card rounded- me-2 ms-auto"
           style="border: 1.5px solid #a78478; width: 16rem"
         >
           <div class="card-body fs-5 text-center" style="color: #a78478">
@@ -157,7 +157,7 @@
       </div>
       <div class="row mb-4 hidden" id="moreContent">
         <div
-          class="card rounded-1 me-4 ms-auto"
+          class="card rounded- me-4 ms-auto"
           style="border: 1.5px solid #a78478; width: 16rem"
         >
           <div class="card-body fs-5 text-center" style="color: #a78478">
@@ -165,7 +165,7 @@
           </div>
         </div>
         <div
-          class="card rounded-1 me-4 ms-auto"
+          class="card rounded- me-4 ms-auto"
           style="border: 1.5px solid #a78478; width: 16rem"
         >
           <div class="card-body fs-5 text-center" style="color: #a78478">
@@ -173,7 +173,7 @@
           </div>
         </div>
         <div
-          class="card rounded-1 me-4 ms-auto"
+          class="card rounded- me-4 ms-auto"
           style="border: 1.5px solid #a78478; width: 16rem"
         >
           <div class="card-body fs-5 text-center" style="color: #a78478">
@@ -181,7 +181,7 @@
           </div>
         </div>
         <div
-          class="card rounded-1 me-2 ms-auto"
+          class="card rounded- me-2 ms-auto"
           style="border: 1.5px solid #a78478; width: 16rem"
         >
           <div class="card-body fs-5 text-center" style="color: #a78478">
@@ -193,7 +193,7 @@
         class="container d-flex justify-content-center align-items-center text-center"
       >
         <a
-          class="btn rounded-1 py-2 mb-4"
+          class="btn rounded- py-2 mb-4"
           id="showMore"
           style="color: #a78478; border: 1.5px solid #a78478; width: 8rem"
           >Show more</a
@@ -233,12 +233,12 @@
     <div class="container mt-4">
       <div class="row mb-4">
         <div
-          class="card rounded-1 me-4 ms-auto"
+          class="card rounded- me-4 ms-auto"
           style="border: 1.5px solid #a78478; width: 16rem; height: 375px"
         >
           <img
             src="https://dummyimage.com/235x290/d9d9d9/000.png"
-            class="card-img-top rounded-1"
+            class="card-img-top rounded-"
             alt=""
             height="290"
             style="object-fit: cover;"
@@ -261,12 +261,12 @@
           </div>
         </div>
         <div
-          class="card rounded-1 me-4 ms-auto"
+          class="card rounded- me-4 ms-auto"
           style="border: 1.5px solid #a78478; width: 16rem"
         >
           <img
             src="https://dummyimage.com/235x290/d9d9d9/000.png"
-            class="card-img-top rounded-1"
+            class="card-img-top rounded-"
             alt=""
             height="290"
             style="object-fit: cover; width: 100%"
@@ -289,12 +289,12 @@
           </div>
         </div>
         <div
-          class="card rounded-1 me-4 ms-auto"
+          class="card rounded- me-4 ms-auto"
           style="border: 1.5px solid #a78478; width: 16rem"
         >
           <img
             src="https://dummyimage.com/235x290/d9d9d9/000.png"
-            class="card-img-top rounded-1"
+            class="card-img-top rounded-"
             alt=""
             height="290"
             style="object-fit: cover; width: 100%"
@@ -317,12 +317,12 @@
           </div>
         </div>
         <div
-          class="card rounded-1 me-auto ms-auto"
+          class="card rounded- me-auto ms-auto"
           style="border: 1.5px solid #a78478; width: 16rem"
         >
           <img
             src="https://dummyimage.com/235x290/d9d9d9/000.png"
-            class="card-img-top rounded-1"
+            class="card-img-top rounded-"
             alt=""
             height="290"
             style="object-fit: cover; width: 100%"
@@ -347,12 +347,12 @@
       </div>
       <div class="row mb-4">
         <div
-          class="card rounded-1 me-4 ms-auto"
+          class="card rounded- me-4 ms-auto"
           style="border: 1.5px solid #a78478; width: 16rem; height: 375px"
         >
           <img
             src="https://dummyimage.com/235x290/d9d9d9/000.png"
-            class="card-img-top rounded-1"
+            class="card-img-top rounded-"
             alt=""
             height="290"
             style="object-fit: cover; width: 100%"
@@ -375,12 +375,12 @@
           </div>
         </div>
         <div
-          class="card rounded-1 me-4 ms-auto"
+          class="card rounded- me-4 ms-auto"
           style="border: 1.5px solid #a78478; width: 16rem"
         >
           <img
             src="https://dummyimage.com/235x290/d9d9d9/000.png"
-            class="card-img-top rounded-1"
+            class="card-img-top rounded-"
             alt=""
             height="290"
             style="object-fit: cover; width: 100%"
@@ -403,12 +403,12 @@
           </div>
         </div>
         <div
-          class="card rounded-1 me-4 ms-auto"
+          class="card rounded- me-4 ms-auto"
           style="border: 1.5px solid #a78478; width: 16rem"
         >
           <img
             src="https://dummyimage.com/235x290/d9d9d9/000.png"
-            class="card-img-top rounded-1"
+            class="card-img-top rounded-"
             alt=""
             height="290"
             style="object-fit: cover; width: 100%"
@@ -431,12 +431,12 @@
           </div>
         </div>
         <div
-          class="card rounded-1 me-auto ms-auto"
+          class="card rounded- me-auto ms-auto"
           style="border: 1.5px solid #a78478; width: 16rem"
         >
           <img
             src="https://dummyimage.com/235x290/d9d9d9/000.png"
-            class="card-img-top rounded-1"
+            class="card-img-top rounded-"
             alt=""
             height="290"
             style="object-fit: cover; width: 100%"
