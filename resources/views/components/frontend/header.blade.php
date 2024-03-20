@@ -24,7 +24,7 @@
             <a class="nav-link text-white fw-light" style="font-size: 14px;" href="/frontend/pages/dashboard.html">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Customer</a>
+            <a class="nav-link text-white fw-light" style="font-size: 14px;" href="/frontend/pages/customer.html">Customer</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Laporan</a>
