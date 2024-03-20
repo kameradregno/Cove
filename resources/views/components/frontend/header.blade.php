@@ -21,7 +21,7 @@
             <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Beranda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Dashboard</a>
+            <a class="nav-link text-white fw-light" style="font-size: 14px;" href="/frontend/pages/dashboard.html">Dashboard</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Customer</a>
