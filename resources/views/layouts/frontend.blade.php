@@ -21,6 +21,11 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <style>
+      body {
+        background-color: #f0f0f0
+      }
+    </style>
   </head>
   <body>
 
@@ -35,22 +40,22 @@
 
     <div class="container mt-5">
       <div class="row justify-content-center">
-        <div class="card border-secondary mx-auto mb-3" style="width: 22rem; height: 167px;">
+        <div class="card border-light mx-auto mb-3" style="width: 22rem; height: 167px;">
           <div class="card-body d-flex align-items-center justify-content-center">
             <h4 class="card-title text-center">Tambah Customer</h4>
           </div>
         </div>
-        <div class="card border-secondary mx-auto mb-3" style="width: 22rem; height: 167px;">
+        <div class="card border-light mx-auto mb-3" style="width: 22rem; height: 167px;">
           <div class="card-body d-flex align-items-center justify-content-center">
             <h4 class="card-title text-center">Tambah Pesanan</h4>
           </div>
         </div>
-        <div class="card border-secondary mx-auto mb-3" style="width: 22rem; height: 167px;">
+        <div class="card border-light mx-auto mb-3" style="width: 22rem; height: 167px;">
           <div class="card-body d-flex align-items-center justify-content-center">
             <h4 class="card-title text-center">Pendapatan Bulan Ini</h4>
           </div>
         </div>
-        <div class="card border-secondary mx-auto mb-3" style="width: 22rem; height: 167px;">
+        <div class="card border-light mx-auto mb-3" style="width: 22rem; height: 167px;">
           <div class="card-body d-flex align-items-center justify-content-center">
             <h4 class="card-title text-center">Note Dari Ibu</h4>
           </div>
