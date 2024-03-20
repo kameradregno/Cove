@@ -51,6 +51,7 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Daftar</a></li>
               <li><a class="dropdown-item" href="#">Masuk</a></li>
+              <li><a class="dropdown-item" href="#">Edit Akun</a></li>
             </ul>
           </div>
         </div>

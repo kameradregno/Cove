@@ -47,15 +47,10 @@
         </div>
         <div class="card border-secondary mx-auto mb-3" style="width: 22rem; height: 167px;">
           <div class="card-body align-items-center justify-content-center">
-            <h5 class="card-title text-center">Edit Akun</h5>
-          </div>
-        </div>
-        <div class="card border-secondary mx-2" style="width: 22rem; height: 167px;">
-          <div class="card-body align-items-center justify-content-center">
             <h5 class="card-title text-center">Pendapatan Bulan Ini</h5>
           </div>
         </div>
-        <div class="card border-secondary mx-2" style="width: 22rem; height: 167px;">
+        <div class="card border-secondary mx-auto mb-3" style="width: 22rem; height: 167px;">
           <div class="card-body align-items-center justify-content-center">
             <h5 class="card-title text-center">Note Dari Ibu</h5>
           </div>
