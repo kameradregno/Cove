@@ -28,7 +28,7 @@
     <body>
         <div
             class="container mt-4 rounded-2"
-            style="background-color: white; height: 515px"
+            style="background-color: white; height: 500px"
         >
             <div
                 class="container mt-4 rounded-2"
@@ -37,13 +37,13 @@
                 <div
                     class="container mt-4 rounded-2 d-flex justify-content-between align-items-center"
                 >
-                    <h5 class="pt-3 pb-2">Daftar Customer</h5>
+                    <h5 class="pt-3 pb-2">Daftar Pesanan</h5>
                     <div class="d-flex">
                         <form class="d-flex me-auto" role="search">
                             <input
                                 class="form-control me-2 form-sm border-secondary"
                                 type="search"
-                                placeholder="Cari Customer"
+                                placeholder="Cari Pesanan"
                                 aria-label="Search"
                                 style="height: 30.35px"
                             />
@@ -76,11 +76,11 @@
                         </div>
                     </div>
                     <a
-                        href="/frontend/pages/customercreate.html"
+                        href="/frontend/pages/pesanancreate.html"
                         class="btn border-primary btn-sm d-flex align-items-center text-primary"
                     >
-                        <i class="bx bx-user-plus fs-5 me-2 text-primary"></i>
-                        Tambah Customer
+                        <i class="bx bx-receipt fs-5 me-2 text-primary"></i>
+                        Tambah Pesanan
                     </a>
                 </div>
 
@@ -89,10 +89,10 @@
                         <thead>
                             <tr>
                                 <th scope="col">Tanggal</th>
-                                <th scope="col">Nama</th>
-                                <th scope="col">No HP</th>
-                                <th scope="col">Alamat</th>
-                                <th>Tipe Customer</th>
+                                <th scope="col">Nama Pembeli</th>
+                                <th scope="col">Nama Pesanan</th>
+                                <th scope="col">Total Harga</th>
+                                <th>Total Pesanan</th>
                                 <th></th>
                                 <th></th>
                             </tr>
@@ -106,7 +106,7 @@
                                     <td>5</td>
                                     <td>
                                         <a
-                                            href="/frontend/pages/customeredit.html"
+                                            href="/frontend/pages/pesananedit.html"
                                         >
                                             <i
                                                 class="bx bx-pencil text-warning"
@@ -119,7 +119,7 @@
                                             class="bx bx-trash text-danger"
                                             style="font-size: 25px"
                                             data-bs-toggle="modal"
-                                            data-bs-target="#staticBackdropCustomer"
+                                            data-bs-target="#staticBackdropLaporan"
                                         ></i>
                                     </td>
                                 </tr>
@@ -132,7 +132,7 @@
         <!-- Modal -->
         <div
             class="modal fade"
-            id="staticBackdropCustomer"
+            id="staticBackdropLaporan"
             data-bs-backdrop="static"
             data-bs-keyboard="false"
             tabindex="-1"
@@ -153,7 +153,7 @@
                         ></button>
                     </div>
                     <div class="modal-body">
-                        Anda yakin ingin menghapus data customer ini?
+                        Anda yakin ingin menghapus data pesanan ini?
                     </div>
                     <div class="modal-footer">
                         <button

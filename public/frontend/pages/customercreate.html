@@ -43,7 +43,6 @@
                     <table class="table table-bg-white">
                         <thead>
                             <tr>
-                                <th scope="col">Tanggal</th>
                                 <th scope="col">Nama</th>
                                 <th scope="col">No HP</th>
                                 <th scope="col">Alamat</th>
@@ -53,10 +52,6 @@
                         </thead>
                         <tbody>
                             <tr class="">
-                                <td scope="row">
-                                    <input type="text" class="form-control rounded-2" style="width: 155px;" name=""
-                                    id="" aria-describedby="helpId" placeholder="">
-                                </td>
                                 <td>
                                     <input type="text" class="form-control rounded-2" style="width: 155px;" name=""
                                     id="" aria-describedby="helpId" placeholder="">
@@ -70,8 +65,12 @@
                                     id="" aria-describedby="helpId" placeholder="">
                                 </td>
                                 <td>
-                                    <input type="text" class="form-control rounded-2" style="width: 155px;" name=""
-                                    id="" aria-describedby="helpId" placeholder="">
+                                    <select name="customertype" class="rounded-2" id="" style="width: 155px; height: 37.33px;">
+                                        <option value="">Reseller</option>
+                                        <option value="">New</option>
+                                        <option value="">RO</option>
+                                        <option value="">Shopee</option>
+                                    </select>
                                 </td>
                                 <td style="font-size: 25px;"><i class="bx bx-user-plus text-success"></i></td>
                             </tr>
