@@ -10,7 +10,11 @@
     <link rel="shortcut icon" href="/frontend/images/logo.png" type="image/x-icon" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
-
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,7 +29,8 @@
                 </a>
             </div>
 
-            <div class="table-responsive">
+            <div class="container" style="height: 415px; overflow-y: scroll;">
+                <div class="table-responsive">
                 <table id="example" class="table table-striped data-table" style="width: 100%">
                     <thead>
                         <tr>
@@ -45,10 +50,10 @@
                             <td>Reseller</td>
                         </tr>
                     </tbody>
-                    <tfoot>
-                    </tfoot>
                 </table>
             </div>
+            </div>
+            
 
         </div>
     </div>
