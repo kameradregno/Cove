@@ -8,7 +8,7 @@
     <div class="container mt-4 rounded-2" style="background-color: white; height: auto">
         <div class="container mt-4 rounded-2 d-flex justify-content-between align-items-center">
             <h5 class="pt-3 pb-2">Daftar Customer</h5>
-            <a href="/frontend/pages/customercreate.html"
+            <a href="{{ url('customer/create') }}"
                 class="btn border-primary btn-sm d-flex align-items-center text-primary">
                 <i class="bx bx-user-plus fs-5 me-2 text-primary"></i>
                 Tambah Customer
