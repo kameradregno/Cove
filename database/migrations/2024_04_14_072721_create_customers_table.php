@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('nama', 255);
             $table->string('telp', 255);
             $table->string('alamat', 500);
-            $table->enum('tipe_customer', ['Reseller', 'New', 'RO', 'Shopee'])->default(['Reseller']);
+            $table->string('type', 500)->default('Reseller');
+            $table->timestamps();
         });
     }
 

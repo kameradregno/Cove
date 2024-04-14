@@ -13,7 +13,7 @@ class Customers extends Model
         'nama' ,
         'telp',
         'alamat',
-        'tipe_customer'
+        'type'
     ];
 
     public function scopeSelectedById($query, $id) {

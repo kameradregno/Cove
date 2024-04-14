@@ -14,32 +14,9 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        if (request()->ajax()) {
-
-            $query = Customers::query();
-            return DataTables::of($query)
-                ->addColumn('action', function ($item) {
-                    return '
-                        <a href="'.route('customer.edit', $item->id).'">
-                            <i class="bx-bx pencil text-warning" style="font-size: 25px;"></i>
-                        </a>
-                        
-                        <form class="inline-block" method="POST" action="' . route("customer.destroy", $item->id) . '">
-                    ' . method_field('delete') . csrf_field() . '
-
-                        <button type="button">
-                            <i class="bx-bx trash text-danger" style="font-size: 25px;"></i>
-                        </button>
-                    ';
-                })
-                ->editColumn('notelp', function ($item) {
-                    return number_format($item->telp);
-                })
-                ->rawColumns(['action'])
-                ->make();
-        }
-
-        return view('customer.index');
+        $customers = Customers::all();
+        
+        return view('customer.index', ['customers' => $customers]);
     }
 
     /**
@@ -59,7 +36,7 @@ class CustomerController extends Controller
             'nama' =>  $request->input('nama'),
             'telp' =>  $request->input('telp'),
             'alamat' =>  $request->input('alamat'),
-            'tipe_customer' =>  $request->input('tipe_customer'),
+            'type' =>  $request->input('type'),
         ]);
 
         return redirect('customer'); 
@@ -87,10 +64,10 @@ class CustomerController extends Controller
             'nama' =>  $request->input('nama'),
             'telp' =>  $request->input('telp'),
             'alamat' =>  $request->input('alamat'),
-            'tipe_customer' =>  $request->input('tipe_customer'),
+            'type' =>  $request->input('type'),
         ]);
 
-        return redirect('student');
+        return redirect('customer');
     }
 
     /**

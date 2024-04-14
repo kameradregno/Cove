@@ -4,9 +4,6 @@
 
 @section('content')
 
-<form action="{{ url('student') }}" class="w-full" method="POST"
-                    enctype="multipart/form-data">
-                    @csrf
 
     <div class="container mt-4 rounded-2" style="background-color: white; height: auto">
         <div class="container mt-4 rounded-2" style="background-color: white; height: auto">
@@ -25,6 +22,8 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <form method="POST" action="{{ url('customer') }}" class="mt-5">
+                            @csrf
                         <tr class="">
                             <td>
                                 <input type="text" class="form-control rounded-2" style="width: 155px;" name="nama"
@@ -39,6 +38,10 @@
                                     id="alamat" aria-describedby="helpId" placeholder="">
                             </td>
                             <td>
+                                <input type="text" class="form-control rounded-2" style="width: 155px;" name="type"
+                                    id="type" aria-describedby="helpId" placeholder="">
+                            </td>
+                            {{-- <td>
                                 <select name="tipe_customer" class="rounded-2" id="tipe_customer"
                                     style="width: 155px; height: 37.33px;">
                                     <option value="">Reseller</option>
@@ -46,15 +49,14 @@
                                     <option value="">RO</option>
                                     <option value="">Shopee</option>
                                 </select>
-                            </td>
+                            </td> --}}
                             <td style="font-size: 25px;"><button type="submit"><i class="bx bx-user-plus text-success"></i></button></td>
                         </tr>
+                    </form>
                     </tbody>
                 </table>
             </div>
         </div>
-    </div>
-
-</form>    
+    </div>  
 
 @endsection
