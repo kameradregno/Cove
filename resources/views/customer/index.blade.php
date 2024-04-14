@@ -4,6 +4,44 @@
 
 @section('content')
 
+        <script>
+            var datatable = $('#crudTable').dataTable({
+                ajax: {
+                    url: '{!! url()->current() !!}'
+                },
+                columns: [
+                    {
+                        data: 'timestamps',
+                        name: 'timestamps',
+                    },
+                    {
+                        data: 'nama',
+                        name: 'nama'
+                    },
+                    {
+                        data: 'telp',
+                        name: 'telp'
+                    },
+                    {
+                        data: 'alamat',
+                        name: 'alamat'
+                    },
+                    {
+                        data: 'tipe_customer',
+                        name: 'tipe_customer'
+                    },
+                    {
+                        data: 'action',
+                        name: 'action',
+                        orderable: false,
+                        searchable: false,
+                        width: '25%'
+                    }
+                    
+                ]
+            })
+        </script> 
+
 <div class="container mt-4 rounded-2" style="background-color: white; height: 515px">
     <div class="container mt-4 rounded-2" style="background-color: white; height: auto">
         <div class="container mt-4 rounded-2 d-flex justify-content-between align-items-center">
@@ -17,7 +55,7 @@
 
         <div class="container" style="height: 415px; overflow-y: scroll;">
             <div class="table-responsive">
-            <table id="example" class="table table-striped data-table" style="width: 100%">
+            <table id="crudTable" class="table table-striped data-table" style="width: 100%">
                 <thead>
                     <tr>
                         <th>Tanggal</th>
@@ -28,13 +66,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>19/2/23</td>
-                        <td>Rakha</td>
-                        <td>081384428789</td>
-                        <td>Pakistan</td>
-                        <td>Reseller</td>
-                    </tr>
+
                 </tbody>
             </table>
         </div>

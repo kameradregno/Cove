@@ -4,6 +4,10 @@
 
 @section('content')
 
+<form action="{{ url('student') }}" class="w-full" method="POST"
+                    enctype="multipart/form-data">
+                    @csrf
+
     <div class="container mt-4 rounded-2" style="background-color: white; height: auto">
         <div class="container mt-4 rounded-2" style="background-color: white; height: auto">
             <div class="container mt-4 rounded-2 d-flex justify-content-between align-items-center">
@@ -23,19 +27,19 @@
                     <tbody>
                         <tr class="">
                             <td>
-                                <input type="text" class="form-control rounded-2" style="width: 155px;" name=""
-                                    id="" aria-describedby="helpId" placeholder="">
+                                <input type="text" class="form-control rounded-2" style="width: 155px;" name="nama"
+                                    id="nama" aria-describedby="helpId" placeholder="">
                             </td>
                             <td>
-                                <input type="text" class="form-control rounded-2" style="width: 155px;" name=""
-                                    id="" aria-describedby="helpId" placeholder="">
+                                <input type="text" class="form-control rounded-2" style="width: 155px;" name="telp"
+                                    id="telp" aria-describedby="helpId" placeholder="">
                             </td>
                             <td>
-                                <input type="text" class="form-control rounded-2" style="width: 155px;" name=""
-                                    id="" aria-describedby="helpId" placeholder="">
+                                <input type="text" class="form-control rounded-2" style="width: 155px;" name="alamat"
+                                    id="alamat" aria-describedby="helpId" placeholder="">
                             </td>
                             <td>
-                                <select name="customertype" class="rounded-2" id=""
+                                <select name="tipe_customer" class="rounded-2" id="tipe_customer"
                                     style="width: 155px; height: 37.33px;">
                                     <option value="">Reseller</option>
                                     <option value="">New</option>
@@ -43,12 +47,14 @@
                                     <option value="">Shopee</option>
                                 </select>
                             </td>
-                            <td style="font-size: 25px;"><i class="bx bx-user-plus text-success"></i></td>
+                            <td style="font-size: 25px;"><button type="submit"><i class="bx bx-user-plus text-success"></i></button></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+
+</form>    
 
 @endsection

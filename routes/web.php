@@ -21,3 +21,11 @@ Route::get('/', function () {
 Route::get('customer', [CustomerController::class, 'index']);
 
 Route::get('customer/create', [CustomerController::class, 'create']);
+
+Route::post('customer', [CustomerController::class, 'store']);
+
+Route::delete('customer/{id}', [CustomerController::class, 'destroy']);
+
+Route::get('customer/{id}/edit', [CustomerController::class, 'edit']);
+
+Route::patch('customer/{id}', [CustomerController::class, 'update']);

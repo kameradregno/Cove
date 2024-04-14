@@ -4,6 +4,12 @@
 
 @section('content')
 
+<form action="{{ route('customer.update', $customer->id) }}" class="w-full" method="POST"
+    enctype="multipart/form-data">
+    @csrf
+    @method('PATCH')
+
+
     <div class="container mt-4 rounded-2" style="background-color: white; height: auto">
         <div class="container mt-4 rounded-2" style="background-color: white; height: auto">
             <div class="container mt-4 rounded-2 d-flex justify-content-between align-items-center">
@@ -40,20 +46,23 @@
                                     id="" aria-describedby="helpId" placeholder="">
                             </td>
                             <td>
-                                <select name="customertype" class="rounded-2" id=""
+                                <select name="tipe_customer" class="rounded-2" id="tipe_customer"
                                     style="width: 155px; height: 37.33px;">
+                                    <option value="{{ old('tipe_customer') ?? $customer->tipe_customer }}">{{ $customer->tipe_customer }}</option>
                                     <option value="">Reseller</option>
                                     <option value="">New</option>
                                     <option value="">RO</option>
                                     <option value="">Shopee</option>
                                 </select>
                             </td>
-                            <td style="font-size: 25px;"><i class="bx bx-save text-success"></i></td>
+                            <td style="font-size: 25px;"><button type="submit"><i class="bx bx-save text-success"></i></button></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+
+</form>
 
 @endsection
