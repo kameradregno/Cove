@@ -9,9 +9,10 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="shortcut icon" href="/frontend/images/logo.png" type="image/x-icon" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css"/>
     <style>
         body {
-            background-color: #f0f0f0
+            background-color: #f0f0f0;
         }
     </style>
 </head>
