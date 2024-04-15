@@ -29,7 +29,7 @@
                 <tbody class="">
                     @foreach ($customers as $customer)
                         <tr>
-                            <td>{{ $customer->timestamp }}</td>
+                            <td>{{ date('d/m/y', strtotime($customer->created_at)) }}</td>
                             <td>{{ $customer->nama }}</td>
                             <td>{{ $customer->telp }}</td>
                             <td>{{ $customer->alamat }}</td>
