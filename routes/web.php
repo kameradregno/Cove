@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,7 @@ Route::delete('customer/{id}', [CustomerController::class, 'destroy']);
 Route::get('customer/{id}/edit', [CustomerController::class, 'edit']);
 
 Route::patch('customer/{id}', [CustomerController::class, 'update']);
+
+
+Route::get('dashboard', [DashboardController::class, 'index']);
+
