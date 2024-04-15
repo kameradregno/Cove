@@ -18,11 +18,18 @@
 
 <body>
 
-    @include('layouts.app.header')
+    <div class="wrapper d-flex align-items-stretch">
+        {{-- sidebar --}}
+        @include('layouts.app.header')
 
-    <div class="container my-4">
 
-        @yield('content')
+
+
+        <div id="content" class="p-4" style="width: 1000px;">
+
+            @yield('content')
+
+        </div>
 
     </div>
 

@@ -33,7 +33,7 @@
             <div class="row justify-content-center">
                 <div class="card border-light mx-auto mb-3" style="width: 22rem; height: 167px;">
                     <div class="card-body d-flex align-items-center justify-content-center">
-                        <h4 class="card-title text-center">Tambah Customer</h4>
+                        <h4 class="card-title text-center"><a href="{{ url('customer') }}" style="color: black; text-decoration:none">Tambah Customer</a></h4>
                     </div>
                 </div>
                 <div class="card border-light mx-auto mb-3" style="width: 22rem; height: 167px;">

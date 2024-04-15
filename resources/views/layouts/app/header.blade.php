@@ -1,61 +1,70 @@
-<nav class="navbar navbar-expand-lg" style="background-color: #353535">
-    <!-- Container wrapper -->
-    <div class="container-fluid">
-      <!-- Toggle button -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-mdb-toggle="collapse"
-        aria-label="Toggle navigation"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        data-mdb-target="#navbarSupportedContent"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
-
-      <!-- Collapsible wrapper -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Beranda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white fw-light" style="font-size: 14px;" href="/frontend/pages/dashboard.html">Dashboard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white fw-light" style="font-size: 14px;" href="{{ url('customer') }}">Customer</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white fw-light" style="font-size: 14px;" href="/frontend/pages/laporan.html">Laporan</a>
-          </li>
-        </ul>
-
-        <div
-          class="icon-group d-flex me-3 align-items-center"
-          style="justify-content: flex-end; gap: 0.8rem"
-        >
-          <!-- <a href="#">
-            <i class="bx bxs-user-circle fs-2 text-light ms-4"></i>
-          </a> -->
-          <div class="dropdown">
-            <button
-              class="dropdown-toggle shadow-0 text-light text-end"
-              style="background-color: #353535; border: none; width: 169px"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
+<div
+                class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark"
+                style="width: 280px; height: 700px;"
             >
-              User
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Daftar</a></li>
-              <li><a class="dropdown-item" href="#">Masuk</a></li>
-              <li><a class="dropdown-item" href="#">Edit Akun</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Container wrapper -->
-  </nav>
+                <a
+                    href="/"
+                    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+                >
+                    <svg class="bi pe-none me-2" width="40" height="32">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                    <span class="fs-4">Sidebar</span>
+                </a>
+                <hr />
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="{{ url('/') }}" class="nav-link text-white" aria-current="page">
+                            <i class="bx bx-home text-light mx-2" style="font-size: 20px; vertical-align:-2px"></i>
+                            Beranda
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <i class="bx bxs-dashboard text-light mx-2" style="font-size: 20px; vertical-align:-2px"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('customer') }}" class="nav-link text-white">
+                            <i class="bx bx-user text-light mx-2" style="font-size: 20px; vertical-align:-2px"></i>
+                            Customer
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <i class="bx bxs-report text-light mx-2" style="font-size: 20px; vertical-align:-2px"></i>
+                            Laporan
+                        </a>
+                    </li>
+                </ul>
+                <hr />
+                <div class="dropdown">
+                    <a
+                        href="#"
+                        class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        <img
+                            src="https://github.com/mdo.png"
+                            alt=""
+                            width="32"
+                            height="32"
+                            class="rounded-circle me-2"
+                        />
+                        <strong>mdo</strong>
+                    </a>
+                    <ul
+                        class="dropdown-menu dropdown-menu-dark text-small shadow"
+                    >
+                        <li>
+                            <a class="dropdown-item" href="#">New project...</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
