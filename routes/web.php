@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// customer
+
 Route::get('customer', [CustomerController::class, 'index']);
 
 Route::get('customer/create', [CustomerController::class, 'create']);
@@ -31,6 +34,20 @@ Route::get('customer/{id}/edit', [CustomerController::class, 'edit']);
 
 Route::patch('customer/{id}', [CustomerController::class, 'update']);
 
+// order
 
-Route::get('dashboard', [DashboardController::class, 'index']);
+// Route::get('order', [OrderController::class, 'index']);
+
+// Route::get('order/create', [OrderController::class, 'create']);
+
+// Route::post('order', [OrderController::class, 'store']);
+
+// Route::delete('order/{id}', [OrderController::class, 'destroy']);
+
+// Route::get('order/{id}/edit', [OrderController::class, 'edit']);
+
+// Route::patch('order/{id}', [OrderController::class, 'update']);
+
+
+// Route::get('dashboard', [DashboardController::class, 'index']);
 
