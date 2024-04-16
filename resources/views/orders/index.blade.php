@@ -7,8 +7,8 @@
     <div class="container mt-4 rounded-2 d-flex justify-content-between align-items-center">
         <h5 class="pb-4">Daftar Pesanan</h5>
         <a href="{{ url('orders/create') }}" class="btn border-primary btn-sm d-flex align-items-center text-primary mb-4">
-            <i class="bx bx-user-plus fs-5 me-2 text-primary"></i>
-            Tambah Customer
+            <i class="bx bx-receipt fs-5 me-2 text-primary"></i>
+            Tambah Pesanan
         </a>
     </div>
 
