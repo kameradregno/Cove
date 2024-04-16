@@ -40,16 +40,48 @@
                                 </a>
                             </td>
                             <td>
-                                <form action="{{ url("customer/$customer->id") }}" method="POST">
-                                    @method('delete')
-                                    @csrf
-                                    <button type="submit" class="d-flex align-items-center"
-                                        style="font-size: 25px; border: 1px solid white; background-color:white;"><i
-                                            class="bx bx-trash text-danger"></i></button>
-                                </form>
-                                </a>
+                                <button type="button" class="d-flex align-items-center" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdropCustomer"
+                                    style="font-size: 25px; border: 1px solid white; background-color:white;"><i
+                                        class="bx bx-trash text-danger"></i></button>
                             </td>
                         </tr>
+
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdropCustomer" data-bs-backdrop="static"
+                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                                            <i class="bx bxs-error text-danger me-2 " style="font-size: 25px"></i>Perhatian
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Anda yakin ingin menghapus data customer ini?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <form action="{{ url("customer/$customer->id") }}" method="POST">
+                                            @method('delete')
+                                            @csrf
+                                            <button type="submit" class="btn btn-outline-danger" data-bs-dismiss="modal">
+                                                Ya
+                                            </button>
+                                        </form>
+                                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                            Tidak
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
                     @endforeach
                 </tbody>
             </table>
@@ -58,30 +90,6 @@
 
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="staticBackdropCustomer" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                        Perhatian
-                    </h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Anda yakin ingin menghapus data customer ini?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
-                        Ya
-                    </button>
-                    <button type="button" class="btn btn-outline-secondary">
-                        Tidak
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
 @endsection

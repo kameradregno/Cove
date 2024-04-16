@@ -54,8 +54,7 @@
                                             <option value="">Shopee</option>
                                         </select>
                                     </td> --}}
-                                    <td style="font-size: 25px;"><button type="submit"><i
-                                                class="bx bx-save text-success"></i></button></td>
+                                    <td style="font-size: 25px;"><button type="submit" style="border: 1px solid white; background-color:white;"><i class="bx bx-save text-success"></i></button></td>
                                 </tr>
                             </form>
                         </tbody>
