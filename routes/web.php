@@ -48,6 +48,10 @@ Route::patch('customer/{id}', [CustomerController::class, 'update']);
 
 // Route::patch('order/{id}', [OrderController::class, 'update']);
 
+// Pesanan
+
+
+
 
 // Route::get('dashboard', [DashboardController::class, 'index']);
 

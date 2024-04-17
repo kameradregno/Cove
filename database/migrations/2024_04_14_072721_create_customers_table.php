@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
             $table->string('nama', 255);
-            $table->integer('telp', 255);
+            $table->string('telp', 255);
             $table->string('alamat', 500);
             $table->string('type', 500)->default('Reseller');
             $table->timestamps();
