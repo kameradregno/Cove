@@ -38,8 +38,12 @@
                                     id="alamat" aria-describedby="helpId" placeholder="">
                             </td>
                             <td>
-                                <input type="text" class="form-control rounded-2" style="width: 155px;" name="type"
-                                    id="type" aria-describedby="helpId" placeholder="">
+                                    <select name="type" id="type" class="rounded-2" style="height: 37.33px; width: 155px">
+                                        <option value="Reseller">Reseller</option>
+                                        <option value="RO">RO</option>
+                                        <option value="New">New</option>
+                                        <option value="Shopee">Shopee</option>
+                                    </select>
                             </td>
                             {{-- <td>
                                 <select name="tipe_customer" class="rounded-2" id="tipe_customer"

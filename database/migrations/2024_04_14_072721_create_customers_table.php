@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nama', 255);
             $table->string('telp', 255);
             $table->string('alamat', 500);
-            $table->string('type', 500)->default('Reseller');
+            $table->string('type')->enum(['Reseller','RO','New', 'Shopee'])->default('Reseller')->null;
             $table->timestamps();
         });
     }
