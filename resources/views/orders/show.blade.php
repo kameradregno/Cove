@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="container mt-4 mb-4 rounded-2" style="background-color: white; height: 800px">
+    <div class="container mt-4 mb-4 rounded-2" style="background-color: white; height: 600px">
         <div class="container mt-4 rounded-2" style="background-color: white; height: auto">
 
 
@@ -84,7 +84,7 @@
                     </a>
                 </div>
 
-                <div class="table-responsive-sm pb-5 pt-2" style="overflow-y: scroll; height: 410px">
+                <div class="table-responsive-sm pb-5 pt-2" style="overflow-y: scroll; height: 255px">
                     <table class="table">
                         <thead class="border-none">
                             <div class="container">

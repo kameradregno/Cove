@@ -4,10 +4,10 @@
 
 @section('content')
 
-    <div class="container mt-4 mb-4 rounded-2" style="background-color: white; height: 800px">
+    <div class="container pt-1 rounded-2" style="background-color: white; height: 630px">
         <div class="container mt-4 rounded-2" style="background-color: white; height: auto">
             <div class="container mt-4 rounded-2 d-flex justify-content-between align-items-center">
-                <h5 class="pt-3 pb-2">Tambah Pesanan</h5>
+                <h5 class="">Tambah Pesanan</h5>
             </div>
 
             <div class="container rounded-2 d-flex justify-content-between align-items-center">
@@ -75,7 +75,7 @@
                 <div class="container mt-4 rounded-2 align-items-center">
                     <h5 class="pt-3 fw-bold">Pesanan</h5>
                 </div>
-                <div class="table-responsive-sm pb-5 pt-2" style="overflow-y: scroll; height: 410px">
+                <div class="table-responsive-sm pb-5 pt-2" style="overflow-y: scroll; height: 255px">
                     <table class="table">
                         <thead class="border-secondary">
                             <div class="container">
