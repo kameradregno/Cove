@@ -1,22 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beranda</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <link rel="shortcut icon" href="/frontend/images/logo.png" type="image/x-icon" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <style>
-        body {
-            background-color: #f0f0f0;
-        }
-    </style>
-</head>
+@section('title', 'Detail Pesanan')
 
-<body>
+@section('content')
+
     <div class="container mt-4 mb-4 rounded-2" style="background-color: white; height: 800px">
         <div class="container mt-4 rounded-2" style="background-color: white; height: auto">
 
@@ -25,8 +12,8 @@
                 <form class="d-flex pt-3 pb-2" role="search">
                     <div class="mb-2">
                         <label for="" class="form-label b-1">Nama Pembeli</label>
-                        <input class="form-control me-2 form-sm border-secondary" type="search"
-                            placeholder="Cari Customer" aria-label="Search" style="height: 30.35px" disabled />
+                        <input class="form-control me-2 form-sm border-secondary" type="search" placeholder="Cari Customer"
+                            aria-label="Search" style="height: 30.35px" disabled />
                     </div>
                 </form>
 
@@ -34,8 +21,8 @@
                     <form class="d-flex pt-3 pb-2" role="search">
                         <div class="mb-2">
                             <label for="" class="form-label mb-1">Nama Pesanan</label>
-                            <input class="form-control form-sm border-secondary" type="search" placeholder="" value=""
-                                aria-label="Search" style="height: 30.35px" disabled />
+                            <input class="form-control form-sm border-secondary" type="search" placeholder=""
+                                value="" aria-label="Search" style="height: 30.35px" disabled />
                         </div>
                     </form>
                 </div>
@@ -43,8 +30,9 @@
                 <form class="d-flex pt-3 pb-2 align-items-center" role="search">
                     <div class="d-flex flex-column mb-2">
                         <label for="" class="form-label mb-1">Transfer/COD</label>
-                        <select name="" id="" class="rounded-2" style="height: 30.35px; width: 206.67px" disabled>
-                            <option value="{{}}"></option>
+                        <select name="" id="" class="rounded-2" style="height: 30.35px; width: 206.67px"
+                            disabled>
+                            <option value="{{-- --}}"></option>
                             <option value="">Transfer</option>
                             <option value="">COD</option>
                         </select>
@@ -65,8 +53,9 @@
                     <form class="d-flex pt-3 pb-2 me-3 align-items-center" role="search">
                         <div class="d-flex flex-column mb-2">
                             <label for="" class="form-label mb-1">Jenis Pengiriman</label>
-                            <select name="" id="" class="rounded-2" style="height: 30.35px; width: 206.67px" disabled>
-                                <option value="{{}}"></option>
+                            <select name="" id="" class="rounded-2" style="height: 30.35px; width: 206.67px"
+                                disabled>
+                                <option value="{{-- --}}"></option>
                                 <option value="">JNE</option>
                                 <option value="">SICEPAT</option>
                                 <option value="">NINJA</option>
@@ -78,8 +67,8 @@
                 <form class="d-flex pt-3 pb-2" role="search">
                     <div class="mb-2">
                         <label for="" class="form-label b-1">Ongkir</label>
-                        <input class="form-control me-2 form-sm border-secondary" type="search"
-                            placeholder="Harga Ongkir" aria-label="Search" style="height: 30.35px" value="" disabled />
+                        <input class="form-control me-2 form-sm border-secondary" type="search" placeholder="Harga Ongkir"
+                            aria-label="Search" style="height: 30.35px" value="" disabled />
                     </div>
                 </form>
             </div>
@@ -102,22 +91,28 @@
                                 <h5 style="font-weight: 500">Sprei</h5>
                             </div>
                             <tr>
-                                <th scope="col" style="
+                                <th scope="col"
+                                    style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        "
+                                    class="fw-bold">
                                     Nama Sprei
                                 </th>
-                                <th scope="col" style="
+                                <th scope="col"
+                                    style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        "
+                                    class="fw-bold">
                                     Harga
                                 </th>
-                                <th scope="col" style="
+                                <th scope="col"
+                                    style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        "
+                                    class="fw-bold">
                                     Catatan
                                 </th>
                                 <th style="background-color: #f0f0f0"></th>
@@ -142,16 +137,20 @@
                         <!-- bahan dll -->
                         <thead class="border-none">
                             <tr>
-                                <th scope="col" style="
+                                <th scope="col"
+                                    style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        "
+                                    class="fw-bold">
                                     Jenis Bahan Sprei
                                 </th>
-                                <th scope="col" style="
+                                <th scope="col"
+                                    style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        "
+                                    class="fw-bold">
                                     Ukuran Sprei
                                 </th>
                                 <th style="background-color: #f0f0f0"></th>
@@ -179,22 +178,28 @@
                                 <h5 style="font-weight: 500">Bantal Tambahan</h5>
                             </div>
                             <tr>
-                                <th scope="col" style="
+                                <th scope="col"
+                                    style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        "
+                                    class="fw-bold">
                                     Bahan Bantal
                                 </th>
-                                <th scope="col" style="
+                                <th scope="col"
+                                    style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        "
+                                    class="fw-bold">
                                     Jenis Bantal
                                 </th>
-                                <th scope="col" style="
+                                <th scope="col"
+                                    style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        "
+                                    class="fw-bold">
                                     Jumlah Bantal
                                 </th>
                                 <th style="background-color: #f0f0f0"></th>
@@ -224,22 +229,28 @@
                                 <h5 style="font-weight: 500">Bed Cover</h5>
                             </div>
                             <tr>
-                                <th scope="col" style="
+                                <th scope="col"
+                                    style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        "
+                                    class="fw-bold">
                                     Bahan Bed Cover
                                 </th>
-                                <th scope="col" style="
+                                <th scope="col"
+                                    style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        "
+                                    class="fw-bold">
                                     Jenis Bed Cover
                                 </th>
-                                <th scope="col" style="
+                                <th scope="col"
+                                    style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        "
+                                    class="fw-bold">
                                     Jumlah Bed Cover
                                 </th>
                                 <th style="background-color: #f0f0f0"></th>
@@ -269,22 +280,28 @@
                                 <h5 style="font-weight: 500">Inner Cover</h5>
                             </div>
                             <tr>
-                                <th scope="col" style="
+                                <th scope="col"
+                                    style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        "
+                                    class="fw-bold">
                                     Bahan Inner Cover
                                 </th>
-                                <th scope="col" style="
+                                <th scope="col"
+                                    style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        "
+                                    class="fw-bold">
                                     Jenis Inner Cover
                                 </th>
-                                <th scope="col" style="
+                                <th scope="col"
+                                    style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        "
+                                    class="fw-bold">
                                     Jumlah Inner Cover
                                 </th>
                             </tr>
@@ -310,22 +327,28 @@
                                 <h5 style="font-weight: 500">Quilt Cover</h5>
                             </div>
                             <tr>
-                                <th scope="col" style="
+                                <th scope="col"
+                                    style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        "
+                                    class="fw-bold">
                                     Bahan Quilt Cover
                                 </th>
-                                <th scope="col" style="
+                                <th scope="col"
+                                    style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        "
+                                    class="fw-bold">
                                     Jenis Quilt Cover
                                 </th>
-                                <th scope="col" style="
+                                <th scope="col"
+                                    style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        "
+                                    class="fw-bold">
                                     Jumlah Quilt Cover
                                 </th>
                             </tr>
@@ -351,10 +374,12 @@
                                 <h5 style="font-weight: 500">Box Sprei</h5>
                             </div>
                             <tr>
-                                <th scope="col" style="
+                                <th scope="col"
+                                    style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        "
+                                    class="fw-bold">
                                     Jumlah Box Sprei
                                 </th>
                             </tr>
@@ -374,10 +399,12 @@
                                 <h5 style="font-weight: 500">Karet</h5>
                             </div>
                             <tr>
-                                <th scope="col" style="
+                                <th scope="col"
+                                    style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        "
+                                    class="fw-bold">
                                     Jenis Karet
                                 </th>
                             </tr>
@@ -394,22 +421,12 @@
             </div>
 
             <div class="mt-3 d-flex justify-content-end">
-                <a class="btn btn-danger d-flex align-items-center">
-                    <i class="bx bx-x" style="font-size: 25px;"></i>
-                </a>
-                <button type="submit" class="btn btn-success ms-1 d-flex align-items-center">
-                    <i class="bx bx-save" style="font-size: 25px;"></i>
+
+                <button type="submit" class="btn btn-primary ms-1 d-flex align-items-center">
+                    <i class="bx bx-check" style="font-size: 25px;"></i>
                 </button>
             </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
-</body>
-
-</html>
+@endsection

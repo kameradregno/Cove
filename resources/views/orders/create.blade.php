@@ -1,32 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beranda</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <link rel="shortcut icon" href="/frontend/images/logo.png" type="image/x-icon" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <style>
-        body {
-            background-color: #f0f0f0;
-        }
-    </style>
-</head>
+@section('title', 'Tambah Pesanan')
 
-<body>
+@section('content')
+
     <div class="container mt-4 mb-4 rounded-2" style="background-color: white; height: 800px">
         <div class="container mt-4 rounded-2" style="background-color: white; height: auto">
-
+            <div class="container mt-4 rounded-2 d-flex justify-content-between align-items-center">
+                <h5 class="pt-3 pb-2">Tambah Pesanan</h5>
+            </div>
 
             <div class="container rounded-2 d-flex justify-content-between align-items-center">
                 <form class="d-flex pt-3 pb-2" role="search">
                     <div class="mb-2">
                         <label for="" class="form-label b-1">Nama Pembeli</label>
                         <input class="form-control me-2 form-sm border-secondary" type="search"
-                            placeholder="Cari Customer" aria-label="Search" style="height: 30.35px" disabled />
+                            placeholder="Cari Customer" aria-label="Search" style="height: 30.35px" />
                     </div>
                 </form>
 
@@ -34,8 +23,8 @@
                     <form class="d-flex pt-3 pb-2" role="search">
                         <div class="mb-2">
                             <label for="" class="form-label mb-1">Nama Pesanan</label>
-                            <input class="form-control form-sm border-secondary" type="search" placeholder="" value=""
-                                aria-label="Search" style="height: 30.35px" disabled />
+                            <input class="form-control form-sm border-secondary" type="search" placeholder=""
+                                aria-label="Search" style="height: 30.35px" />
                         </div>
                     </form>
                 </div>
@@ -43,8 +32,7 @@
                 <form class="d-flex pt-3 pb-2 align-items-center" role="search">
                     <div class="d-flex flex-column mb-2">
                         <label for="" class="form-label mb-1">Transfer/COD</label>
-                        <select name="" id="" class="rounded-2" style="height: 30.35px; width: 206.67px" disabled>
-                            <option value="{{}}"></option>
+                        <select name="" id="" class="rounded-2" style="height: 30.35px; width: 206.67px">
                             <option value="">Transfer</option>
                             <option value="">COD</option>
                         </select>
@@ -56,8 +44,8 @@
                 <form class="d-flex pt-3 pb-2" role="search">
                     <div class="d-flex flex-column mb-2">
                         <label for="" class="form-label b-1">Alamat</label>
-                        <textarea name="" id="" cols="30" rows="10" class="rounded-2" style="height: 30.35px"
-                            disabled></textarea>
+                        <textarea name="" id="" cols="30" rows="10" class="rounded-2"
+                            style="height: 30.35px"></textarea>
                     </div>
                 </form>
 
@@ -65,8 +53,7 @@
                     <form class="d-flex pt-3 pb-2 me-3 align-items-center" role="search">
                         <div class="d-flex flex-column mb-2">
                             <label for="" class="form-label mb-1">Jenis Pengiriman</label>
-                            <select name="" id="" class="rounded-2" style="height: 30.35px; width: 206.67px" disabled>
-                                <option value="{{}}"></option>
+                            <select name="" id="" class="rounded-2" style="height: 30.35px; width: 206.67px">
                                 <option value="">JNE</option>
                                 <option value="">SICEPAT</option>
                                 <option value="">NINJA</option>
@@ -79,25 +66,18 @@
                     <div class="mb-2">
                         <label for="" class="form-label b-1">Ongkir</label>
                         <input class="form-control me-2 form-sm border-secondary" type="search"
-                            placeholder="Harga Ongkir" aria-label="Search" style="height: 30.35px" value="" disabled />
+                            placeholder="Harga Ongkir" aria-label="Search" style="height: 30.35px" />
                     </div>
                 </form>
             </div>
 
             <div class="container rounded-2" style="background-color: #f0f0f0">
-                <div class="container mt-4 rounded-2 d-flex justify-content-between align-items-center">
+                <div class="container mt-4 rounded-2 align-items-center">
                     <h5 class="pt-3 fw-bold">Pesanan</h5>
-
-                    <a href="{{ url('orders/create') }}"
-                        class="btn border-primary btn-sm d-flex align-items-center text-primary mb-3 mt-3">
-                        <i class="bx bx-receipt fs-5 me-2 text-primary"></i>
-                        Tambah Pesanan
-                    </a>
                 </div>
-
                 <div class="table-responsive-sm pb-5 pt-2" style="overflow-y: scroll; height: 410px">
                     <table class="table">
-                        <thead class="border-none">
+                        <thead class="border-secondary">
                             <div class="container">
                                 <h5 style="font-weight: 500">Sprei</h5>
                             </div>
@@ -105,19 +85,19 @@
                                 <th scope="col" style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        ">
                                     Nama Sprei
                                 </th>
                                 <th scope="col" style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        ">
                                     Harga
                                 </th>
                                 <th scope="col" style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        ">
                                     Catatan
                                 </th>
                                 <th style="background-color: #f0f0f0"></th>
@@ -127,13 +107,23 @@
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <p>King Koil</p>
+                                    <input type="text" class="form-control rounded-2 border-secondary" style="
+                                                                                        width: 155px;
+                                                                                        background-color: #f0f0f0;
+                                                                                    " name="" id=""
+                                        aria-describedby="helpId" placeholder="" />
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    Rp. 1.000.000
+                                    <input type="text" class="form-control rounded-2 border-secondary" style="
+                                                width: 155px;
+                                                background-color: #f0f0f0;
+                                            " name="" id="" aria-describedby="helpId" placeholder="" />
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    Bisa nego gak?
+                                    <textarea name="" class="rounded-2" style="
+                                                height: 37.33px;
+                                                background-color: #f0f0f0;
+                                            " id="" cols="30" rows="10"></textarea>
                                 </td>
                                 <td style="background-color: #f0f0f0;"></td>
                                 <td style="background-color: #f0f0f0;"></td>
@@ -145,13 +135,13 @@
                                 <th scope="col" style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        ">
                                     Jenis Bahan Sprei
                                 </th>
                                 <th scope="col" style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        ">
                                     Ukuran Sprei
                                 </th>
                                 <th style="background-color: #f0f0f0"></th>
@@ -161,10 +151,20 @@
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <p>Wol</p>
+                                    <select name="" style="
+                                                height: 37.33px;
+                                                width: 155px;
+                                                background-color: #f0f0f0;
+                                            " class="rounded-2" id="">
+                                        <option value="">Katun</option>
+                                        <option value="">Wol</option>
+                                    </select>
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    <p>3x3</p>
+                                    <input type="text" class="form-control rounded-2 border-secondary" style="
+                                                width: 155px;
+                                                background-color: #f0f0f0;
+                                            " name="" id="" aria-describedby="helpId" placeholder="Cari Ukuran" />
                                 </td>
                                 <td style="background-color: #f0f0f0"></td>
                                 <td style="background-color: #f0f0f0"></td>
@@ -174,7 +174,7 @@
                     </table>
                     <!-- + bantal -->
                     <table class="table">
-                        <thead class="border-none">
+                        <thead class="border-secondary">
                             <div class="container">
                                 <h5 style="font-weight: 500">Bantal Tambahan</h5>
                             </div>
@@ -182,19 +182,19 @@
                                 <th scope="col" style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        ">
                                     Bahan Bantal
                                 </th>
                                 <th scope="col" style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        ">
                                     Jenis Bantal
                                 </th>
                                 <th scope="col" style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        ">
                                     Jumlah Bantal
                                 </th>
                                 <th style="background-color: #f0f0f0"></th>
@@ -204,22 +204,37 @@
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <p>Wol</p>
+                                    <select name="" style="
+                                                height: 37.33px;
+                                                width: 155px;
+                                                background-color: #f0f0f0;
+                                            " class="rounded-2" id="">
+                                        <option value="">Katun</option>
+                                        <option value="">Wol</option>
+                                    </select>
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    <p>Guling</p>
+                                    <input type="text" class="form-control rounded-2 border-secondary" style="
+                                                width: 155px;
+                                                background-color: #f0f0f0;
+                                            " name="" id="" aria-describedby="helpId" placeholder="" />
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    <p>3</p>
+                                    <input type="text" class="form-control rounded-2 border-secondary" style="
+                                                width: 155px;
+                                                background-color: #f0f0f0;
+                                            " name="" id="" aria-describedby="helpId" placeholder="" />
                                 </td>
-                                <td style="background-color: #f0f0f0;"></td>
-                                <td style="background-color: #f0f0f0;"></td>
+                                <td style="background-color: #f0f0f0">
+                                </td>
+                                <td style="background-color: #f0f0f0">
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                     <!-- + bc -->
                     <table class="table">
-                        <thead class="border-none">
+                        <thead class="border-secondary">
                             <div class="container">
                                 <h5 style="font-weight: 500">Bed Cover</h5>
                             </div>
@@ -227,19 +242,19 @@
                                 <th scope="col" style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        ">
                                     Bahan Bed Cover
                                 </th>
                                 <th scope="col" style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        ">
                                     Jenis Bed Cover
                                 </th>
                                 <th scope="col" style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        ">
                                     Jumlah Bed Cover
                                 </th>
                                 <th style="background-color: #f0f0f0"></th>
@@ -249,22 +264,37 @@
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <p>Katun</p>
+                                    <select name="" style="
+                                                height: 37.33px;
+                                                width: 155px;
+                                                background-color: #f0f0f0;
+                                            " class="rounded-2" id="">
+                                        <option value="">Katun</option>
+                                        <option value="">Wol</option>
+                                    </select>
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    BC Big Foam
+                                    <input type="text" class="form-control rounded-2 border-secondary" style="
+                                                width: 155px;
+                                                background-color: #f0f0f0;
+                                            " name="" id="" aria-describedby="helpId" placeholder="" />
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    4
+                                    <input type="text" class="form-control rounded-2 border-secondary" style="
+                                                width: 155px;
+                                                background-color: #f0f0f0;
+                                            " name="" id="" aria-describedby="helpId" placeholder="" />
                                 </td>
-                                <td style="background-color: #f0f0f0;"></td>
-                                <td style="background-color: #f0f0f0;"></td>
+                                <td style="background-color: #f0f0f0">
+                                </td>
+                                <td style="background-color: #f0f0f0">
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                     <!-- + inner cover -->
                     <table class="table">
-                        <thead class="border-none">
+                        <thead class="border-secondary">
                             <div class="container">
                                 <h5 style="font-weight: 500">Inner Cover</h5>
                             </div>
@@ -272,40 +302,59 @@
                                 <th scope="col" style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        ">
                                     Bahan Inner Cover
                                 </th>
                                 <th scope="col" style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        ">
                                     Jenis Inner Cover
                                 </th>
                                 <th scope="col" style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        ">
                                     Jumlah Inner Cover
                                 </th>
+                                <th style="background-color: #f0f0f0"></th>
+                                <th style="background-color: #f0f0f0"></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <p>Katun</p>
+                                    <select name="" style="
+                                                height: 37.33px;
+                                                width: 155px;
+                                                background-color: #f0f0f0;
+                                            " class="rounded-2" id="">
+                                        <option value="">Katun</option>
+                                        <option value="">Wol</option>
+                                    </select>
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    <p>King Koil</p>
+                                    <input type="text" class="form-control rounded-2 border-secondary" style="
+                                                width: 155px;
+                                                background-color: #f0f0f0;
+                                            " name="" id="" aria-describedby="helpId" placeholder="" />
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    <p>5</p>
+                                    <input type="text" class="form-control rounded-2 border-secondary" style="
+                                                width: 155px;
+                                                background-color: #f0f0f0;
+                                            " name="" id="" aria-describedby="helpId" placeholder="" />
+                                </td>
+                                <td style="background-color: #f0f0f0">
+                                </td>
+                                <td style="background-color: #f0f0f0">
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                     <!-- + quilt cover -->
                     <table class="table">
-                        <thead class="border-none">
+                        <thead class="border-secondary">
                             <div class="container">
                                 <h5 style="font-weight: 500">Quilt Cover</h5>
                             </div>
@@ -313,40 +362,59 @@
                                 <th scope="col" style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        ">
                                     Bahan Quilt Cover
                                 </th>
                                 <th scope="col" style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        ">
                                     Jenis Quilt Cover
                                 </th>
                                 <th scope="col" style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        ">
                                     Jumlah Quilt Cover
                                 </th>
+                                <th style="background-color: #f0f0f0"></th>
+                                <th style="background-color: #f0f0f0"></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <p>Katun</p>
+                                    <select name="" style="
+                                                height: 37.33px;
+                                                width: 155px;
+                                                background-color: #f0f0f0;
+                                            " class="rounded-2" id="">
+                                        <option value="">Katun</option>
+                                        <option value="">Wol</option>
+                                    </select>
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    <p>Halus</p>
+                                    <input type="text" class="form-control rounded-2 border-secondary" style="
+                                                width: 155px;
+                                                background-color: #f0f0f0;
+                                            " name="" id="" aria-describedby="helpId" placeholder="" />
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    <p>8</p>
+                                    <input type="text" class="form-control rounded-2 border-secondary" style="
+                                                width: 155px;
+                                                background-color: #f0f0f0;
+                                            " name="" id="" aria-describedby="helpId" placeholder="" />
+                                </td>
+                                <td style="background-color: #f0f0f0">
+                                </td>
+                                <td style="background-color: #f0f0f0">
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                     <!-- + box sprei -->
                     <table class="table">
-                        <thead class="border-none">
+                        <thead class="border-secondary">
                             <div class="container">
                                 <h5 style="font-weight: 500">Box Sprei</h5>
                             </div>
@@ -354,22 +422,31 @@
                                 <th scope="col" style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        ">
                                     Jumlah Box Sprei
                                 </th>
+                                <th style="background-color: #f0f0f0"></th>
+                                <th style="background-color: #f0f0f0"></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <p>8</p>
+                                    <input type="text" class="form-control rounded-2 border-secondary" style="
+                                                width: 155px;
+                                                background-color: #f0f0f0;
+                                            " name="" id="" aria-describedby="helpId" placeholder="" />
+                                </td>
+                                <td style="background-color: #f0f0f0">
+                                </td>
+                                <td style="background-color: #f0f0f0">
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                    <!-- + karet -->
+                    <!-- + Karet -->
                     <table class="table">
-                        <thead class="border-none">
+                        <thead class="border-secondary">
                             <div class="container">
                                 <h5 style="font-weight: 500">Karet</h5>
                             </div>
@@ -377,21 +454,35 @@
                                 <th scope="col" style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
-                                        " class="fw-bold">
+                                        ">
                                     Jenis Karet
                                 </th>
+                                <th style="background-color: #f0f0f0"></th>
+                                <th style="background-color: #f0f0f0"></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <p>Karet Keliing</p>
+                                    <select name="" style="
+                                                height: 37.33px;
+                                                width: 155px;
+                                                background-color: #f0f0f0;
+                                            " class="rounded-2" id="">
+                                        <option value="">Keliling</option>
+                                        <option value="">Anti Geser</option>
+                                    </select>
+                                </td>
+                                <td style="background-color: #f0f0f0">
+                                </td>
+                                <td style="background-color: #f0f0f0">
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
+
 
             <div class="mt-3 d-flex justify-content-end">
                 <a class="btn btn-danger d-flex align-items-center">
@@ -404,12 +495,5 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
-</body>
 
-</html>
+@endsection

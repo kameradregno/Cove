@@ -25,9 +25,9 @@
             </a>
         </li>
         <li>
-            <a href="#" class="nav-link text-white">
-                <i class="bx bxs-report text-light mx-2" style="font-size: 20px; vertical-align:-2px"></i>
-                Laporan
+            <a href="{{ url('orders') }}" class="nav-link text-white">
+                <i class="bx bxs-receipt text-light mx-2" style="font-size: 20px; vertical-align:-2px"></i>
+                Pesanan
             </a>
         </li>
     </ul>

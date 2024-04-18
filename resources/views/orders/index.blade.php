@@ -23,25 +23,26 @@
                         <th>Total Harga</th>
                         <th>Total Pesanan</th>
                         <th></th>
+                        {{-- <th></th> --}}
                         <th></th>
                     </tr>
                 </thead>
                 <tbody class="">
-                    @foreach ($customers as $customer)
+                    {{-- @foreach ($orders as $order)
                         <tr>
-                            <td>{{ date('d/m/y', strtotime($customer->created_at)) }}</td>
-                            <td>{{ $customer->nama }}</td>
-                            <td>{{ $customer->telp }}</td>
-                            <td>{{ $customer->alamat }}</td>
-                            <td>{{ $customer->type }}</td>
+                            <td>{{ date('d/m/y', strtotime($order->created_at)) }}</td>
+                            <td>{{ $order->nama }}</td>
+                            <td>{{ $order->telp }}</td>
+                            <td>{{ $order->alamat }}</td>
+                            <td>{{ $order->type }}</td>
                             <td>
-                                <a href="{{ url("customer/$customer->id/edit") }}" style="text-decoration:none;">
+                                <a href="{{ url("order/$order->id/edit") }}" style="text-decoration:none;">
                                     <i class="bx bx-pencil text-warning" style="font-size: 25px;"></i>
                                 </a>
                             </td>
                             <td>
                                 <button type="button" class="d-flex align-items-center" data-bs-toggle="modal"
-                                    data-bs-target="#staticBackdropCustomer"
+                                    data-bs-target="#staticBackdropOrder"
                                     style="font-size: 25px; border: 1px solid white; background-color:white;"><i
                                         class="bx bx-trash text-danger"></i></button>
                             </td>
@@ -49,9 +50,8 @@
 
 
                         <!-- Modal -->
-                        <div class="modal fade" id="staticBackdropCustomer" data-bs-backdrop="static"
-                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                            aria-hidden="true">
+                        <div class="modal fade" id="staticBackdropOrder" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -62,10 +62,10 @@
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        Anda yakin ingin menghapus data customer ini?
+                                        Anda yakin ingin menghapus data order ini?
                                     </div>
                                     <div class="modal-footer">
-                                        <form action="{{ url("customer/$customer->id") }}" method="POST">
+                                        <form action="{{ url("order/$order->id") }}" method="POST">
                                             @method('delete')
                                             @csrf
                                             <button type="submit" class="btn btn-outline-danger" data-bs-dismiss="modal">
@@ -79,10 +79,62 @@
                                 </div>
                             </div>
                         </div>
+                    @endforeach --}}
+                    <tr>
+                        <td>1919</td>
+                        <td>asep</td>
+                        <td>sprei sebiji</td>
+                        <td>5m zimbabwe</td>
+                        <td>100</td>
+                        <td>
+                            <a href="{{-- url("order/$order->id/edit") --}}" style="text-decoration:none;">
+                                <i class="bx bx-pencil text-warning" style="font-size: 25px;"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{ url('orders/show') }}" style="text-decoration:none;">
+                                <i class="bx bx-detail text-secondary" style="font-size: 25px;"></i>
+                            </a>
+                        </td>
+                        {{-- <td>
+                            <button type="button" class="d-flex align-items-center" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdropOrder"
+                                style="font-size: 25px; border: 1px solid white; background-color:white;"><i
+                                    class="bx bx-trash text-danger"></i></button>
+                        </td> --}}
+                    </tr>
 
 
-
-                    @endforeach
+                    <!-- Modal -->
+                    {{-- <div class="modal fade" id="staticBackdropOrder" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                                        <i class="bx bxs-error text-danger me-2 " style="font-size: 25px"></i>Perhatian
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Anda yakin ingin menghapus data order ini?
+                                </div>
+                                <div class="modal-footer">
+                                    <form action="{{ url("order/$order->id") }}" method="POST">
+                                        @method('delete')
+                                        @csrf
+                                        <button type="submit" class="btn btn-outline-danger" data-bs-dismiss="modal">
+                                            Ya
+                                        </button>
+                                    </form>
+                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                        Tidak
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> --}}
                 </tbody>
             </table>
         </div>

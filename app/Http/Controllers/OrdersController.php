@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class pesananController extends Controller
+class OrdersController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return view('orders.index');
     }
 
     /**
@@ -19,7 +19,7 @@ class pesananController extends Controller
      */
     public function create()
     {
-        //
+        return view('orders.create');
     }
 
     /**
@@ -33,9 +33,9 @@ class pesananController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        //
+         return view('orders.show');
     }
 
     /**

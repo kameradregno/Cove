@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\OrderController;
+use App\Http\Controllers\OrdersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,17 +36,19 @@ Route::patch('customer/{id}', [CustomerController::class, 'update']);
 
 // order
 
-// Route::get('order', [OrderController::class, 'index']);
+Route::get('orders', [OrdersController::class, 'index']);
 
-// Route::get('order/create', [OrderController::class, 'create']);
+Route::get('orders/create', [OrdersController::class, 'create']);
 
-// Route::post('order', [OrderController::class, 'store']);
+Route::get('orders/show', [OrdersController::class, 'show']);
 
-// Route::delete('order/{id}', [OrderController::class, 'destroy']);
+// Route::post('orders', [OrdersController::class, 'store']);
 
-// Route::get('order/{id}/edit', [OrderController::class, 'edit']);
+// Route::delete('orders/{id}', [OrdersController::class, 'destroy']);
 
-// Route::patch('order/{id}', [OrderController::class, 'update']);
+// Route::get('orders/{id}/edit', [OrdersController::class, 'edit']);
+
+// Route::patch('orders/{id}', [OrdersController::class, 'update']);
 
 // Pesanan
 
