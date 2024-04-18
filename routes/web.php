@@ -52,8 +52,5 @@ Route::get('orders/show', [OrdersController::class, 'show']);
 
 // Pesanan
 
-
-
-
-// Route::get('dashboard', [DashboardController::class, 'index']);
+Route::get('dashboard', [DashboardController::class, 'index']);
 
