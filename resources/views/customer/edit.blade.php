@@ -41,7 +41,7 @@
                                     </td>
                                     <td>
                                             <select name="type" id="type" class="rounded-2" style="height: 37.33px; width: 155px">
-                                                <option value="{{ old('type') ?? $customer->type }}">{{ $customer->type }}</option>
+                                                {{-- <option value="{{ old('type') ?? $customer->type }}">{{ $customer->type }}</option> --}}
                                                 <option value="Reseller">Reseller</option>
                                                 <option value="RO">RO</option>
                                                 <option value="New">New</option>
