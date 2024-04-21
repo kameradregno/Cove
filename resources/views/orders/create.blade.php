@@ -44,21 +44,21 @@
                 <h5 class="" style="font-weight: 400; font-size:20px">Cek Ongkir</h5>
             </div>
 
-            <form action="" method="POST">
+            <form action="" method="post">
                 @csrf
                 <div class="container mb-2 d-flex justify-content-between align-items-center" style="margin-top: -10px">
                     <form class="d-flex pt-3 pb-2" role="search">
                         <div class="d-flex flex-column mb-2">
                             <label for="" class="form-label b-1">Alamat</label>
-                            <textarea name="" id="" cols="30" rows="10" class="rounded-2" style="height: 30.35px"></textarea>
+                            <textarea name="" id="" cols="30" rows="10" class="rounded-2" style="height: 37.35px"></textarea>
                         </div>
                     </form>
 
                     <div class="d-flex justify-content-between">
                         <div class="d-flex flex-column mb-2">
                             <label for="" class="form-label mb-1">Asal Kota</label>
-                            <select name="origin" id="origin" class="rounded-2 form-control"
-                                style="height: 30.35px; width: 206.67px">
+                            <select name="origin" id="origin" class="rounded-2 form-control" required
+                                style="width: 206.67px">
                                 @foreach ($cities as $city)
                                     <option value="{{ $city['city_id'] }}">{{ $city['city_name'] }}</option>
                                 @endforeach
@@ -69,8 +69,8 @@
 
                     <div class="d-flex flex-column mb-2">
                         <label for="" class="form-label mb-1">Kota Tujuan</label>
-                        <select name="destination" id="destination" class="rounded-2 form-control"
-                            style="height: 30.35px; width: 206.67px">
+                        <select name="destination" id="destination" class="rounded-2 form-control" required
+                            style="width: 206.67px">
                             @foreach ($cities as $city)
                                 <option value="{{ $city['city_id'] }}">{{ $city['city_name'] }}</option>
                             @endforeach
@@ -83,8 +83,8 @@
                     <form class="d-flex pt-3 pb-2" role="search">
                         <div class="mb-2">
                             <label for="" class="form-label b-1">Berat Paket</label>
-                            <input class="form-control me-2 form-sm border-secondary" type="search"
-                                placeholder="Input Berat" aria-label="Search" style="height: 30.35px" />
+                            <input class="form-control me-2 form-sm border-secondary" type="search" required
+                                placeholder="Input Berat" aria-label="Search" style="height: 37.35px" />
                         </div>
                     </form>
 
@@ -93,18 +93,25 @@
                             <div class="d-flex flex-column mb-2">
                                 <label for="" class="form-label mb-1">Jenis Pengiriman</label>
                                 <select name="" id="" class="rounded-2"
-                                    style="height: 30.35px; width: 206.67px">
+                                    style="height: 37.35px; width: 206.67px">
                                     <option value="">JNE</option>
+                                    <option value="">POS</option>
+                                    <option value="">TIKI</option>
                                 </select>
                             </div>
                         </form>
                     </div>
 
                     <div class="mb-2 pt-5 pb-2">
-                        <button type="button" class="btn btn-primary btn-sm text-center" style=" width:205px">
+                        <button type="submit" name="cekOngkir" class="btn btn-primary btn-md text-center" style=" ">
                             Cek Ongkir
                         </button>
+                    </div>
 
+                    <div>
+                        @if (@isset($request->cekOngkir))
+                            <p>form tersubmit</p>
+                        @endif
                     </div>
 
                 </div>

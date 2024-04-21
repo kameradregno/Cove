@@ -86,6 +86,8 @@ class OrdersController extends Controller
             'courier' => $request->courier,
         ]);
 
+        dd($response->all());
+
         $cities = $response['rajaongkir']['results'];
         $ongkir = $response['rajaongkir']['results'];
         return view('orders.create', ['cities' => $cities, 'ongkir' => $ongkir]);
