@@ -22,12 +22,13 @@ class OrdersController extends Controller
 
     {
 
-         $response = Http::withHeaders([
-            'key' => 'ee4eb6fc840c8b581f6f52aacd86e664'
-        ])->get('https://api.rajaongkir.com/starter/city');
+        //  $response = Http::withHeaders([
+        //     'key' => 'ee4eb6fc840c8b581f6f52aacd86e664'
+        // ])->get('https://api.rajaongkir.com/starter/city');
 
-        $cities = $response['rajaongkir']['results'];
-        return view('orders.create', ['cities' => $cities, 'ongkir' => '']);
+        // $cities = $response['rajaongkir']['results'];
+
+        return view('orders.create');
 
     }
 
@@ -37,25 +38,25 @@ class OrdersController extends Controller
     public function cekOngkir(Request $request)
     {
 
-         $response = Http::withHeaders([
-            'key' => 'ee4eb6fc840c8b581f6f52aacd86e664'
-        ])->get('https://api.rajaongkir.com/starter/city');
+        //  $response = Http::withHeaders([
+        //     'key' => 'ee4eb6fc840c8b581f6f52aacd86e664'
+        // ])->get('https://api.rajaongkir.com/starter/city');
 
-         $responseCost = Http::withHeaders([
-            'key' => 'ee4eb6fc840c8b581f6f52aacd86e664'
-        ])->post('https://api.rajaongkir.com/starter/cost', [
-            'origin' => $request->origin,
-            'desntination' => $request->destination,
-            'weight' => $request->weight,
-            'courier' => $request->courier,
-        ]);
+        //  $responseCost = Http::withHeaders([
+        //     'key' => 'ee4eb6fc840c8b581f6f52aacd86e664'
+        // ])->post('https://api.rajaongkir.com/starter/cost', [
+        //     'origin' => $request->origin,
+        //     'desntination' => $request->destination,
+        //     'weight' => $request->weight,
+        //     'courier' => $request->courier,
+        // ]);
 
-        dd($responseCost->json());
+        // dd($responseCost->json());
 
-        $cities = $response['rajaongkir']['results'];
-        $ongkir = $response['rajaongkir']['results'];
+        // $cities = $response['rajaongkir']['results'];
+        // $ongkir = $response['rajaongkir']['results'];
 
-        return view('orders.create', ['cities' => $cities, 'ongkir' => $ongkir]);
+        return view('orders.create');
 
     }
 
