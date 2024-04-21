@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class OrdersController extends Controller
 {
@@ -11,7 +12,16 @@ class OrdersController extends Controller
      */
     public function index()
     {
-        return view('orders.index');
+
+        $response = Http::withHeaders([
+            'key' => 'ee4eb6fc840c8b581f6f52aacd86e664'
+        ])->get('https://api.rajaongkir.com/starter/city');
+
+        $cities = $response['rajaongkir']['result'];
+
+
+        dd($response->json());
+        return view('orders.index', ['cities' => $cities]);
     }
 
     /**
