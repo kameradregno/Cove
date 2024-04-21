@@ -10,16 +10,16 @@
                 <h5 class="">Tambah Pesanan</h5>
             </div>
 
-            <div class="container rounded-2 d-flex justify-content-between align-items-center">
+            {{-- <div class="container rounded-2 d-flex justify-content-between align-items-center">
                 <form class="d-flex pt-3 pb-2" role="search">
                     <div class="mb-2">
                         <label for="" class="form-label b-1">Nama Pembeli</label>
                         <input class="form-control me-2 form-sm border-secondary" type="search" placeholder="Cari Customer"
                             aria-label="Search" style="height: 30.35px" />
                     </div>
-                </form>
+                </form> --}}
 
-                <div class="d-flex justify-content-between">
+            {{-- <div class="d-flex justify-content-between">
                     <form class="d-flex pt-3 pb-2" role="search">
                         <div class="mb-2">
                             <label for="" class="form-label mb-1">Nama Pesanan</label>
@@ -27,9 +27,9 @@
                                 aria-label="Search" style="height: 30.35px" />
                         </div>
                     </form>
-                </div>
+                </div> --}}
 
-                <form class="d-flex pt-3 pb-2 align-items-center" role="search">
+            {{-- <form class="d-flex pt-3 pb-2 align-items-center" role="search">
                     <div class="d-flex flex-column mb-2">
                         <label for="" class="form-label mb-1">Transfer/COD</label>
                         <select name="" id="" class="rounded-2" style="height: 30.35px; width: 206.67px">
@@ -38,7 +38,7 @@
                         </select>
                     </div>
                 </form>
-            </div>
+            </div> --}}
 
             <div class="container mt-4 mb-3 rounded-2 d-flex justify-content-between align-items-center">
                 <h5 class="" style="font-weight: 400; font-size:20px">Cek Ongkir</h5>
@@ -46,6 +46,7 @@
 
             <form action="" method="post">
                 @csrf
+
                 <div class="container mb-2 d-flex justify-content-between align-items-center" style="margin-top: -10px">
                     <form class="d-flex pt-3 pb-2" role="search">
                         <div class="d-flex flex-column mb-2">
@@ -92,11 +93,13 @@
                         <form class="d-flex pt-3 pb-2 justify-content-between align-items-center" role="search">
                             <div class="d-flex flex-column mb-2">
                                 <label for="" class="form-label mb-1">Jenis Pengiriman</label>
-                                <select name="" id="" class="rounded-2"
-                                    style="height: 37.35px; width: 206.67px">
-                                    <option value="">JNE</option>
-                                    <option value="">POS</option>
-                                    <option value="">TIKI</option>
+                                <select name="courier" id="courier" class="rounded-2"
+                                    style="height: 37.35px; width: 206.67px" required>
+
+                                    <option value="jne">JNE</option>
+                                    <option value="pos">POS</option>
+                                    <option value="tiki">TIKI</option>
+
                                 </select>
                             </div>
                         </form>
@@ -107,27 +110,14 @@
                             Cek Ongkir
                         </button>
                     </div>
-
-                    <div>
-                        @if (@isset($request->cekOngkir))
-                            <p>form tersubmit</p>
-                        @endif
-                    </div>
-
                 </div>
 
                 <div class="container mt-4 d-flex justify-content-between align-items-center" style="margin-top: -10px">
 
                     <div class="d-flex mb-2">
-                        <p>skdasldnaio</p>
-                    </div>
-
-                    <div class="d-flex flex-column mb-2">
-                        <p>salknasodnsao</p>
-                    </div>
-
-                    <div class="mb-2">
-                        <p>jasih</p>
+                        @if ($ongkir != '')
+                            <p>form tersubmit</p>
+                        @endif
                     </div>
 
                 </div>
