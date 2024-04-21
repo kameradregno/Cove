@@ -17,7 +17,7 @@ class OrdersController extends Controller
             'key' => 'ee4eb6fc840c8b581f6f52aacd86e664'
         ])->get('https://api.rajaongkir.com/starter/city');
 
-        $cities = $response['rajaongkir']['result'];
+        $cities = $response['rajaongkir']['results'];
 
 
         dd($response->json());
