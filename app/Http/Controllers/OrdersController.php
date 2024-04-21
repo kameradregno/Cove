@@ -12,24 +12,23 @@ class OrdersController extends Controller
      */
     public function index()
     {
-
-        $response = Http::withHeaders([
-            'key' => 'ee4eb6fc840c8b581f6f52aacd86e664'
-        ])->get('https://api.rajaongkir.com/starter/city');
-
-        $cities = $response['rajaongkir']['results'];
-
-
-        dd($response->json());
-        return view('orders.index', ['cities' => $cities]);
+        return view('orders.index');
     }
 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
+
     {
-        return view('orders.create');
+
+         $response = Http::withHeaders([
+            'key' => 'ee4eb6fc840c8b581f6f52aacd86e664'
+        ])->get('https://api.rajaongkir.com/starter/city');
+
+        $cities = $response['rajaongkir']['results'];
+
+        return view('orders.create', ['cities' => $cities]);
     }
 
     /**
@@ -71,4 +70,26 @@ class OrdersController extends Controller
     {
         //
     }
+
+    public function cekOngkir(Request $request){
+
+         $response = Http::withHeaders([
+            'key' => 'ee4eb6fc840c8b581f6f52aacd86e664'
+        ])->get('https://api.rajaongkir.com/starter/city');
+
+         $responseCost = Http::withHeaders([
+            'key' => 'ee4eb6fc840c8b581f6f52aacd86e664'
+        ])->post('https://api.rajaongkir.com/starter/cost', [
+            'origin' => $request->origin,
+            'desntination' => $request->destination,
+            'weight' => $request->weight,
+            'courier' => $request->courier,
+        ]);
+
+        $cities = $response['rajaongkir']['results'];
+        $ongkir = $response['rajaongkir']['results'];
+        return view('orders.create', ['cities' => $cities, 'ongkir' => $ongkir]);
+
+    }
+
 }

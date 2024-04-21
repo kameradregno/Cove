@@ -49,27 +49,15 @@
                 <div class="container mb-2 d-flex justify-content-between align-items-center" style="margin-top: -10px">
                     <form class="d-flex pt-3 pb-2" role="search">
                         <div class="d-flex flex-column mb-2">
-                            <label for="" class="form-label b-1">Alamat/No. Rumah/Kantor</label>
+                            <label for="" class="form-label b-1">Alamat</label>
                             <textarea name="" id="" cols="30" rows="10" class="rounded-2" style="height: 30.35px"></textarea>
                         </div>
                     </form>
 
                     <div class="d-flex justify-content-between">
-                            <div class="d-flex flex-column mb-2">
-                                <label for="" class="form-label mb-1">Asal Kota</label>
-                                <select name="origin" id="origin" class="rounded-2 form-control"
-                                    style="height: 30.35px; width: 206.67px">
-                                    @foreach ($cities as $city)
-                                        <option value="{{ $city['city_id'] }}">{{ $city['city_name'] }}</option>
-                                    @endforeach
-
-                                </select>
-                            </div>
-                    </div>
-
                         <div class="d-flex flex-column mb-2">
-                            <label for="" class="form-label mb-1">Kota Tujuan</label>
-                            <select name="destination" id="destination" class="rounded-2 form-control"
+                            <label for="" class="form-label mb-1">Asal Kota</label>
+                            <select name="origin" id="origin" class="rounded-2 form-control"
                                 style="height: 30.35px; width: 206.67px">
                                 @foreach ($cities as $city)
                                     <option value="{{ $city['city_id'] }}">{{ $city['city_name'] }}</option>
@@ -77,12 +65,24 @@
 
                             </select>
                         </div>
+                    </div>
+
+                    <div class="d-flex flex-column mb-2">
+                        <label for="" class="form-label mb-1">Kota Tujuan</label>
+                        <select name="destination" id="destination" class="rounded-2 form-control"
+                            style="height: 30.35px; width: 206.67px">
+                            @foreach ($cities as $city)
+                                <option value="{{ $city['city_id'] }}">{{ $city['city_name'] }}</option>
+                            @endforeach
+
+                        </select>
+                    </div>
                 </div>
 
                 <div class="container mb-2 d-flex justify-content-between align-items-center" style="margin-top: -10px">
                     <form class="d-flex pt-3 pb-2" role="search">
                         <div class="mb-2">
-                            <label for="" class="form-label b-1">Berat Paket &#40;gr&#41;</label>
+                            <label for="" class="form-label b-1">Berat Paket</label>
                             <input class="form-control me-2 form-sm border-secondary" type="search"
                                 placeholder="Input Berat" aria-label="Search" style="height: 30.35px" />
                         </div>
@@ -110,6 +110,7 @@
                 </div>
 
                 <div class="container mt-4 d-flex justify-content-between align-items-center" style="margin-top: -10px">
+
                     <div class="d-flex mb-2">
                         <p>skdasldnaio</p>
                     </div>
