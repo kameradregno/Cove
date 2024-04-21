@@ -43,7 +43,7 @@
             <div class="container mb-2 d-flex justify-content-between align-items-center" style="margin-top: -10px">
                 <form class="d-flex pt-3 pb-2" role="search">
                     <div class="d-flex flex-column mb-2">
-                        <label for="" class="form-label b-1">Alamat</label>
+                        <label for="" class="form-label b-1">Alamat/No. Rumah/Kantor</label>
                         <textarea name="" id="" cols="30" rows="10" class="rounded-2" style="height: 30.35px"
                             disabled></textarea>
                     </div>
@@ -51,23 +51,18 @@
 
                 <div class="d-flex justify-content-between">
                     <form class="d-flex pt-3 pb-2 me-3 align-items-center" role="search">
-                        <div class="d-flex flex-column mb-2">
-                            <label for="" class="form-label mb-1">Jenis Pengiriman</label>
-                            <select name="" id="" class="rounded-2" style="height: 30.35px; width: 206.67px"
-                                disabled>
-                                <option value="{{-- --}}"></option>
-                                <option value="">JNE</option>
-                                <option value="">SICEPAT</option>
-                                <option value="">NINJA</option>
-                            </select>
+                        <div class="mb-2">
+                            <label for="" class="form-label b-1">Asal Kota</label>
+                            <input class="form-control me-2 form-sm border-secondary" type="search" placeholder="Input Kota"
+                                aria-label="Search" style="height: 30.35px" disabled />
                         </div>
                     </form>
                 </div>
 
                 <form class="d-flex pt-3 pb-2" role="search">
                     <div class="mb-2">
-                        <label for="" class="form-label b-1">Ongkir</label>
-                        <input class="form-control me-2 form-sm border-secondary" type="search" placeholder="Harga Ongkir"
+                        <label for="" class="form-label b-1">Kota Tujuan</label>
+                        <input class="form-control me-2 form-sm border-secondary" type="search" placeholder="Input Kota Tujuan"
                             aria-label="Search" style="height: 30.35px" value="" disabled />
                     </div>
                 </form>
