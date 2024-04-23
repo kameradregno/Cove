@@ -13,132 +13,56 @@
                 </div>
 
                 <div class="container rounded-2 d-flex justify-content-between align-items-center">
-                    <form class="d-flex pt-3 pb-2">
-                        <div class="d-flex mb-2">
-                            <input class="form-control me-2 form-sm border-secondary" type="text"
-                                placeholder="Nama Pembeli" name="nama_pembeli" id="nama_pembeli" style="height: 30.35px" />
-                        </div>
-                    </form>
-                
-                    <div class="d-flex justify-content-between">
-                        <form class="d-flex pt-3 pb-2">
-                            <div class="d-flex mb-2">
-                                <input class="form-control form-sm border-secondary" type="text" placeholder="Nama Pesanan"
-                                    name="nama_pesanan" id="nama_pesanan" style="height: 30.35px" />
-                            </div>
-                        </form>
+
+                    <div class="d-flex flex-column mb-2">
+                        <label for="" class="form-label b-1">Nama Pembeli</label>
+                        <input class="form-control me-2 form-sm border-secondary" type="text" placeholder="Nama Pembeli"
+                            name="nama_pembeli" id="nama_pembeli" style="height: 30.35px" />
                     </div>
 
-                    <form class="d-flex pt-3 pb-2 align-items-center">
-                        <div class="d-flex flex-column mb-2">
-                            <select name="metode_pembayaran" id="metode_pembayaran" class="rounded-2"
-                                style="height: 30.35px; width: 206.67px">
-                                <option value="">Transfer/COD</option>
-                                <option value="TRANSFER">Transfer</option>
-                                <option value="COD">COD</option>
-                            </select>
-                        </div>
-                    </form>
-                </div>
 
-
-                {{-- <div class="container mt-4 mb-3 rounded-2 d-flex justify-content-between align-items-center">
-                <h5 class="" style="font-weight: 400; font-size:20px">Cek Ongkir</h5>
-            </div> --}}
-
-                {{-- <form action="" method="post">
-                @csrf --}}
-
-                <div class="container mb-2 d-flex justify-content-start align-items-center" style="margin-top: -10px">
-                    <form class="d-flex pt-3 pb-2 pe-4" role="search">
-                        <div class="d-flex flex-column mb-2">
-                            <label for="" class="form-label b-1">Alamat</label>
-                            <textarea name="alamat" id="alamat" cols="30" rows="10" class="rounded-2" style="height: 37.35px"></textarea>
-                        </div>
-                    </form>
-
-                    <div class="d-flex">
-                        <form class="d-flex pt-3 pb-2 justify-content-start ps-5 align-items-center" role="search">
-                            <div class="d-flex flex-column mb-2">
-                                <label for="" class="form-label mb-1">Jenis Pengiriman</label>
-                                <select name="jenis_pengiriman" id="jenis_pengiriman" class="rounded-2"
-                                    style="height: 37.35px; width: 206.67px">
-                                    <option value="JNE">JNE</option>
-                                    <option value="POS">POS</option>
-                                    <option value="TIKI">TIKI</option>
-
-                                </select>
-                            </div>
-                        </form>
-                    </div>
-                    {{-- 
                     <div class="d-flex justify-content-between">
-                        <div class="d-flex flex-column mb-2">
-                            <label for="" class="form-label mb-1">Asal Kota</label>
-                            <select name="origin" id="origin" class="rounded-2 form-control" required
-                                style="width: 206.67px">
-                                @foreach ($cities as $city)
-                                    <option value="{{ $city['city_id'] }}">{{ $city['city_name'] }}</option>
-                                @endforeach
 
-                            </select>
+                        <div class="d-flex flex-column mb-2">
+                            <label for="" class="form-label b-1">Nama Pesanan</label>
+                            <input class="form-control form-sm border-secondary" type="text" placeholder="Nama Pesanan"
+                                name="nama_pesanan" id="nama_pesanan" style="height: 30.35px" />
                         </div>
+
                     </div>
 
                     <div class="d-flex flex-column mb-2">
-                        <label for="" class="form-label mb-1">Kota Tujuan</label>
-                        <select name="destination" id="destination" class="rounded-2 form-control" required
-                            style="width: 206.67px">
-                            @foreach ($cities as $city)
-                                <option value="{{ $city['city_id'] }}">{{ $city['city_name'] }}</option>
-                            @endforeach
-
+                        <label for="" class="form-label b-1">Metode Pembayaran</label>
+                        <select name="metode_pembayaran" id="metode_pembayaran" class="rounded-2"
+                            style="height: 30.35px; width: 206.67px">
+                            <option value="TRANSFER">Transfer</option>
+                            <option value="COD">COD</option>
                         </select>
-                    </div> --}}
+                    </div>
+
                 </div>
 
-                {{-- <div class="container mb-2 d-flex justify-content-between align-items-center" style="margin-top: -10px">
-                    <form class="d-flex pt-3 pb-2" role="search">
-                        <div class="mb-2">
-                            <label for="" class="form-label b-1">Berat Paket</label>
-                            <input class="form-control me-2 form-sm border-secondary" type="search" required
-                                placeholder="Input Berat" aria-label="Search" style="height: 37.35px" />
-                        </div>
-                    </form>
+                <div class="container mb-2 d-flex justify-content-start align-items-center" style="margin-top: -10px">
+                    <div class="d-flex flex-column mb-2">
+                        <label for="" class="form-label b-1">Alamat</label>
+                        <textarea name="alamat" id="alamat" cols="30" rows="10" class="rounded-2" style="height: 37.35px"></textarea>
+                    </div>
 
                     <div class="d-flex">
-                        <form class="d-flex pt-3 pb-2 justify-content-between align-items-center" role="search">
-                            <div class="d-flex flex-column mb-2">
-                                <label for="" class="form-label mb-1">Jenis Pengiriman</label>
-                                <select name="courier" id="courier" class="rounded-2"
-                                    style="height: 37.35px; width: 206.67px" required>
+                        <div class="d-flex flex-column mb-2">
+                            <label for="" class="form-label mb-1">Jenis Pengiriman</label>
+                            <select name="jenis_pengiriman" id="jenis_pengiriman" class="rounded-2"
+                                style="height: 37.35px; width: 206.67px">
+                                <option value="JNE">JNE</option>
+                                <option value="POS">POS</option>
+                                <option value="TIKI">TIKI</option>
 
-                                    <option value="jne">JNE</option>
-                                    <option value="pos">POS</option>
-                                    <option value="tiki">TIKI</option>
-
-                                </select>
-                            </div>
-                        </form>
+                            </select>
+                        </div>
                     </div>
-
-                    <div class="mb-2 pt-5 pb-2">
-                        <button type="submit" name="cekOngkir" class="btn btn-primary btn-md text-center" style=" ">
-                            Cek Ongkir
-                        </button>
-                    </div>
-                </div> --}}
-
-                <div class="container mt-4 d-flex justify-content-between align-items-center" style="margin-top: -10px">
-
-                    {{-- <div class="d-flex mb-2">
-                        @if ($ongkir != '')
-                            <p>form tersubmit</p>
-                        @endif
-                    </div> --}}
-
                 </div>
-                {{-- </form> --}}
+
+
 
                 <div class="container rounded-2" style="background-color: #f0f0f0">
                     <div class="container mt-4 rounded-2 align-items-center">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Orders;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 
 class OrdersController extends Controller
 {
@@ -31,6 +32,7 @@ class OrdersController extends Controller
      */
     public function store(Request $request)
     {
+        
         Orders::create([
             'nama_pembeli' =>  $request->input('nama_pembeli'),
             'nama_pesanan' =>  $request->input('nama_pesanan'),

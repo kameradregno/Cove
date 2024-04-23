@@ -23,14 +23,14 @@
                         <th>Total Harga</th>
                         <th>Total Pesanan</th>
                         <th></th>
-                        {{-- <th></th> --}}
+                        <th></th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody class="">
                     @foreach ($orders as $order)
                         <tr>
-                            <td>{{ date('d/m/y', strtotime($customer->created_at)) }}</td>
+                            <td>{{ date('d/m/y', strtotime($order->created_at)) }}</td>
                             <td>{{ $order->nama_pembeli }}</td>
                             <td>{{ $order->nama_pesanan }}</td>
                             <td>5m zimbabwe</td>
@@ -45,16 +45,16 @@
                                     <i class="bx bx-detail text-secondary" style="font-size: 25px;"></i>
                                 </a>
                             </td>
-                            {{-- <td>
+                            <td>
                             <button type="button" class="d-flex align-items-center" data-bs-toggle="modal"
                                 data-bs-target="#staticBackdropOrder"
                                 style="font-size: 25px; border: 1px solid white; background-color:white;"><i
                                     class="bx bx-trash text-danger"></i></button>
-                        </td> --}}
+                        </td>
                         </tr>
                     @endforeach
                     <!-- Modal -->
-                    {{-- <div class="modal fade" id="staticBackdropOrder" data-bs-backdrop="static" data-bs-keyboard="false"
+                    <div class="modal fade" id="staticBackdropOrder" data-bs-backdrop="static" data-bs-keyboard="false"
                         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -82,7 +82,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div> --}}
+                    </div>
                 </tbody>
             </table>
         </div>

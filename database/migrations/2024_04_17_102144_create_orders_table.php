@@ -16,8 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama_pembeli', 255);
             $table->string('nama_pesanan', 255);
-            // $table->string('slug');
-            $table->string('metode_pembayaran')->enum(['TRANSFER','COD'])->def;          
+            $table->string('metode_pembayaran')->enum(['TRANSFER','COD']);          
             $table->string('alamat', 1000);
             $table->string('jenis_pengiriman')->enum(['JNE','POS','TIKI']);
             $table->timestamps();
