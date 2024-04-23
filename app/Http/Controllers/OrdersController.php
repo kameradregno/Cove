@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Orders;
+use App\Models\Customers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
@@ -25,19 +26,22 @@ class OrdersController extends Controller
      */
 
     public function create()
-
     {
-        return view('orders.create');
+
+    $data['customers'] = Customers::all();
+    return view('orders.create', $data);
+
     }
+
     /**
      * Store a newly created resource in storage.
      */
 
     public function store(Request $request)
     {
-
         Orders::create([
-            'nama_pembeli' =>  $request->input('nama_pembeli'),
+            'customer_id' => $request->input('customer_id'),
+          
             'nama_pesanan' =>  $request->input('nama_pesanan'),
             'metode_pembayaran' =>  $request->input('metode_pembayaran'),
             'alamat' =>  $request->input('alamat'),
