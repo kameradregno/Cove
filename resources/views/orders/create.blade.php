@@ -15,17 +15,15 @@
                 <div class="container rounded-2 d-flex justify-content-between align-items-center">
                     <form class="d-flex pt-3 pb-2">
                         <div class="d-flex mb-2">
-                            <label for="" class="form-label b-1">Nama Pembeli</label>
                             <input class="form-control me-2 form-sm border-secondary" type="text"
-                                placeholder="Cari Customer" name="nama_pembeli" id="nama_pembeli" style="height: 30.35px" />
+                                placeholder="Nama Pembeli" name="nama_pembeli" id="nama_pembeli" style="height: 30.35px" />
                         </div>
                     </form>
 
                     <div class="d-flex justify-content-between">
                         <form class="d-flex pt-3 pb-2">
                             <div class="d-flex mb-2">
-                                <label for="" class="form-label mb-1">Nama Pesanan</label>
-                                <input class="form-control form-sm border-secondary" type="text" placeholder=""
+                                <input class="form-control form-sm border-secondary" type="text" placeholder="Nama Pesanan"
                                     name="nama_pesanan" id="nama_pesanan" style="height: 30.35px" />
                             </div>
                         </form>
@@ -33,9 +31,9 @@
 
                     <form class="d-flex pt-3 pb-2 align-items-center">
                         <div class="d-flex flex-column mb-2">
-                            <label for="" class="form-label mb-1">Transfer/COD</label>
                             <select name="metode_pembayaran" id="metode_pembayaran" class="rounded-2"
                                 style="height: 30.35px; width: 206.67px">
+                                <option value="">Transfer/COD</option>
                                 <option value="TRANSFER">Transfer</option>
                                 <option value="COD">COD</option>
                             </select>
