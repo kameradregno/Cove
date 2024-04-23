@@ -40,13 +40,15 @@ Route::get('orders', [OrdersController::class, 'index']);
 
 Route::get('orders/create', [OrdersController::class, 'create']);
 
+Route::post('orders', [OrdersController::class, 'store']);
+
 Route::get('orders/show', [OrdersController::class, 'show']);
 
-// Route::delete('orders/{id}', [OrdersController::class, 'destroy']);
+Route::delete('orders/{id}', [OrdersController::class, 'destroy']);
 
-// Route::get('orders/{id}/edit', [OrdersController::class, 'edit']);
+Route::get('orders/{id}/edit', [OrdersController::class, 'edit']);
 
-// Route::patch('orders/{id}', [OrdersController::class, 'update']);
+Route::patch('orders/{id}', [OrdersController::class, 'update']);
 
 // Pesanan
 

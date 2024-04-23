@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Orders;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
@@ -12,7 +13,9 @@ class OrdersController extends Controller
      */
     public function index()
     {
-        return view('orders.index');
+        $orders = Orders::all();
+        
+        return view('orders.index', ['orders' => $orders]);
     }
 
     /**
@@ -21,59 +24,45 @@ class OrdersController extends Controller
     public function create()
 
     {
-
-        //  $response = Http::withHeaders([
-        //     'key' => 'ee4eb6fc840c8b581f6f52aacd86e664'
-        // ])->get('https://api.rajaongkir.com/starter/city');
-
-        // $cities = $response['rajaongkir']['results'];
-
         return view('orders.create');
-
     }
-
     /**
      * Store a newly created resource in storage.
      */
-    public function cekOngkir(Request $request)
+    public function store(Request $request)
     {
+        Orders::create([
+            'nama_pembeli' =>  $request->input('nama_pembeli'),
+            'nama_pesanan' =>  $request->input('nama_pesanan'),
+            'metode_pembayaran' =>  $request->input('metode_pembayaran'),
+            'alamat' =>  $request->input('alamat'),
+            'jenis_pengiriman' =>  $request->input('jenis_pengiriman'),
+        ]);
 
-        //  $response = Http::withHeaders([
-        //     'key' => 'ee4eb6fc840c8b581f6f52aacd86e664'
-        // ])->get('https://api.rajaongkir.com/starter/city');
-
-        //  $responseCost = Http::withHeaders([
-        //     'key' => 'ee4eb6fc840c8b581f6f52aacd86e664'
-        // ])->post('https://api.rajaongkir.com/starter/cost', [
-        //     'origin' => $request->origin,
-        //     'desntination' => $request->destination,
-        //     'weight' => $request->weight,
-        //     'courier' => $request->courier,
-        // ]);
-
-        // dd($responseCost->json());
-
-        // $cities = $response['rajaongkir']['results'];
-        // $ongkir = $response['rajaongkir']['results'];
-
-        return view('orders.create');
-
+        return redirect('orders'); 
     }
-
     /**
      * Display the specified resource.
      */
-    public function show()
+    public function show($slug)
     {
-         return view('orders.show');
+        $data = Orders::where( 'slug', $slug )->first();
+        
+        return view('orders.show', compact('data'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+        $chosen_order = Orders::where('id', $id)->first();
+
+        $data = [
+            'order' => $chosen_order,
+        ];
+
+        return view('orders.edit', $data);
     }
 
     /**
@@ -81,7 +70,15 @@ class OrdersController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        Orders::where('id', $id)->update([
+            'nama_pembeli' =>  $request->input('nama_pembeli'),
+            'nama_pesanan' =>  $request->input('nama_pesanan'),
+            'metode_pembayaran' =>  $request->input('metode_pembayaran'),
+            'alamat' =>  $request->input('alamat'),
+            'jenis_pengiriman' =>  $request->input('jenis_pengiriman'),
+        ]);
+
+        return redirect('orders');
     }
 
     /**
@@ -89,7 +86,9 @@ class OrdersController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Orders::SelectedById($id)->delete();
+
+        return redirect('orders');
     }
 
 }

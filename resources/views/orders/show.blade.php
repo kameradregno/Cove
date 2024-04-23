@@ -40,32 +40,53 @@
                 </form>
             </div>
 
-            <div class="container mb-2 d-flex justify-content-between align-items-center" style="margin-top: -10px">
-                <form class="d-flex pt-3 pb-2" role="search">
+            <div class="container mb-2 d-flex justify-content-start align-items-center" style="margin-top: -10px">
+                <form class="d-flex pt-3 pb-2 pe-4" role="search">
                     <div class="d-flex flex-column mb-2">
-                        <label for="" class="form-label b-1">Alamat/No. Rumah/Kantor</label>
-                        <textarea name="" id="" cols="30" rows="10" class="rounded-2" style="height: 30.35px"
-                            disabled></textarea>
+                        <label for="" class="form-label b-1">Alamat</label>
+                        <textarea name="" id="" cols="30" rows="10" class="rounded-2" style="height: 37.35px" disabled></textarea>
                     </div>
                 </form>
 
-                <div class="d-flex justify-content-between">
-                    <form class="d-flex pt-3 pb-2 me-3 align-items-center" role="search">
-                        <div class="mb-2">
-                            <label for="" class="form-label b-1">Asal Kota</label>
-                            <input class="form-control me-2 form-sm border-secondary" type="search" placeholder="Input Kota"
-                                aria-label="Search" style="height: 30.35px" disabled />
+                <div class="d-flex">
+                    <form class="d-flex pt-3 pb-2 justify-content-start ps-5 align-items-center" role="search">
+                        <div class="d-flex flex-column mb-2">
+                            <label for="" class="form-label mb-1">Jenis Pengiriman</label>
+                            <select name="courier" id="courier" class="rounded-2"
+                                style="height: 37.35px; width: 206.67px" disabled>
+
+                                <option value="jne">JNE</option>
+                                <option value="pos">POS</option>
+                                <option value="tiki">TIKI</option>
+
+                            </select>
                         </div>
                     </form>
                 </div>
+{{-- 
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-column mb-2">
+                        <label for="" class="form-label mb-1">Asal Kota</label>
+                        <select name="origin" id="origin" class="rounded-2 form-control" required
+                            style="width: 206.67px">
+                            @foreach ($cities as $city)
+                                <option value="{{ $city['city_id'] }}">{{ $city['city_name'] }}</option>
+                            @endforeach
 
-                <form class="d-flex pt-3 pb-2" role="search">
-                    <div class="mb-2">
-                        <label for="" class="form-label b-1">Kota Tujuan</label>
-                        <input class="form-control me-2 form-sm border-secondary" type="search" placeholder="Input Kota Tujuan"
-                            aria-label="Search" style="height: 30.35px" value="" disabled />
+                        </select>
                     </div>
-                </form>
+                </div>
+
+                <div class="d-flex flex-column mb-2">
+                    <label for="" class="form-label mb-1">Kota Tujuan</label>
+                    <select name="destination" id="destination" class="rounded-2 form-control" required
+                        style="width: 206.67px">
+                        @foreach ($cities as $city)
+                            <option value="{{ $city['city_id'] }}">{{ $city['city_name'] }}</option>
+                        @endforeach
+
+                    </select>
+                </div> --}}
             </div>
 
             <div class="container rounded-2" style="background-color: #f0f0f0">

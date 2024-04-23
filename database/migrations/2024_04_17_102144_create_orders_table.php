@@ -13,16 +13,13 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
 
-            $table->UnsignedBigInteger('customers_id');
             $table->string('nama_pembeli', 255);
             $table->string('nama_pesanan', 255);
-            $table->enum('metode_pembayaran', ['TRANSFER','COD']);
-            $table->integer('ongkir');            
-            $table->enum('jenis_pengiriman', ['JNE','SICEPAT','JNT']);
+            $table->string('metode_pembayaran')->enum(['TRANSFER','COD']);          
+            $table->string('alamat', 1000);
+            $table->string('jenis_pengiriman')->enum(['JNE','POS','TIKI']);
             $table->timestamps();
 
-            $table->foreign('customers_id')->references('id')->on('customers');
- 
         });
     }
 

@@ -9,14 +9,12 @@ class Orders extends Model
 {
     use HasFactory;
 
-    /**
-     * Get the customers that owns the orders
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function customers(): BelongsTo
-    {
-        return $this->belongsTo(customers::class, 'customers_id', 'customers');
-    }
+    protected $fillable = [
+        'nama_pembeli' ,
+        'nama_pesanan',
+        'metode_pembayaran',
+        'alamat',
+        'jenis_pengiriman'
+    ];
     
 }
