@@ -36,7 +36,7 @@
                             <td>5m zimbabwe</td>
                             <td>100</td>
                             <td>
-                                <a href="{{ url("order/$order->id/edit") }}" style="text-decoration:none;">
+                                <a href="{{ url("orders/$order->id/edit") }}" style="text-decoration:none;">
                                     <i class="bx bx-pencil text-warning" style="font-size: 25px;"></i>
                                 </a>
                             </td>
@@ -46,13 +46,13 @@
                                 </a>
                             </td>
                             <td>
-                            <button type="button" class="d-flex align-items-center" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdropOrder"
-                                style="font-size: 25px; border: 1px solid white; background-color:white;"><i
-                                    class="bx bx-trash text-danger"></i></button>
-                        </td>
+                                <button type="button" class="d-flex align-items-center" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdropOrder"
+                                    style="font-size: 25px; border: 1px solid white; background-color:white;"><i
+                                        class="bx bx-trash text-danger"></i></button>
+                            </td>
                         </tr>
-                    @endforeach
+                    
                     <!-- Modal -->
                     <div class="modal fade" id="staticBackdropOrder" data-bs-backdrop="static" data-bs-keyboard="false"
                         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -69,7 +69,7 @@
                                     Anda yakin ingin menghapus data order ini?
                                 </div>
                                 <div class="modal-footer">
-                                    <form action="{{ url("order/$order->id") }}" method="POST">
+                                    <form action="{{ url("orders/$order->id") }}" method="POST">
                                         @method('delete')
                                         @csrf
                                         <button type="submit" class="btn btn-outline-danger" data-bs-dismiss="modal">
@@ -83,6 +83,8 @@
                             </div>
                         </div>
                     </div>
+
+                    @endforeach
                 </tbody>
             </table>
         </div>

@@ -22,6 +22,7 @@ class CustomerController extends Controller
     /**
      * Show the form for creating a new resource.
      */
+
     public function create()
     {
         return view('customer.create');
@@ -30,6 +31,7 @@ class CustomerController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+
     public function store(Request $request)
     {
         Customers::create([
@@ -41,9 +43,11 @@ class CustomerController extends Controller
 
         return redirect('customer'); 
     }
+
     /**
      * Show the form for editing the specified resource.
      */
+    
     public function edit($id)
     {
         $chosen_customer = Customers::where('id', $id)->first();
@@ -58,6 +62,7 @@ class CustomerController extends Controller
     /**
      * Update the specified resource in storage.
      */
+
     public function update(Request $request, $id)
     {
         Customers::where('id', $id)->update([
@@ -73,10 +78,12 @@ class CustomerController extends Controller
     /**
      * Remove the specified resource from storage.
      */
+
     public function destroy(string $id)
     {
         Customers::SelectedById($id)->delete();
 
         return redirect('customer');
     }
+    
 }

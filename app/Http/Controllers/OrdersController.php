@@ -12,6 +12,7 @@ class OrdersController extends Controller
     /**
      * Display a listing of the resource.
      */
+
     public function index()
     {
         $orders = Orders::all();
@@ -22,6 +23,7 @@ class OrdersController extends Controller
     /**
      * Show the form for creating a new resource.
      */
+
     public function create()
 
     {
@@ -30,6 +32,7 @@ class OrdersController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+
     public function store(Request $request)
     {
 
@@ -43,6 +46,7 @@ class OrdersController extends Controller
 
         return redirect('orders'); 
     }
+
     /**
      * Display the specified resource.
      */
@@ -85,6 +89,7 @@ class OrdersController extends Controller
     /**
      * Remove the specified resource from storage.
      */
+    
     public function destroy(string $id)
     {
         Orders::SelectedById($id)->delete();
