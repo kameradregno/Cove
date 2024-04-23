@@ -32,7 +32,7 @@ class OrdersController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         Orders::create([
             'nama_pembeli' =>  $request->input('nama_pembeli'),
             'nama_pesanan' =>  $request->input('nama_pesanan'),
@@ -46,12 +46,11 @@ class OrdersController extends Controller
     /**
      * Display the specified resource.
      */
-    // public function show($slug)
-    // {
-    //     $data = Orders::where( 'slug', $slug )->first();
-        
-    //     return view('orders.show', compact('data'));
-    // }
+    
+    public function show()
+    {
+        //
+    }
 
     /**
      * Show the form for editing the specified resource.

@@ -7,6 +7,7 @@
     <div class="container pt-1 rounded-2" style="background-color: white; height: 680px">
         <form method="POST" action="{{ url('orders') }}">
             @csrf
+            
             <div class="container mt-4 rounded-2" style="background-color: white; height: auto">
                 <div class="container mt-4 rounded-2 d-flex justify-content-between align-items-center">
                     <h5 class="">Tambah Pesanan</h5>
@@ -61,8 +62,6 @@
                         </div>
                     </div>
                 </div>
-
-
 
                 <div class="container rounded-2" style="background-color: #f0f0f0">
                     <div class="container mt-4 rounded-2 align-items-center">
