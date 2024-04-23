@@ -19,7 +19,7 @@
                                 placeholder="Nama Pembeli" name="nama_pembeli" id="nama_pembeli" style="height: 30.35px" />
                         </div>
                     </form>
-
+                
                     <div class="d-flex justify-content-between">
                         <form class="d-flex pt-3 pb-2">
                             <div class="d-flex mb-2">

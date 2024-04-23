@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
 
+            $table->id();
             $table->string('nama_pembeli', 255);
             $table->string('nama_pesanan', 255);
-            $table->string('metode_pembayaran')->enum(['TRANSFER','COD']);          
+            // $table->string('slug');
+            $table->string('metode_pembayaran')->enum(['TRANSFER','COD'])->def;          
             $table->string('alamat', 1000);
             $table->string('jenis_pengiriman')->enum(['JNE','POS','TIKI']);
             $table->timestamps();
