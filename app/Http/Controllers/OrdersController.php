@@ -54,9 +54,12 @@ class OrdersController extends Controller
      * Display the specified resource.
      */
     
-    public function show()
+    public function show($slug)
     {
-        //
+        $data = Orders::where( 'slug', $slug )->first();
+        $orders = $data->orders()->get();
+        
+        return view('orders.show', compact('data','orders'));
     }
 
     /**

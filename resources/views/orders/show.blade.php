@@ -12,8 +12,8 @@
                 <form class="d-flex pt-3 pb-2" role="search">
                     <div class="mb-2">
                         <label for="" class="form-label b-1">Nama Pembeli</label>
-                        <input class="form-control me-2 form-sm border-secondary" type="search" placeholder="Cari Customer"
-                            aria-label="Search" style="height: 30.35px" disabled />
+                        <input class="form-control me-2 form-sm border-secondary"
+                            value="{{ $data->customername->nama }}" style="height: 30.35px" disabled />
                     </div>
                 </form>
 
@@ -21,8 +21,8 @@
                     <form class="d-flex pt-3 pb-2" role="search">
                         <div class="mb-2">
                             <label for="" class="form-label mb-1">Nama Pesanan</label>
-                            <input class="form-control form-sm border-secondary" type="search" placeholder=""
-                                value="" aria-label="Search" style="height: 30.35px" disabled />
+                            <input class="form-control form-sm border-secondary"
+                                value="{{ $data->nama_pesanan }}" name="nama_pesanan" id="nama_pesanan" style="height: 30.35px" disabled />
                         </div>
                     </form>
                 </div>
@@ -30,11 +30,9 @@
                 <form class="d-flex pt-3 pb-2 align-items-center" role="search">
                     <div class="d-flex flex-column mb-2">
                         <label for="" class="form-label mb-1">Transfer/COD</label>
-                        <select name="" id="" class="rounded-2" style="height: 30.35px; width: 206.67px"
+                        <select name="nama_pembayaran" id="nama_pembayaran" class="rounded-2" style="height: 30.35px; width: 206.67px"
                             disabled>
-                            <option value="{{-- --}}"></option>
-                            <option value="">Transfer</option>
-                            <option value="">COD</option>
+                            <option value="{{ $data->metode_pembayaran }}"></option>
                         </select>
                     </div>
                 </form>
@@ -44,7 +42,7 @@
                 <form class="d-flex pt-3 pb-2 pe-4" role="search">
                     <div class="d-flex flex-column mb-2">
                         <label for="" class="form-label b-1">Alamat</label>
-                        <textarea name="" id="" cols="30" rows="10" class="rounded-2" style="height: 37.35px" disabled></textarea>
+                        <textarea name="" id="" cols="30" rows="10" class="rounded-2" style="height: 37.35px" disabled>{{ $data->alamat }}</textarea>
                     </div>
                 </form>
 
@@ -54,11 +52,7 @@
                             <label for="" class="form-label mb-1">Jenis Pengiriman</label>
                             <select name="courier" id="courier" class="rounded-2"
                                 style="height: 37.35px; width: 206.67px" disabled>
-
-                                <option value="jne">JNE</option>
-                                <option value="pos">POS</option>
-                                <option value="tiki">TIKI</option>
-
+                                <option value="{{ $data->jenis_pengiriman }}">{{ $data->jenis_pengiriman }}</option>
                             </select>
                         </div>
                     </form>
