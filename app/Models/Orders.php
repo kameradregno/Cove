@@ -13,7 +13,6 @@ class Orders extends Model
     protected $fillable =
     [
         'customer_id',
-    
         'nama_pesanan',
         'metode_pembayaran',
         'alamat',

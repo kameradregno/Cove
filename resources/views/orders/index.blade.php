@@ -34,7 +34,7 @@
                         <tr>
 
                             <td>{{ date('d/m/y', strtotime($order->created_at)) }}</td>
-                            <td>{{ }}</td>
+                            <td>{{ $order->customername->nama }}</td>
                             <td>{{ $order->nama_pesanan }}</td>
                             <td>5m zimbabwe</td>
                             <td>100</td>

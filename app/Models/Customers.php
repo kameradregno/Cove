@@ -27,6 +27,5 @@ class Customers extends Model
     public function scopeSelectedById($query, $id) {
 
         return $query->where('id', $id);
-
     }
 }

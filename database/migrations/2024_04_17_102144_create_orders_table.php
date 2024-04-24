@@ -16,7 +16,6 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('customer_id');
 
-            $table->string('nama_pembeli', 255);
             $table->string('nama_pesanan', 255);
             $table->string('metode_pembayaran')->enum(['TRANSFER','COD']);          
             $table->string('alamat', 1000);

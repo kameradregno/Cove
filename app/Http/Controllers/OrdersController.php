@@ -41,7 +41,6 @@ class OrdersController extends Controller
     {
         Orders::create([
             'customer_id' => $request->input('customer_id'),
-          
             'nama_pesanan' =>  $request->input('nama_pesanan'),
             'metode_pembayaran' =>  $request->input('metode_pembayaran'),
             'alamat' =>  $request->input('alamat'),
