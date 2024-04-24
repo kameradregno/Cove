@@ -48,7 +48,7 @@ Route::delete('orders/{id}', [OrdersController::class, 'destroy']);
 
 Route::get('orders/{id}/edit', [OrdersController::class, 'edit']);
 
-Route::patch('orders/{id}', [OrdersController::class, 'update']);
+Route::put('orders/{id}', [OrdersController::class, 'update'])->name('orders.update');
 
 // Pesanan
 

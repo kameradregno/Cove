@@ -5,14 +5,16 @@
 @section('content')
 
     <div class="container pt-1 mt-5 rounded-2" style="background-color: white; height: 630px">
-        <div class="container mt-4 rounded-2" style="background-color: white; height: auto">
-            <div class="container mt-4 rounded-2 d-flex justify-content-between align-items-center">
-                <h5 class="">Edit Pesanan</h5>
-            </div>
 
-            <form method="post" action="{{ url("order/$order->id") }}">
-                @method('patch')
+        <div class="container mt-4 rounded-2" style="background-color: white; height: auto">
+            <form method="POST" action="{{ route('orders.update', $order->id) }}">
+                @method('put')
                 @csrf
+                <div class="container mt-4 rounded-2 d-flex justify-content-between align-items-center">
+                    <h5 class="">Edit Pesanan</h5>
+                </div>
+
+
                 <div class="container rounded-2 mt-3 d-flex justify-content-between align-items-center">
                     <div class="mb-2">
                         <label for="" class="form-label b-1">Nama Pembeli</label>
@@ -57,16 +59,20 @@
                                 <option value="TIKI">TIKI</option>
                             </select>
                         </div>
+
+                    </div>
+
+                    <div class="d-flex-justify-content-between pt-4">
+                        <button type="submit" class="btn btn-success btn-md text-center" style="width:206px"><i
+                                class="bx bx-save"></i>
+                            Simpan</button>
+                    </div>
+
+
+
+                </div>
             </form>
         </div>
-
-        <div class="d-flex-justify-content-between pt-4">
-            <button type="submit" class="btn btn-success btn-md text-center" style="width:206px"><i class="bx bx-save"></i>
-                Simpan</button>
-        </div>
-
-    </div>
-    </div>
     </div>
 
 @endsection
