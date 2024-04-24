@@ -126,6 +126,7 @@
                                 </td>
                                 <td style="background-color: #f0f0f0;"><i class="bx bx-x" style="font-size: 25px"></i></td>
                                 <td style="background-color: #f0f0f0;"><i class="bx bx-pencil" style="font-size: 25px"></i></td>
+                                <td style="background-color: #f0f0f0;"><i class="bx bx-detail" style="font-size: 25px"></i></td>
                             </tr>
                         </tbody>
                     </table>

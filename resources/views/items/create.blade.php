@@ -42,6 +42,7 @@
                                 </th>
                                 <th style="background-color: #f0f0f0"></th>
                                 <th style="background-color: #f0f0f0"></th>
+                                <th style="background-color: #f0f0f0"></th>
                             </tr>
                         </thead>
                         <tbody>
