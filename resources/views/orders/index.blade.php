@@ -46,7 +46,7 @@
                             </td>
 
                             <td>
-                                <a href="{{ url('orders/show') }}" style="text-decoration:none;">
+                                <a href="{{ url("orders/$order->id") }}" style="text-decoration:none;">
                                     <i class="bx bx-detail text-secondary" style="font-size: 25px;"></i>
                                 </a>
                             </td>

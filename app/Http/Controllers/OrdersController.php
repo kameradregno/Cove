@@ -39,13 +39,9 @@ class OrdersController extends Controller
 
     public function store(Request $request)
     {
-        Orders::create([
-            'customer_id' => $request->input('customer_id'),
-            'nama_pesanan' =>  $request->input('nama_pesanan'),
-            'metode_pembayaran' =>  $request->input('metode_pembayaran'),
-            'alamat' =>  $request->input('alamat'),
-            'jenis_pengiriman' =>  $request->input('jenis_pengiriman'),
-        ]);
+        $data = $request->all();
+
+        Orders::create($data);
 
         return redirect('orders'); 
     }
@@ -54,9 +50,12 @@ class OrdersController extends Controller
      * Display the specified resource.
      */
     
-    public function show()
+    public function show($id)
     {
-        //
+         $data = Orders::where( 'id', $id )->first();
+
+          return view('orders.show', compact('data'));
+
     }
 
     /**
@@ -76,10 +75,9 @@ class OrdersController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
         Orders::where('id', $id)->update([
-            'nama_pembeli' =>  $request->input('nama_pembeli'),
             'nama_pesanan' =>  $request->input('nama_pesanan'),
             'metode_pembayaran' =>  $request->input('metode_pembayaran'),
             'alamat' =>  $request->input('alamat'),

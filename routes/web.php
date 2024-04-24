@@ -42,7 +42,7 @@ Route::get('orders/create', [OrdersController::class, 'create']);
 
 Route::post('orders', [OrdersController::class, 'store']);
 
-Route::get('orders/show', [OrdersController::class, 'show']);
+Route::get('orders/{id}', [OrdersController::class, 'show']);
 
 Route::delete('orders/{id}', [OrdersController::class, 'destroy']);
 

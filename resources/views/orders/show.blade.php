@@ -12,8 +12,8 @@
                 <form class="d-flex pt-3 pb-2" role="search">
                     <div class="mb-2">
                         <label for="" class="form-label b-1">Nama Pembeli</label>
-                        <input class="form-control me-2 form-sm border-secondary" type="search" placeholder="Cari Customer"
-                            aria-label="Search" style="height: 30.35px" disabled />
+                        <input class="form-control me-2 form-sm border-secondary" value="{{ $data->customername->nama }}"
+                            style="height: 37.35px" disabled />
                     </div>
                 </form>
 
@@ -21,30 +21,29 @@
                     <form class="d-flex pt-3 pb-2" role="search">
                         <div class="mb-2">
                             <label for="" class="form-label mb-1">Nama Pesanan</label>
-                            <input class="form-control form-sm border-secondary" type="search" placeholder=""
-                                value="" aria-label="Search" style="height: 30.35px" disabled />
+                            <input class="form-control form-sm border-secondary" value="{{ $data->nama_pesanan }}"
+                                name="nama_pesanan" id="nama_pesanan" style="height: 37.35px" disabled />
                         </div>
                     </form>
                 </div>
 
                 <form class="d-flex pt-3 pb-2 align-items-center" role="search">
                     <div class="d-flex flex-column mb-2">
-                        <label for="" class="form-label mb-1">Transfer/COD</label>
-                        <select name="" id="" class="rounded-2" style="height: 30.35px; width: 206.67px"
-                            disabled>
-                            <option value="{{-- --}}"></option>
-                            <option value="">Transfer</option>
-                            <option value="">COD</option>
+                        <label for="" class="form-label mb-1">Metode Pembayaran</label>
+                        <select name="nama_pembayaran" id="nama_pembayaran" class="rounded-2"
+                            style="height: 37.35px; width: 206.67px" disabled>
+                            <option value="{{ $data->metode_pembayaran }}">{{ $data->metode_pembayaran }}</option>
                         </select>
                     </div>
                 </form>
             </div>
 
             <div class="container mb-2 d-flex justify-content-start align-items-center" style="margin-top: -10px">
-                <form class="d-flex pt-3 pb-2 pe-4" role="search">
+                <form class="d-flex pt-3 pb-2 pe-5" role="search">
                     <div class="d-flex flex-column mb-2">
                         <label for="" class="form-label b-1">Alamat</label>
-                        <textarea name="" id="" cols="30" rows="10" class="rounded-2" style="height: 37.35px" disabled></textarea>
+                        <textarea name="" id="" cols="30" rows="10" class="rounded-2" style="height: 37.35px"
+                            disabled>{{ $data->alamat }}</textarea>
                     </div>
                 </form>
 
@@ -52,51 +51,24 @@
                     <form class="d-flex pt-3 pb-2 justify-content-start ps-5 align-items-center" role="search">
                         <div class="d-flex flex-column mb-2">
                             <label for="" class="form-label mb-1">Jenis Pengiriman</label>
-                            <select name="courier" id="courier" class="rounded-2"
-                                style="height: 37.35px; width: 206.67px" disabled>
-
-                                <option value="jne">JNE</option>
-                                <option value="pos">POS</option>
-                                <option value="tiki">TIKI</option>
-
+                            <select name="courier" id="courier" class="rounded-2" style="height: 37.35px; width: 206.67px"
+                                disabled>
+                                <option value="{{ $data->jenis_pengiriman }}">{{ $data->jenis_pengiriman }}</option>
                             </select>
                         </div>
                     </form>
                 </div>
-{{-- 
-                <div class="d-flex justify-content-between">
-                    <div class="d-flex flex-column mb-2">
-                        <label for="" class="form-label mb-1">Asal Kota</label>
-                        <select name="origin" id="origin" class="rounded-2 form-control" required
-                            style="width: 206.67px">
-                            @foreach ($cities as $city)
-                                <option value="{{ $city['city_id'] }}">{{ $city['city_name'] }}</option>
-                            @endforeach
 
-                        </select>
-                    </div>
-                </div>
-
-                <div class="d-flex flex-column mb-2">
-                    <label for="" class="form-label mb-1">Kota Tujuan</label>
-                    <select name="destination" id="destination" class="rounded-2 form-control" required
-                        style="width: 206.67px">
-                        @foreach ($cities as $city)
-                            <option value="{{ $city['city_id'] }}">{{ $city['city_name'] }}</option>
-                        @endforeach
-
-                    </select>
-                </div> --}}
             </div>
 
             <div class="container rounded-2" style="background-color: #f0f0f0">
                 <div class="container mt-4 rounded-2 d-flex justify-content-between align-items-center">
-                    <h5 class="pt-3 fw-bold">Pesanan</h5>
+                    <h5 class="pt-3 fw-bold">Barang Pesanan</h5>
 
                     <a href="{{ url('orders/create') }}"
                         class="btn border-primary btn-sm d-flex align-items-center text-primary mb-3 mt-3">
                         <i class="bx bx-receipt fs-5 me-2 text-primary"></i>
-                        Tambah Pesanan
+                        Tambah Barang
                     </a>
                 </div>
 
@@ -438,9 +410,9 @@
 
             <div class="mt-3 d-flex justify-content-end">
 
-                <button type="submit" class="btn btn-primary ms-1 d-flex align-items-center">
+                <a href="{{ url('orders') }}" class="btn btn-primary ms-1 d-flex align-items-center">
                     <i class="bx bx-check" style="font-size: 25px;"></i>
-                </button>
+                </a>
             </div>
         </div>
     </div>
