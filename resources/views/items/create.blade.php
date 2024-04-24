@@ -53,7 +53,7 @@
                                                                                     width: 155px;
                                                                                     background-color: #f0f0f0;
                                                                                 "
-                                        name="" id="" aria-describedby="helpId" placeholder="" />
+                                        name="nama_sprei" id="nama_sprei" aria-describedby="helpId" placeholder="" />
                                 </td>
                                 <td style="background-color: #f0f0f0">
                                     <input type="text" class="form-control rounded-2 border-secondary"
@@ -61,15 +61,15 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                        name="" id="" aria-describedby="helpId" placeholder="" />
+                                        name="harga_sprei" id="harga_sprei" aria-describedby="helpId" placeholder="" />
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    <textarea name="" class="rounded-2"
+                                    <textarea name="catatan" class="rounded-2"
                                         style="
                                             height: 37.33px;
                                             background-color: #f0f0f0;
                                         "
-                                        id="" cols="30" rows="10"></textarea>
+                                        id="catatan" cols="30" rows="10"></textarea>
                                 </td>
                                 <td style="background-color: #f0f0f0;"></td>
                                 <td style="background-color: #f0f0f0;"></td>
@@ -99,15 +99,15 @@
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <select name=""
+                                    <select name="bahan_sprei"
                                         style="
                                             height: 37.33px;
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                        class="rounded-2" id="">
-                                        <option value="">Katun</option>
-                                        <option value="">Wol</option>
+                                        class="rounded-2" id="bahan_sprei">
+                                        <option value="Katun">Katun</option>
+                                        <option value="Wol">Wol</option>
                                     </select>
                                 </td>
                                 <td style="background-color: #f0f0f0">
@@ -116,7 +116,8 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                        name="" id="" aria-describedby="helpId" placeholder="Cari Ukuran" />
+                                        name="ukuran_sprei" id="ukuran_sprei" aria-describedby="helpId"
+                                        placeholder="Cari Ukuran" />
                                 </td>
                                 <td style="background-color: #f0f0f0"></td>
                                 <td style="background-color: #f0f0f0"></td>
@@ -143,7 +144,7 @@
                                         background-color: #f0f0f0;
                                         font-weight: 400;
                                     ">
-                                    Jenis Bantal
+                                    Bahan Bantal
                                 </th>
                                 <th scope="col"
                                     style="
@@ -159,15 +160,15 @@
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <select name=""
+                                    <select name="bahan_bantal"
                                         style="
                                             height: 37.33px;
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                        class="rounded-2" id="">
-                                        <option value="">Katun</option>
-                                        <option value="">Wol</option>
+                                        class="rounded-2" id="bahan_bantal">
+                                        <option value="Katun">Katun</option>
+                                        <option value="Wol">Wol</option>
                                     </select>
                                 </td>
                                 <td style="background-color: #f0f0f0">
@@ -176,7 +177,7 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                        name="" id="" aria-describedby="helpId" placeholder="" />
+                                        name="jenis_bantal" id="jenis_bantal" aria-describedby="helpId" placeholder="" />
                                 </td>
                                 <td style="background-color: #f0f0f0">
                                     <input type="text" class="form-control rounded-2 border-secondary"
@@ -184,7 +185,8 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                        name="" id="" aria-describedby="helpId" placeholder="" />
+                                        name="jumlah_bantal" id="jumlah_bantal" aria-describedby="helpId"
+                                        placeholder="" />
                                 </td>
                                 <td style="background-color: #f0f0f0">
                                 </td>
@@ -228,15 +230,15 @@
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <select name=""
+                                    <select name="bahan_bedcover"
                                         style="
                                             height: 37.33px;
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                        class="rounded-2" id="">
-                                        <option value="">Katun</option>
-                                        <option value="">Wol</option>
+                                        class="rounded-2" id="bahan_bedcover">
+                                        <option value="Katun">Katun</option>
+                                        <option value="Wol">Wol</option>
                                     </select>
                                 </td>
                                 <td style="background-color: #f0f0f0">
@@ -245,7 +247,8 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                        name="" id="" aria-describedby="helpId" placeholder="" />
+                                        name="jenis_bedcover" id="jenis_bedcover" aria-describedby="helpId"
+                                        placeholder="" />
                                 </td>
                                 <td style="background-color: #f0f0f0">
                                     <input type="text" class="form-control rounded-2 border-secondary"
@@ -253,7 +256,8 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                        name="" id="" aria-describedby="helpId" placeholder="" />
+                                        name="jumlah_bedcover" id="jumlah_bedcover" aria-describedby="helpId"
+                                        placeholder="" />
                                 </td>
                                 <td style="background-color: #f0f0f0">
                                 </td>
@@ -297,15 +301,15 @@
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <select name=""
+                                    <select name="bahan_inner"
                                         style="
                                             height: 37.33px;
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                        class="rounded-2" id="">
-                                        <option value="">Katun</option>
-                                        <option value="">Wol</option>
+                                        class="rounded-2" id="bahan_inner">
+                                        <option value="Katun">Katun</option>
+                                        <option value="Wol">Wol</option>
                                     </select>
                                 </td>
                                 <td style="background-color: #f0f0f0">
@@ -314,7 +318,7 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                        name="" id="" aria-describedby="helpId" placeholder="" />
+                                        name="jenis_inner" id="jenis_inner" aria-describedby="helpId" placeholder="" />
                                 </td>
                                 <td style="background-color: #f0f0f0">
                                     <input type="text" class="form-control rounded-2 border-secondary"
@@ -322,7 +326,8 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                        name="" id="" aria-describedby="helpId" placeholder="" />
+                                        name="jumlah_inner" id="jumlah_inner" aria-describedby="helpId"
+                                        placeholder="" />
                                 </td>
                                 <td style="background-color: #f0f0f0">
                                 </td>
@@ -366,15 +371,15 @@
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <select name=""
+                                    <select name="bahan_quilt"
                                         style="
                                             height: 37.33px;
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                        class="rounded-2" id="">
-                                        <option value="">Katun</option>
-                                        <option value="">Wol</option>
+                                        class="rounded-2" id="bahan_quilt">
+                                        <option value="Katun">Katun</option>
+                                        <option value="Wol">Wol</option>
                                     </select>
                                 </td>
                                 <td style="background-color: #f0f0f0">
@@ -383,7 +388,7 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                        name="" id="" aria-describedby="helpId" placeholder="" />
+                                        name="jenis_quilt" id="jenis_quilt" aria-describedby="helpId" placeholder="" />
                                 </td>
                                 <td style="background-color: #f0f0f0">
                                     <input type="text" class="form-control rounded-2 border-secondary"
@@ -391,7 +396,8 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                        name="" id="" aria-describedby="helpId" placeholder="" />
+                                        name="jumlah_quilt" id="jumlah_quilt" aria-describedby="helpId"
+                                        placeholder="" />
                                 </td>
                                 <td style="background-color: #f0f0f0">
                                 </td>
@@ -426,7 +432,7 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                        name="" id="" aria-describedby="helpId" placeholder="" />
+                                        name="jumlah_box" id="jumlah_box" aria-describedby="helpId" placeholder="" />
                                 </td>
                                 <td style="background-color: #f0f0f0">
                                 </td>
@@ -456,15 +462,15 @@
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <select name=""
+                                    <select name="jenis_karet"
                                         style="
                                             height: 37.33px;
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                        class="rounded-2" id="">
-                                        <option value="">Keliling</option>
-                                        <option value="">Anti Geser</option>
+                                        class="rounded-2" id="jenis_karet">
+                                        <option value="Keliling">Keliling</option>
+                                        <option value="Anti Geser">Anti Geser</option>
                                     </select>
                                 </td>
                                 <td style="background-color: #f0f0f0">

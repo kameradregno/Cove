@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Customers;
+use App\Models\Items;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -29,10 +30,14 @@ class Orders extends Model
         return $this->belongsTo(Customers::class, 'customer_id', 'id');
     }
 
-     public function scopeSelectedById($query, $id) {
+    public function items(): HasMany
+    {
+        return $this->hasMany(Items::class, 'order_id', 'id');
+    }
+
+    public function scopeSelectedById($query, $id) {
 
         return $query->where('id', $id);
-
     }
     
 }

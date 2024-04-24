@@ -52,9 +52,9 @@ class OrdersController extends Controller
     
     public function show($id)
     {
-         $data = Orders::where( 'id', $id )->first();
+        $data = Orders::where( 'id', $id )->first();
 
-          return view('orders.show', compact('data'));
+        return view('orders.show', compact('data'));
 
     }
 

@@ -5,14 +5,14 @@
 @section('content')
 
     <div class="container mt-4 mb-4 rounded-2" style="background-color: white; height: 600px">
-        
+
         <div class="container mt-4 rounded-2" style="background-color: white; height: auto">
             <div class="container rounded-2 d-flex justify-content-between align-items-center">
                 <form class="d-flex pt-3 pb-2" role="search">
                     <div class="mb-2">
                         <label for="" class="form-label b-1">Nama Pembeli</label>
-                        <input class="form-control me-2 form-sm border-secondary"
-                            value="{{ $data->customername->nama }}" style="height: 37.35px" disabled />
+                        <input class="form-control me-2 form-sm border-secondary" value="{{ $data->customername->nama }}"
+                            style="height: 37.35px" disabled />
                     </div>
                 </form>
 
@@ -20,8 +20,8 @@
                     <form class="d-flex pt-3 pb-2" role="search">
                         <div class="mb-2">
                             <label for="" class="form-label mb-1">Nama Pesanan</label>
-                            <input class="form-control form-sm border-secondary"
-                                value="{{ $data->nama_pesanan }}" name="nama_pesanan" id="nama_pesanan" style="height: 37.35px" disabled />
+                            <input class="form-control form-sm border-secondary" value="{{ $data->nama_pesanan }}"
+                                name="nama_pesanan" id="nama_pesanan" style="height: 37.35px" disabled />
                         </div>
                     </form>
                 </div>
@@ -29,8 +29,8 @@
                 <form class="d-flex pt-3 pb-2 align-items-center" role="search">
                     <div class="d-flex flex-column mb-2">
                         <label for="" class="form-label mb-1">Metode Pembayaran</label>
-                        <select name="nama_pembayaran" id="nama_pembayaran" class="rounded-2" style="height: 37.35px; width: 206.67px"
-                            disabled>
+                        <select name="nama_pembayaran" id="nama_pembayaran" class="rounded-2"
+                            style="height: 37.35px; width: 206.67px" disabled>
                             <option value="{{ $data->metode_pembayaran }}">{{ $data->metode_pembayaran }}</option>
                         </select>
                     </div>
@@ -41,7 +41,8 @@
                 <form class="d-flex pt-3 pb-2 pe-5" role="search">
                     <div class="d-flex flex-column mb-2">
                         <label for="" class="form-label b-1">Alamat</label>
-                        <textarea name="" id="" cols="30" rows="10" class="rounded-2" style="height: 37.35px" disabled>{{ $data->alamat }}</textarea>
+                        <textarea name="" id="" cols="30" rows="10" class="rounded-2" style="height: 37.35px"
+                            disabled>{{ $data->alamat }}</textarea>
                     </div>
                 </form>
 
@@ -49,8 +50,8 @@
                     <form class="d-flex pt-3 pb-2 justify-content-start ps-5 align-items-center" role="search">
                         <div class="d-flex flex-column mb-2">
                             <label for="" class="form-label mb-1">Jenis Pengiriman</label>
-                            <select name="courier" id="courier" class="rounded-2"
-                                style="height: 37.35px; width: 206.67px" disabled>
+                            <select name="courier" id="courier" class="rounded-2" style="height: 37.35px; width: 206.67px"
+                                disabled>
                                 <option value="{{ $data->jenis_pengiriman }}">{{ $data->jenis_pengiriman }}</option>
                             </select>
                         </div>
@@ -111,23 +112,30 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="">
-                                <td style="background-color: #f0f0f0">
-                                    <p>King Koil</p>
-                                </td>
-                                <td style="background-color: #f0f0f0">
-                                    Rp. 1.000.000
-                                </td>
-                                <td style="background-color: #f0f0f0">
-                                    Sprei Tempe
-                                </td>
-                                <td style="background-color: #f0f0f0">
-                                    3x3
-                                </td>
-                                <td style="background-color: #f0f0f0;"><i class="bx bx-x" style="font-size: 25px"></i></td>
-                                <td style="background-color: #f0f0f0;"><i class="bx bx-pencil" style="font-size: 25px"></i></td>
-                                <td style="background-color: #f0f0f0;"><i class="bx bx-detail" style="font-size: 25px"></i></td>
-                            </tr>
+                            @foreach ($items as $item)
+                                <tr class="">
+                                    <td style="background-color: #f0f0f0">
+                                        <p>{{ $item->nama_sprei }}</p>
+                                    </td>
+                                    <td style="background-color: #f0f0f0">
+                                        {{ $item->harga_sprei }}
+                                    </td>
+                                    <td style="background-color: #f0f0f0">
+                                        {{ $item->jenis_sprei }}
+                                    </td>
+                                    <td style="background-color: #f0f0f0">
+                                        {{ $item->ukuran_sprei }}
+                                    </td>
+                                    <td style="background-color: #f0f0f0;"><i class="bx bx-x" style="font-size: 25px"></i>
+                                    </td>
+                                    <td style="background-color: #f0f0f0;"><i class="bx bx-pencil"
+                                            style="font-size: 25px"></i>
+                                    </td>
+                                    <td style="background-color: #f0f0f0;"><i class="bx bx-detail"
+                                            style="font-size: 25px"></i>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
