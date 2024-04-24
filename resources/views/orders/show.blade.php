@@ -29,10 +29,10 @@
 
                 <form class="d-flex pt-3 pb-2 align-items-center" role="search">
                     <div class="d-flex flex-column mb-2">
-                        <label for="" class="form-label mb-1">Transfer/COD</label>
+                        <label for="" class="form-label mb-1">Metode Pembayaran</label>
                         <select name="nama_pembayaran" id="nama_pembayaran" class="rounded-2" style="height: 30.35px; width: 206.67px"
                             disabled>
-                            <option value="{{ $data->metode_pembayaran }}"></option>
+                            <option value="{{ $data->metode_pembayaran }}">{{ $data->metode_pembayaran }}</option>
                         </select>
                     </div>
                 </form>
