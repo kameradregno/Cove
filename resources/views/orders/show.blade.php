@@ -13,7 +13,7 @@
                     <div class="mb-2">
                         <label for="" class="form-label b-1">Nama Pembeli</label>
                         <input class="form-control me-2 form-sm border-secondary"
-                            value="{{ $data->customername->nama }}" style="height: 30.35px" disabled />
+                            value="{{ $data->customername->nama }}" style="height: 37.35px" disabled />
                     </div>
                 </form>
 
@@ -22,7 +22,7 @@
                         <div class="mb-2">
                             <label for="" class="form-label mb-1">Nama Pesanan</label>
                             <input class="form-control form-sm border-secondary"
-                                value="{{ $data->nama_pesanan }}" name="nama_pesanan" id="nama_pesanan" style="height: 30.35px" disabled />
+                                value="{{ $data->nama_pesanan }}" name="nama_pesanan" id="nama_pesanan" style="height: 37.35px" disabled />
                         </div>
                     </form>
                 </div>
@@ -30,7 +30,7 @@
                 <form class="d-flex pt-3 pb-2 align-items-center" role="search">
                     <div class="d-flex flex-column mb-2">
                         <label for="" class="form-label mb-1">Metode Pembayaran</label>
-                        <select name="nama_pembayaran" id="nama_pembayaran" class="rounded-2" style="height: 30.35px; width: 206.67px"
+                        <select name="nama_pembayaran" id="nama_pembayaran" class="rounded-2" style="height: 37.35px; width: 206.67px"
                             disabled>
                             <option value="{{ $data->metode_pembayaran }}">{{ $data->metode_pembayaran }}</option>
                         </select>
