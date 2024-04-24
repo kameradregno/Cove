@@ -12,8 +12,13 @@
                 <form class="d-flex pt-3 pb-2" role="search">
                     <div class="mb-2">
                         <label for="" class="form-label b-1">Nama Pembeli</label>
+<<<<<<< HEAD
                         <input class="form-control me-2 form-sm border-secondary" value="{{ $data->customername->nama }}"
                             style="height: 37.35px" disabled />
+=======
+                        <input class="form-control me-2 form-sm border-secondary"
+                            value="{{ $data->customername->nama }}" style="height: 30.35px" disabled />
+>>>>>>> 04cc412ca215075c1eb91cdfea04baa51c8d5b69
                     </div>
                 </form>
 
@@ -21,18 +26,30 @@
                     <form class="d-flex pt-3 pb-2" role="search">
                         <div class="mb-2">
                             <label for="" class="form-label mb-1">Nama Pesanan</label>
+<<<<<<< HEAD
                             <input class="form-control form-sm border-secondary" value="{{ $data->nama_pesanan }}"
                                 name="nama_pesanan" id="nama_pesanan" style="height: 37.35px" disabled />
+=======
+                            <input class="form-control form-sm border-secondary"
+                                value="{{ $data->nama_pesanan }}" name="nama_pesanan" id="nama_pesanan" style="height: 30.35px" disabled />
+>>>>>>> 04cc412ca215075c1eb91cdfea04baa51c8d5b69
                         </div>
                     </form>
                 </div>
 
                 <form class="d-flex pt-3 pb-2 align-items-center" role="search">
                     <div class="d-flex flex-column mb-2">
+<<<<<<< HEAD
                         <label for="" class="form-label mb-1">Metode Pembayaran</label>
                         <select name="nama_pembayaran" id="nama_pembayaran" class="rounded-2"
                             style="height: 37.35px; width: 206.67px" disabled>
                             <option value="{{ $data->metode_pembayaran }}">{{ $data->metode_pembayaran }}</option>
+=======
+                        <label for="" class="form-label mb-1">Transfer/COD</label>
+                        <select name="nama_pembayaran" id="nama_pembayaran" class="rounded-2" style="height: 30.35px; width: 206.67px"
+                            disabled>
+                            <option value="{{ $data->metode_pembayaran }}"></option>
+>>>>>>> 04cc412ca215075c1eb91cdfea04baa51c8d5b69
                         </select>
                     </div>
                 </form>
@@ -42,8 +59,12 @@
                 <form class="d-flex pt-3 pb-2 pe-5" role="search">
                     <div class="d-flex flex-column mb-2">
                         <label for="" class="form-label b-1">Alamat</label>
+<<<<<<< HEAD
                         <textarea name="" id="" cols="30" rows="10" class="rounded-2" style="height: 37.35px"
                             disabled>{{ $data->alamat }}</textarea>
+=======
+                        <textarea name="" id="" cols="30" rows="10" class="rounded-2" style="height: 37.35px" disabled>{{ $data->alamat }}</textarea>
+>>>>>>> 04cc412ca215075c1eb91cdfea04baa51c8d5b69
                     </div>
                 </form>
 
@@ -51,8 +72,13 @@
                     <form class="d-flex pt-3 pb-2 justify-content-start ps-5 align-items-center" role="search">
                         <div class="d-flex flex-column mb-2">
                             <label for="" class="form-label mb-1">Jenis Pengiriman</label>
+<<<<<<< HEAD
                             <select name="courier" id="courier" class="rounded-2" style="height: 37.35px; width: 206.67px"
                                 disabled>
+=======
+                            <select name="courier" id="courier" class="rounded-2"
+                                style="height: 37.35px; width: 206.67px" disabled>
+>>>>>>> 04cc412ca215075c1eb91cdfea04baa51c8d5b69
                                 <option value="{{ $data->jenis_pengiriman }}">{{ $data->jenis_pengiriman }}</option>
                             </select>
                         </div>

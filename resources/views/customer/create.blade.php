@@ -27,18 +27,18 @@
                         <tr class="">
                             <td>
                                 <input type="text" class="form-control rounded-2" style="width: 155px;" name="nama"
-                                    id="nama" aria-describedby="helpId" placeholder="">
+                                    id="nama" aria-describedby="helpId" placeholder="" required>
                             </td>
                             <td>
                                 <input type="text" class="form-control rounded-2" style="width: 155px;" name="telp"
-                                    id="telp" aria-describedby="helpId" placeholder="">
+                                    id="telp" aria-describedby="helpId" placeholder="" required>
                             </td>
                             <td>
                                 <input type="text" class="form-control rounded-2" style="width: 155px;" name="alamat"
-                                    id="alamat" aria-describedby="helpId" placeholder="">
+                                    id="alamat" aria-describedby="helpId" placeholder="" required>
                             </td>
                             <td>
-                                    <select name="type" id="type" class="rounded-2" style="height: 37.33px; width: 155px">
+                                    <select name="type" id="type" class="rounded-2" style="height: 37.33px; width: 155px" required>
                                         <option value="Reseller">Reseller</option>
                                         <option value="RO">RO</option>
                                         <option value="New">New</option>
