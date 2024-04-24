@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="container pt-1 mt-5 rounded-2" style="background-color: white; height: 630px">
+    <div class="container pt-1 rounded-2" style="background-color: white; height: 310px; margin-top:3rem">
 
         <div class="container mt-4 rounded-2" style="background-color: white; height: auto">
             <form method="POST" action="{{ route('orders.update', $order->id) }}">
