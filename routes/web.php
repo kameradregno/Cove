@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\OrdersController;
+use App\Http\Controllers\ItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,7 +51,11 @@ Route::get('orders/{id}/edit', [OrdersController::class, 'edit']);
 
 Route::put('orders/{id}', [OrdersController::class, 'update'])->name('orders.update');
 
-// Pesanan
+// Item
+
+Route::get('items/create', [ItemController::class, 'create']);
+
+// Dashboard
 
 Route::get('dashboard', [DashboardController::class, 'index']);
 

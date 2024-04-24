@@ -5,9 +5,8 @@
 @section('content')
 
     <div class="container mt-4 mb-4 rounded-2" style="background-color: white; height: 600px">
+        
         <div class="container mt-4 rounded-2" style="background-color: white; height: auto">
-
-
             <div class="container rounded-2 d-flex justify-content-between align-items-center">
                 <form class="d-flex pt-3 pb-2" role="search">
                     <div class="mb-2">
@@ -64,7 +63,7 @@
                 <div class="container mt-4 rounded-2 d-flex justify-content-between align-items-center">
                     <h5 class="pt-3 fw-bold">Barang Pesanan</h5>
 
-                    <a href="{{ url('orders/create') }}"
+                    <a href="{{ url('items/create') }}"
                         class="btn border-primary btn-sm d-flex align-items-center text-primary mb-3 mt-3">
                         <i class="bx bx-receipt fs-5 me-2 text-primary"></i>
                         Tambah Barang
@@ -72,6 +71,67 @@
                 </div>
 
                 <div class="table-responsive-sm pb-5 pt-2" style="overflow-y: scroll; height: 255px">
+                    <table class="table">
+                        <thead class="">
+                            <tr>
+                                <th scope="col"
+                                    style="
+                                            background-color: #f0f0f0;
+                                            font-weight: 400;
+                                        "
+                                    class="fw-bold">
+                                    Nama Sprei
+                                </th>
+                                <th scope="col"
+                                    style="
+                                            background-color: #f0f0f0;
+                                            font-weight: 400;
+                                        "
+                                    class="fw-bold">
+                                    Harga
+                                </th>
+                                <th scope="col"
+                                    style="
+                                            background-color: #f0f0f0;
+                                            font-weight: 400;
+                                        "
+                                    class="fw-bold">
+                                    Jenis
+                                </th>
+                                <th scope="col"
+                                    style="
+                                            background-color: #f0f0f0;
+                                            font-weight: 400;
+                                        "
+                                    class="fw-bold">
+                                    Ukuran
+                                </th>
+                                <th style="background-color: #f0f0f0"></th>
+                                <th style="background-color: #f0f0f0"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="">
+                                <td style="background-color: #f0f0f0">
+                                    <p>King Koil</p>
+                                </td>
+                                <td style="background-color: #f0f0f0">
+                                    Rp. 1.000.000
+                                </td>
+                                <td style="background-color: #f0f0f0">
+                                    Sprei Tempe
+                                </td>
+                                <td style="background-color: #f0f0f0">
+                                    3x3
+                                </td>
+                                <td style="background-color: #f0f0f0;"><i class="bx bx-x" style="font-size: 25px"></i></td>
+                                <td style="background-color: #f0f0f0;"><i class="bx bx-pencil" style="font-size: 25px"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                {{-- <div class="table-responsive-sm pb-5 pt-2" style="overflow-y: scroll; height: 255px">
                     <table class="table">
                         <thead class="border-none">
                             <div class="container">
@@ -404,7 +464,7 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                </div> --}}
             </div>
 
             <div class="mt-3 d-flex justify-content-end">
