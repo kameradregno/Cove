@@ -124,7 +124,7 @@
                                         {{ $item->bahan_sprei }}
                                     </td>
                                     <td style="background-color: #f0f0f0">
-                                        {{ $item->Ukuran_sprei }}
+                                        {{ $item->ukuran_sprei }}
                                     </td>
                                     <td style="background-color: #f0f0f0;"><i class="bx bx-x" style="font-size: 25px"></i>
                                     </td>
