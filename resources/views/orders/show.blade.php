@@ -115,16 +115,16 @@
                             @foreach ($items as $item)
                                 <tr class="">
                                     <td style="background-color: #f0f0f0">
-                                        <p>{{ $item->nama_sprei }}</p>
+                                        <p> {{ $item->nama_sprei }} </p>
                                     </td>
                                     <td style="background-color: #f0f0f0">
                                         {{ $item->harga_sprei }}
                                     </td>
                                     <td style="background-color: #f0f0f0">
-                                        {{ $item->jenis_sprei }}
+                                        {{ $item->bahan_sprei }}
                                     </td>
                                     <td style="background-color: #f0f0f0">
-                                        {{ $item->ukuran_sprei }}
+                                        {{ $item->Ukuran_sprei }}
                                     </td>
                                     <td style="background-color: #f0f0f0;"><i class="bx bx-x" style="font-size: 25px"></i>
                                     </td>

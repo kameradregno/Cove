@@ -29,4 +29,6 @@ class Items extends Model
         return $query->where('id', $id);
 
     }
+
+    
 }

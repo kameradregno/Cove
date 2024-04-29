@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Items;
 use App\Models\Orders;
+use Illuminate\Support\Str;
 
 class ItemController extends Controller
 {
@@ -16,6 +17,7 @@ class ItemController extends Controller
         $items = Items::all();
         
         return view('orders.show', ['items' => $items]);
+        
     }
 
     /**
@@ -23,8 +25,7 @@ class ItemController extends Controller
      */
     public function create()
     {
-        // $data['orders'] = Orders::all();
-        // return view('items.create', $data);
+       return view('items.create');
     }
 
     /**
@@ -32,11 +33,7 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        // $data = $request->all();
-
-        // Items::create($data);
-
-        // return redirect('orders'); 
+        //
     }
 
     /**
@@ -44,10 +41,7 @@ class ItemController extends Controller
      */
     public function show(string $id)
     {
-        // $data = Items::where( 'id', $id )->first();
-
-        // return view('items.show', compact('data'));
-        
+       //
     }
 
     /**
@@ -71,6 +65,8 @@ class ItemController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Items::SelectedById($id)->delete();
+        return redirect('orders');
     }
+
 }
