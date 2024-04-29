@@ -54,7 +54,7 @@ Route::put('orders/{id}', [OrdersController::class, 'update'])->name('orders.upd
 // Item
 
 Route::get('items/create', [ItemController::class, 'create']);
-Route::post('items', [ItemController::class, 'items'])->name('items'); 
+Route::post('items', [ItemController::class, 'store']); 
 
 // Dashboard
 
