@@ -53,13 +53,13 @@ Route::put('orders/{id}', [OrdersController::class, 'update'])->name('orders.upd
 
 // Item
 
-Route::get('items', [ItemController::class, 'index']);
+Route::get('items/{id}', [ItemController::class, 'index'])->name('items.index');
 
-Route::get('items/create', [ItemController::class, 'create']);
+Route::get('items/create/{id}', [ItemController::class, 'create']);
 
 Route::post('items', [ItemController::class, 'store']);
 
-Route::get('items/{id}', [ItemController::class, 'show']);
+// Route::get('items/{id}', [ItemController::class, 'show']);
 
 Route::delete('items/{id}', [ItemController::class, 'destroy']);
 

@@ -48,7 +48,7 @@
                                 <th style="background-color: #f0f0f0"></th>
                             </tr>
                         </thead>
-                        <tbody>
+                        {{-- <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
                                     <p>{{ $data->nama_sprei }}</p>
@@ -62,7 +62,7 @@
                                 <td style="background-color: #f0f0f0;"></td>
                                 <td style="background-color: #f0f0f0;"></td>
                             </tr>
-                        </tbody>
+                        </tbody> --}}
                         <!-- bahan dll -->
                         <thead class="border-none">
                             <tr>
@@ -86,7 +86,7 @@
                                 <th style="background-color: #f0f0f0"></th>
                             </tr>
                         </thead>
-                        <tbody>
+                        {{-- <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
                                     {{ $data->bahan_sprei }}
@@ -98,7 +98,7 @@
                                 <td style="background-color: #f0f0f0"></td>
                                 <td style="background-color: #f0f0f0"></td>
                             </tr>
-                        </tbody>
+                        </tbody> --}}
                     </table>
                     <!-- + bantal -->
                     <div class="container">
@@ -135,7 +135,7 @@
                                 <th style="background-color: #f0f0f0"></th>
                             </tr>
                         </thead>
-                        <tbody>
+                        {{-- <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
                                     {{ $data->bahan_bantal }}
@@ -149,7 +149,7 @@
                                 <td style="background-color: #f0f0f0;"></td>
                                 <td style="background-color: #f0f0f0;"></td>
                             </tr>
-                        </tbody>
+                        </tbody> --}}
                     </table>
                     <!-- + bc -->
                     <div class="container">
@@ -187,7 +187,7 @@
                                 <th style="background-color: #f0f0f0"></th>
                             </tr>
                         </thead>
-                        <tbody>
+                        {{-- <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
                                     <p>{{ $data->bahan_bedcover }}</p>
@@ -201,7 +201,7 @@
                                 <td style="background-color: #f0f0f0;"></td>
                                 <td style="background-color: #f0f0f0;"></td>
                             </tr>
-                        </tbody>
+                        </tbody> --}}
                     </table>
                     <!-- + inner cover -->
                     <div class="container">
@@ -237,7 +237,7 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody>
+                        {{-- <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
                                     <p>{{ $data->bahan_inner }}</p>
@@ -249,7 +249,7 @@
                                     <p>{{ $data->bahan_inner }}</p>
                                 </td>
                             </tr>
-                        </tbody>
+                        </tbody> --}}
                     </table>
                     <!-- + quilt cover -->
                     <div class="container">
@@ -285,7 +285,7 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody>
+                        {{-- <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
                                     <p>{{ $data->bahan_quilt }}</p>
@@ -297,7 +297,7 @@
                                     <p>{{ $data->bahan_quilt }}</p>
                                 </td>
                             </tr>
-                        </tbody>
+                        </tbody> --}}
                     </table>
                     <!-- + box sprei -->
                     <div class="container">
@@ -317,13 +317,13 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody>
+                        {{-- <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
                                     <p>{{ $data->jumlah_box }}</p>
                                 </td>
                             </tr>
-                        </tbody>
+                        </tbody> --}}
                     </table>
                     <!-- + karet -->
                     <div class="container">
@@ -343,20 +343,20 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody>
+                        {{-- <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
                                     <p>{{ $data->jenis_karet }}</p>
                                 </td>
                             </tr>
-                        </tbody>
+                        </tbody> --}}x`
                     </table>
                 </div>
             </div>
 
 
             <div class="mt-3 d-flex justify-content-end">
-                <a class="btn btn-primary d-flex align-items-center" href="{{ url('orders') }}">
+                <a class="btn btn-primary d-flex align-items-center" href="{{ url('orders ') }}">
                     <i class="bx bx-check" style="font-size: 25px;"></i>
                 </a>
             </div>

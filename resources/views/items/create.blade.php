@@ -50,7 +50,12 @@
                             <tbody>
                                 <tr class="border-secondary">
                                     <td style="background-color: #f0f0f0">
-                                        {{-- <input type="hidden" name="order_id" value="{{ $item->id }}"> --}}
+                                        {{-- <select name="order_id" id="nomer_pesanan" class="form-control"
+                                            style="width: 206.67px">
+                                            @foreach ($items as $item)
+                                                <option value="{{ $item['id'] }}">{{ $item['nama_pesanan'] }}</option>
+                                            @endforeach
+                                        </select> --}}
                                         <input type="text" class="form-control rounded-2 border-secondary"
                                             style="
                                                                                     width: 155px;
@@ -492,7 +497,7 @@
 
 
                 <div class="mt-3 d-flex justify-content-end">
-                    <a class="btn btn-danger d-flex align-items-center" href="{{ url('orders') }}">
+                    <a class="btn btn-danger d-flex align-items-center" href="{{ url('items') }}">
                         <i class="bx bx-x" style="font-size: 25px;"></i>
                     </a>
                     <button type="submit" class="btn btn-success ms-1 d-flex align-items-center">

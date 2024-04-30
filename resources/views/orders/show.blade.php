@@ -41,8 +41,8 @@
                 <form class="d-flex pt-3 pb-2" role="search">
                     <div class="d-flex flex-column mb-2">
                         <label for="" class="form-label b-1">Alamat</label>
-                        <textarea name="" id="" cols="30" rows="10" class="rounded-2" style="height: 37.35px; width: 206.66px"
-                            disabled>{{ $data->alamat }}</textarea>
+                        <textarea name="" id="" cols="30" rows="10" class="rounded-2"
+                            style="height: 37.35px; width: 206.66px" disabled>{{ $data->alamat }}</textarea>
                     </div>
                 </form>
 
@@ -59,8 +59,8 @@
                 </div>
 
                 <div class="d-flex-justify-content-between pt-4">
-                    <a href="{{ url('items') }}" class="btn btn-primary btn-md text-center" style="width:206px"><i
-                            class="bx bx-package"></i>
+                    <a href="{{ url("items/$data->customer_id") }}" class="btn btn-primary btn-md text-center"
+                        style="width:206px"><i class="bx bx-package"></i>
                         Ke Item Pesanan</a>
                 </div>
 

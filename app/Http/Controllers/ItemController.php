@@ -13,8 +13,9 @@ class ItemController extends Controller
     public function index()
     {
         $items = Items::all();
-
+        dd($items);
         return view('items.index', ['items' => $items]);
+
     }
 
     /**
@@ -51,7 +52,7 @@ class ItemController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
         $chosen_item = Items::where('id', $id)->first();
 
@@ -65,7 +66,7 @@ class ItemController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
         Items::where('id', $id)->update([
             'nama_sprei' =>  $request->input('nama_sprei'),

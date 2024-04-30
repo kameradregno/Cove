@@ -17,13 +17,13 @@
 
                     <div class="d-flex flex-column mb-2">
                         <label for="" class="form-label b-1">Nama Pembeli</label>
+
                         <select name="customer_id" id="nama_pembeli" class="form-control" style="width: 206.67px">
                             @foreach ($customers as $customer)
                                 <option value="{{ $customer['id'] }}">{{ $customer['nama'] }}</option>
                             @endforeach
                         </select>
                     </div>
-
 
                     <div class="d-flex justify-content-between">
 
