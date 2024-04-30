@@ -66,10 +66,8 @@
                         <button type="submit" class="btn btn-success btn-md text-center" style="width:206px"><i
                                 class="bx bx-save"></i>
                             Simpan</button>
+                            
                     </div>
-
-
-
                 </div>
             </form>
         </div>
