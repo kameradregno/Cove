@@ -53,9 +53,8 @@ class OrdersController extends Controller
     public function show($id)
     {
         $data = Orders::where( 'id', $id )->first();
-        $items = $data->items()->get();
 
-        return view('orders.show', compact('data', 'items'));
+        return view('orders.show', compact('data'));
 
     }
 

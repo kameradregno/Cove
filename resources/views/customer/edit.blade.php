@@ -13,7 +13,6 @@
                 <table class="table table-bg-white">
                     <thead>
                         <tr>
-                            <th scope="col">Tanggal</th>
                             <th scope="col">Nama</th>
                             <th scope="col">No HP</th>
                             <th scope="col">Alamat</th>
@@ -32,7 +31,7 @@
                                         placeholder="">
                                 </td>
                                 <td>
-                                    <input type="text" value="" class="form-control rounded-2"
+                                    <input type="text" value="{{ $customer->telp }}" class="form-control rounded-2"
                                         style="width: 155px;" name="telp" id="telp" aria-describedby="helpId"
                                         placeholder="">
                                 </td>

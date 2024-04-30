@@ -53,8 +53,19 @@ Route::put('orders/{id}', [OrdersController::class, 'update'])->name('orders.upd
 
 // Item
 
+Route::get('items', [ItemController::class, 'index']);
+
 Route::get('items/create', [ItemController::class, 'create']);
-Route::post('items', [ItemController::class, 'store']); 
+
+Route::post('items', [ItemController::class, 'store']);
+
+Route::get('items/{id}', [ItemController::class, 'show']);
+
+Route::delete('items/{id}', [ItemController::class, 'destroy']);
+
+Route::get('items/{id}/edit', [ItemController::class, 'edit']);
+
+Route::put('items/{id}', [ItemController::class, 'update'])->name('orders.update');
 
 // Dashboard
 

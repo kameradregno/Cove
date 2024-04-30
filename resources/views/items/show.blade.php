@@ -51,13 +51,13 @@
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <p>King Koil</p>
+                                    <p>{{ $data->nama_sprei }}</p>
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    Rp. 1.000.000
+                                    Rp.{{ $data->harga_sprei }}
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    Bisa nego gak?
+                                    {{ $data->catatan }}
                                 </td>
                                 <td style="background-color: #f0f0f0;"></td>
                                 <td style="background-color: #f0f0f0;"></td>
@@ -89,10 +89,10 @@
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <p>Wol</p>
+                                    {{ $data->bahan_sprei }}
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    <p>3x3</p>
+                                    <p>{{ $data->ukuran_sprei }}</p>
                                 </td>
                                 <td style="background-color: #f0f0f0"></td>
                                 <td style="background-color: #f0f0f0"></td>
@@ -106,7 +106,6 @@
                     </div>
                     <table class="table">
                         <thead class="border-none">
-
                             <tr>
                                 <th scope="col"
                                     style="
@@ -139,13 +138,13 @@
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <p>Wol</p>
+                                    {{ $data->bahan_bantal }}
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    <p>Guling</p>
+                                    <p>{{ $data->jenis_bantal }}</p>
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    <p>3</p>
+                                    <p>{{ $data->jumlah_bantal }}</p>
                                 </td>
                                 <td style="background-color: #f0f0f0;"></td>
                                 <td style="background-color: #f0f0f0;"></td>
@@ -191,13 +190,13 @@
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <p>Katun</p>
+                                    <p>{{ $data->bahan_bedcover }}</p>
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    BC Big Foam
+                                    {{ $data->bahan_bedcover }}
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    4
+                                    {{ $data->bahan_bedcover }}
                                 </td>
                                 <td style="background-color: #f0f0f0;"></td>
                                 <td style="background-color: #f0f0f0;"></td>
@@ -241,13 +240,13 @@
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <p>Katun</p>
+                                    <p>{{ $data->bahan_inner }}</p>
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    <p>King Koil</p>
+                                    <p>{{ $data->bahan_inner }}</p>
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    <p>5</p>
+                                    <p>{{ $data->bahan_inner }}</p>
                                 </td>
                             </tr>
                         </tbody>
@@ -289,13 +288,13 @@
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <p>Katun</p>
+                                    <p>{{ $data->bahan_quilt }}</p>
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    <p>Halus</p>
+                                    <p>{{ $data->bahan_quilt }}</p>
                                 </td>
                                 <td style="background-color: #f0f0f0">
-                                    <p>8</p>
+                                    <p>{{ $data->bahan_quilt }}</p>
                                 </td>
                             </tr>
                         </tbody>
@@ -321,7 +320,7 @@
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <p>8</p>
+                                    <p>{{ $data->jumlah_box }}</p>
                                 </td>
                             </tr>
                         </tbody>
@@ -347,7 +346,7 @@
                         <tbody>
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
-                                    <p>Karet Keliing</p>
+                                    <p>{{ $data->jenis_karet }}</p>
                                 </td>
                             </tr>
                         </tbody>

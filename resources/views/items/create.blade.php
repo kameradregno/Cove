@@ -50,6 +50,7 @@
                             <tbody>
                                 <tr class="border-secondary">
                                     <td style="background-color: #f0f0f0">
+                                        {{-- <input type="hidden" name="order_id" value="{{ $item->id }}"> --}}
                                         <input type="text" class="form-control rounded-2 border-secondary"
                                             style="
                                                                                     width: 155px;
@@ -146,7 +147,7 @@
                                         background-color: #f0f0f0;
                                         font-weight: 400;
                                     ">
-                                        Bahan Bantal
+                                        Jenis Bantal
                                     </th>
                                     <th scope="col"
                                         style="
