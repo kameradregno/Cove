@@ -35,7 +35,7 @@ class ItemController extends Controller
 
         Items::create($data);
 
-        return redirect('orders'); 
+        return redirect('items'); 
     }
 
     /**
