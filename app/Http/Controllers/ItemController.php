@@ -12,8 +12,13 @@ class ItemController extends Controller
      */
     public function index()
     {
-        $items = Items::all()->first();
-        return view('items.index', ['items' => $items]);
+        $items = Items::where('order_id')->get();
+
+        $items = [
+            'items' => $items
+        ];
+
+        return view('items.index', $items);
     }
 
     /**
