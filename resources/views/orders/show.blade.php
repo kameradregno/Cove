@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="d-flex-justify-content-between pt-4">
-                    <a href="{{ url("items/$data->customer_id") }}" class="btn btn-primary btn-md text-center"
+                    <a href="{{ url("items/$data->id") }}" class="btn btn-primary btn-md text-center"
                         style="width:206px"><i class="bx bx-package"></i>
                         Ke Item Pesanan</a>
                 </div>
