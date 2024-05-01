@@ -6,7 +6,7 @@
 
     <div class="container mt-4 rounded-2 d-flex justify-content-between align-items-center">
         <h5 class="pb-4">Daftar Barang Pesanan</h5>
-        <a href="{{ route('item.index', $items->id) }}"
+        <a href="{{ route('items.index', $items->id) }}"
             class="btn border-primary btn-sm d-flex align-items-center text-primary mb-4">
             <i class="bx bx-package fs-5 me-2 text-primary"></i>
             Tambah Item Pesanan

@@ -12,10 +12,8 @@ class ItemController extends Controller
      */
     public function index()
     {
-        $items = Items::all();
-        dd($items);
+        $items = Items::all()->first();
         return view('items.index', ['items' => $items]);
-
     }
 
     /**
