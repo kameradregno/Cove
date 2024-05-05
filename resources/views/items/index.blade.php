@@ -6,7 +6,7 @@
 
     <div class="container mt-4 rounded-2 d-flex justify-content-between align-items-center">
         <h5 class="pb-4">Daftar Barang Pesanan</h5>
-        <a href="{{ route('items.create', $items) }}"
+        <a href="{{ url("items/create/$id") }}"
             class="btn border-primary btn-sm d-flex align-items-center text-primary mb-4">
             <i class="bx bx-package fs-5 me-2 text-primary"></i>
             Tambah Item Pesanan
@@ -29,7 +29,7 @@
                 </thead>
                 <tbody>
 
-                    @foreach ($items as $item)
+                    {{-- @foreach ($items as $item)
                         <tr>
 
                             <td>{{ $item->nama_sprei }}</td>
@@ -96,7 +96,7 @@
                                 </div>
                             </div>
                         </div>
-                    @endforeach
+                    @endforeach --}}
 
                 </tbody>
             </table>

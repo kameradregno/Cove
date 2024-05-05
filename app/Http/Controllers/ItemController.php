@@ -10,24 +10,33 @@ class ItemController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $items = Items::where('order_id')->get();
+        // $id = $request->route('id');
 
-        $items = [
-            'items' => $items
-        ];
+        // dd($request.$id);    
+        // $items = Items::where('order_id')->get();
 
-        return view('items.index', $items);
+        // $isi = [
+        //     // 'items' => $items,
+        //     'id' => $id
+        // ];
+
+        $id = ['id' => $request->route('id')]; // Assuming you only need the ID
+        // dd($id);
+
+        return view('items.index', $id); 
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        $data['items'] = Items::all();
-        return view('items.create', $data);
+
+        $id = ['id' => $request->route('id')]; // Assuming you only need the ID
+        // $data['items'] = Items::all();
+        return view('items.create', $id);
     }
 
     /**
@@ -45,8 +54,10 @@ class ItemController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Request $request) // Assuming you're not using route model binding
     {
+        $id = $request->route('id');
+
         $data = Items::where( 'id', $id )->first();
 
         return view('items.show', compact('data'));
