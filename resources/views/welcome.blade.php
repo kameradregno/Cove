@@ -38,7 +38,7 @@
                 </div>
                 <div class="card border-light mx-auto mb-3" style="width: 22rem; height: 167px;">
                     <div class="card-body d-flex align-items-center justify-content-center">
-                        <h4 class="card-title text-center">Tambah Pesanan</h4>
+                        <h4 class="card-title text-center"><a href="{{ url('orders') }}" style="color: black; text-decoration:none">Tambah Pesanan</a></h4>
                     </div>
                 </div>
                 <div class="card border-light mx-auto mb-3" style="width: 22rem; height: 167px;">

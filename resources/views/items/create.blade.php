@@ -56,6 +56,7 @@
                                                 <option value="{{ $item['id'] }}">{{ $item['nama_pesanan'] }}</option>
                                             @endforeach
                                         </select> --}}
+                                        <input type="hidden" name="order_id" id="order_id">
                                         <input type="text" class="form-control rounded-2 border-secondary"
                                             style="
                                                                                     width: 155px;

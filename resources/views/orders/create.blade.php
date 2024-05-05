@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="container pt-1 rounded-2" style="background-color: white; height: 310px; margin-top:3rem">
+    <div class="container pt-1 rounded-2" style="background-color: white; height: 310px; margin-top:3rem;margin-left:-1.2rem">
         <form method="POST" action="{{ url('orders') }}">
             @csrf
 
