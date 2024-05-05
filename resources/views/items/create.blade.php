@@ -8,7 +8,7 @@
         <div class="container pt-4 rounded-2" style="background-color: white; height: auto">
 
 
-            <form method="POST" action="{{ url('items') }}">
+            <form method="POST" action="{{ url("items") }}">
                 @csrf
                 <div class="container rounded-2 pt-3" style="background-color: #f0f0f0">
                     <div class="container  rounded-2 pb-2 align-items-center">
@@ -498,10 +498,10 @@
 
 
                 <div class="mt-3 d-flex justify-content-end">
-                    <a class="btn btn-danger d-flex align-items-center" href="{{ url('items') }}">
+                    <a class="btn btn-danger d-flex align-items-center" href="{{ url("items/$id") }}">
                         <i class="bx bx-x" style="font-size: 25px;"></i>
                     </a>
-                    <button type="submit" class="btn btn-success ms-1 d-flex align-items-center">
+                    <button type="submit" href="{{ url("items/$id") }}" class="btn btn-success ms-1 d-flex align-items-center">
                         <i class="bx bx-save" style="font-size: 25px;"></i>
                     </button>
                 </div>

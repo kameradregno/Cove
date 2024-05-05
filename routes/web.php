@@ -52,7 +52,6 @@ Route::get('orders/{id}/edit', [OrdersController::class, 'edit']);
 Route::put('orders/{id}', [OrdersController::class, 'update'])->name('orders.update');
 
 // Item
-
 Route::get('items/{id}', [ItemController::class, 'index'])->name('items.index');
 
 Route::get('items/create/{id}', [ItemController::class, 'create'])->name('items.create');
