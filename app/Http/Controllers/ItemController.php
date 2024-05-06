@@ -12,18 +12,8 @@ class ItemController extends Controller
      */
     public function index(Request $request)
     {
-        // $id = $request->route('id');
-
-        // dd($request.$id);    
-        // $items = Items::where('order_id')->get();
-
-        // $isi = [
-        //     // 'items' => $items,
-        //     'id' => $id
-        // ];
 
         $id = ['id' => $request->route('id')]; // Assuming you only need the ID
-        // dd($id);
 
         return view('items.index', $id); 
     }
@@ -35,7 +25,7 @@ class ItemController extends Controller
     {
 
         $id = ['id' => $request->route('id')]; // Assuming you only need the ID
-        // $data['items'] = Items::all();
+      
         return view('items.create', $id);
     }
 
@@ -48,7 +38,7 @@ class ItemController extends Controller
 
         Items::create($data);
 
-        return redirect('items'); 
+        return redirect('items.show'); 
     }
 
     /**
