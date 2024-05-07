@@ -21,20 +21,20 @@
                     <tr>
                         <th>Nama Sprei</th>
                         <th>Harga</th>
-                        <th>Jenis</th>
+                        <th>Bahan</th>
                         <th>Ukuran</th>
+                        <th></th>
                         <th></th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
 
-                    {{-- @foreach ($items as $item)
+                    @foreach ($items as $item)
                         <tr>
 
                             <td>{{ $item->nama_sprei }}</td>
                             <td>{{ $item->harga_sprei }}</td>
-                            <td>{{ $item->nama_pesanan }}</td>
                             <td>{{ $item->bahan_sprei }}</td>
                             <td>{{ $item->ukuran_sprei }}</td>
                             <td>
@@ -96,7 +96,7 @@
                                 </div>
                             </div>
                         </div>
-                    @endforeach --}}
+                    @endforeach
 
                 </tbody>
             </table>

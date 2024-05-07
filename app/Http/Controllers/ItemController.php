@@ -14,9 +14,15 @@ class ItemController extends Controller
     {
 
         $id = ['id' => $request->route('id')]; // Assuming you only need the ID
+        // $items = Items::where('order_id')->get();
+        $items = Items::all();
 
-        return view('items.index', $id); 
-    }
+        $items = [
+            'items' => $items
+        ];
+
+        return view('items.index', $id, $items); 
+    }   
 
     /**
      * Show the form for creating a new resource.
