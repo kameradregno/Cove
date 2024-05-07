@@ -48,7 +48,8 @@
                                 <th style="background-color: #f0f0f0"></th>
                             </tr>
                         </thead>
-                        {{-- <tbody>
+                        <tbody>
+                            
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
                                     <p>{{ $data->nama_sprei }}</p>
@@ -62,8 +63,9 @@
                                 <td style="background-color: #f0f0f0;"></td>
                                 <td style="background-color: #f0f0f0;"></td>
                             </tr>
-                        </tbody> --}}
+                        </tbody>
                         <!-- bahan dll -->
+
                         <thead class="border-none">
                             <tr>
                                 <th scope="col"
@@ -356,7 +358,7 @@
 
 
             <div class="mt-3 d-flex justify-content-end">
-                <a class="btn btn-primary d-flex align-items-center" href="{{ url('orders ') }}">
+                <a class="btn btn-primary d-flex align-items-center" href="{{ url('orders') }}">
                     <i class="bx bx-check" style="font-size: 25px;"></i>
                 </a>
             </div>

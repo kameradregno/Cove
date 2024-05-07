@@ -52,19 +52,24 @@ Route::get('orders/{id}/edit', [OrdersController::class, 'edit']);
 Route::put('orders/{id}', [OrdersController::class, 'update'])->name('orders.update');
 
 // Item
+
 Route::get('items/{id}', [ItemController::class, 'index'])->name('items.index');
 
 Route::get('items/create/{id}', [ItemController::class, 'create'])->name('items.create');
 
+<<<<<<< HEAD
 Route::post('items/{id}', [ItemController::class, 'store'])->name('items.store');
+=======
+Route::put('items', [ItemController::class, 'store']);
+>>>>>>> 7287d29d861ca0a5530d733c0b7d2d4105c592ec
 
-// Route::get('items/{id}', [ItemController::class, 'show']);
+Route::get('items/show/{id}', [ItemController::class, 'show'])->name('items.show');
 
-Route::delete('items/{id}', [ItemController::class, 'destroy']);
+// Route::delete('items/{id}', [ItemController::class, 'destroy']);
 
-Route::get('items/{id}/edit', [ItemController::class, 'edit']);
+// Route::get('items/{id}/edit', [ItemController::class, 'edit']);
 
-Route::put('items/{id}', [ItemController::class, 'update'])->name('items.update');
+// Route::put('items/{id}', [ItemController::class, 'update'])->name('items.update');
 
 // Dashboard
 

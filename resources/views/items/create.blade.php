@@ -8,8 +8,12 @@
         <div class="container pt-4 rounded-2" style="background-color: white; height: auto">
 
 
+<<<<<<< HEAD
             <form method="POST" action="{{ route('items.store', $id) }}">
                 {{-- @method('PUT') --}}
+=======
+            <form method="PUT" action="{{ route('items.show', $id) }}">
+>>>>>>> 7287d29d861ca0a5530d733c0b7d2d4105c592ec
                 @csrf
                 <div class="container rounded-2 pt-3" style="background-color: #f0f0f0">
                     <div class="container  rounded-2 pb-2 align-items-center">
@@ -57,7 +61,7 @@
                                                 <option value="{{ $item['id'] }}">{{ $item['nama_pesanan'] }}</option>
                                             @endforeach
                                         </select> --}}
-                                        <input type="hidden" name="order_id" id="order_id" value="{{$id}}">
+                                        <input type="hidden" name="order_id" id="order_id" value="{{ $id }}">
                                         <input type="text" class="form-control rounded-2 border-secondary"
                                             style="
                                                                                     width: 155px;
@@ -502,7 +506,8 @@
                     <a class="btn btn-danger d-flex align-items-center" href="{{ url("items/$id") }}">
                         <i class="bx bx-x" style="font-size: 25px;"></i>
                     </a>
-                    <button type="submit" href="{{ url("items/$id") }}" class="btn btn-success ms-1 d-flex align-items-center">
+                    <button type="submit" href="{{ url("items/$id") }}"
+                        class="btn btn-success ms-1 d-flex align-items-center">
                         <i class="bx bx-save" style="font-size: 25px;"></i>
                     </button>
                 </div>
