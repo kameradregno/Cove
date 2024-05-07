@@ -12,15 +12,20 @@ class ItemController extends Controller
      */
     public function index(Request $request)
     {
+        $idtaker = $request->route('id');
 
-        $id = ['id' => $request->route('id')]; // Assuming you only need the ID
-        // $items = Items::where('order_id')->get();
-        $items = Items::all();
+        $id = ['id' => $idtaker]; // Assuming you only need the ID
+        // $hitam = Items::all();
 
+        $itemsemua = Items::all();
+        $itemfilter = $itemsemua->where('order_id', 'like',"$idtaker");
+
+        // $hitam = Items::where('order_id', 'like', '1');
+
+        
         $items = [
-            'items' => $items
+            'items' => $itemfilter
         ];
-
         return view('items.index', $id, $items); 
     }   
 
@@ -31,7 +36,7 @@ class ItemController extends Controller
     {
 
         $id = ['id' => $request->route('id')]; // Assuming you only need the ID
-      
+    
         return view('items.create', $id);
     }
 
