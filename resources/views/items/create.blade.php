@@ -8,12 +8,7 @@
         <div class="container pt-4 rounded-2" style="background-color: white; height: auto">
 
 
-<<<<<<< HEAD
             <form method="POST" action="{{ route('items.store', $id) }}">
-                {{-- @method('PUT') --}}
-=======
-            <form method="PUT" action="{{ route('items.show', $id) }}">
->>>>>>> 7287d29d861ca0a5530d733c0b7d2d4105c592ec
                 @csrf
                 <div class="container rounded-2 pt-3" style="background-color: #f0f0f0">
                     <div class="container  rounded-2 pb-2 align-items-center">

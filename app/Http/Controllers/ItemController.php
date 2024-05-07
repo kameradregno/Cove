@@ -37,14 +37,9 @@ class ItemController extends Controller
         $data = $request->all();
 
         $id = $request->route('id');
-
-<<<<<<< HEAD
         Items::create($data);
         
         return redirect("items/{$id}"); 
-=======
-        return redirect('items.show'); 
->>>>>>> 7287d29d861ca0a5530d733c0b7d2d4105c592ec
     }
 
     /**

@@ -57,11 +57,7 @@ Route::get('items/{id}', [ItemController::class, 'index'])->name('items.index');
 
 Route::get('items/create/{id}', [ItemController::class, 'create'])->name('items.create');
 
-<<<<<<< HEAD
 Route::post('items/{id}', [ItemController::class, 'store'])->name('items.store');
-=======
-Route::put('items', [ItemController::class, 'store']);
->>>>>>> 7287d29d861ca0a5530d733c0b7d2d4105c592ec
 
 Route::get('items/show/{id}', [ItemController::class, 'show'])->name('items.show');
 
