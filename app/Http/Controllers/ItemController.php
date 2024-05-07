@@ -46,9 +46,11 @@ class ItemController extends Controller
     {
         $data = $request->all();
 
-        Items::create($data);
+        $id = $request->route('id');
 
-        return redirect('items'); 
+        Items::create($data);
+        
+        return redirect("items/{$id}"); 
     }
 
     /**

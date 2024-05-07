@@ -56,7 +56,7 @@ Route::get('items/{id}', [ItemController::class, 'index'])->name('items.index');
 
 Route::get('items/create/{id}', [ItemController::class, 'create'])->name('items.create');
 
-Route::post('items', [ItemController::class, 'store']);
+Route::post('items/{id}', [ItemController::class, 'store'])->name('items.store');
 
 // Route::get('items/{id}', [ItemController::class, 'show']);
 
