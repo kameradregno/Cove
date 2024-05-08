@@ -61,11 +61,11 @@ Route::post('items/{id}', [ItemController::class, 'store'])->name('items.store')
 
 Route::get('items/show/{id}', [ItemController::class, 'show'])->name('items.show');
 
-// Route::delete('items/{id}', [ItemController::class, 'destroy']);
+Route::delete('items/{id}/{id_order}', [ItemController::class, 'destroy']);
 
-// Route::get('items/{id}/edit', [ItemController::class, 'edit']);
+Route::get('items/{id}/edit', [ItemController::class, 'edit']);
 
-// Route::put('items/{id}', [ItemController::class, 'update'])->name('items.update');
+Route::put('items/{id}', [ItemController::class, 'update'])->name('items.update');
 
 // Dashboard
 

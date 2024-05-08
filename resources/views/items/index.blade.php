@@ -72,7 +72,7 @@
 
                             <td>
                                 <button type="button" class="d-flex align-items-center" data-bs-toggle="modal"
-                                    data-bs-target="#staticBackdropItem"
+                                    data-bs-target="#staticBackdropItem{{$item->id}}"
                                     style="font-size: 25px; border: 1px solid white; background-color:white;"><i
                                         class="bx bx-trash text-danger"></i></button>
                             </td>
@@ -81,7 +81,7 @@
 
                         <!-- Modal -->
 
-                        <div class="modal fade" id="staticBackdropItem" data-bs-backdrop="static" data-bs-keyboard="false"
+                        <div class="modal fade" id="staticBackdropItem{{$item->id}}" data-bs-backdrop="static" data-bs-keyboard="false"
                             tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -95,12 +95,12 @@
                                     </div>
 
                                     <div class="modal-body">
-                                        Anda yakin ingin menghapus barang ini?
+                                        Anda yakin ingin menghapus barang ini? 
                                     </div>
 
                                     <div class="modal-footer">
 
-                                        <form action="{{ url("items/$item->id") }}" method="POST">
+                                        <form action="{{ url("items/$item->id/$item->order_id") }}" method="POST">
                                             @method('delete')
                                             @csrf
                                             <button type="submit" class="btn btn-outline-danger" data-bs-dismiss="modal">

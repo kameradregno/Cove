@@ -98,10 +98,13 @@ class ItemController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Request $request)
     {
+        $id = $request->route('id');
+        $id_order = $request->route('id_order');
+
         Items::SelectedById($id)->delete();
 
-        return redirect('items');
+        return redirect("items/$id_order");
     }
 }
