@@ -6,16 +6,34 @@
 
     <div class="container mt-4 rounded-2 d-flex justify-content-between align-items-center">
         <h5 class="pb-4">Daftar Barang Pesanan</h5>
-        <a href="{{ url("items/create/$id") }}"
-            class="btn border-primary btn-sm d-flex align-items-center text-primary mb-4">
+        <a href="{{ url("items/create/$id") }}" class="btn border-primary btn-sm d-flex align-items-center text-primary mb-4">
             <i class="bx bx-package fs-5 me-2 text-primary"></i>
             Tambah Item Pesanan
         </a>
     </div>
 
-    <div class="container rounded-2" style="height: 530px; background-color:white; overflow-y:scroll">
+    <div class="container rounded-2 " style="background-color: white">
+        <div class="container pb-4 pt-3 align-items-center justify-content-between d-flex">
+            <input type="search" name="" id="" class="form-control rounded-2 border-secondary"
+            placeholder="Cari Barang" style="width: 160px; height: 32px">
+        <div class="dropdown">
+            <button class="btn btn-white border-dark btn-sm dropdown-toggle" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Cari Berdasarkan...
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+        </div>
+        
+    </div>
+
+    <div class="container rounded-2" style="height: 465px; background-color:white; overflow-y:scroll">
         <div class="table-responsive rounded-2">
-            <table id="example" class="table data-table rounded-2" style="overflow-y:scroll">
+            <table id="example" class="table data-table rounded-2">
 
                 <thead>
                     <tr>
