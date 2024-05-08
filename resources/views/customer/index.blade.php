@@ -12,26 +12,27 @@
         </a>
     </div>
 
-    <div class="container rounded-2 " style="background-color: white">
+    <div class="container" style="background-color: white; border-radius: 6px 6px 0px 0px;">
         <div class="container pb-4 pt-3 align-items-center justify-content-between d-flex">
             <input type="search" name="" id="" class="form-control rounded-2 border-secondary"
-            placeholder="Cari Customer" style="width: 160px; height: 32px">
-        <div class="dropdown">
-            <button class="btn btn-white border-dark btn-sm dropdown-toggle" type="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Cari Berdasarkan...
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+                placeholder="Cari Customer" style="width: 160px; height: 32px">
+            <div class="dropdown">
+                <button class="btn btn-white border-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Cari Berdasarkan...
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
         </div>
-        </div>
-        
+
     </div>
 
-    <div class="container rounded-2" style="height: 465px; background-color:white; overflow-y:scroll">
+    <div class="container"
+        style="height: 465px; background-color:white; overflow-y:scroll;  border-radius: 6px 6px 0px 0px ;">
         <div class="table-responsive rounded-2">
             <table id="example" class="table data-table rounded-2">
                 <thead>
