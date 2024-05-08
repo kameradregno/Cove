@@ -19,7 +19,7 @@
             <div class="dropdown">
                 <button class="btn btn-white border-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
-                    Cari Berdasarkan...
+                    <i class='bx bx-filter-alt'></i> Cari Berdasarkan...
                 </button>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Action</a></li>
