@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="container mt-4 mb-4 rounded-2" style="background-color: white; height: 210px">
+    <div class="container mb-4 rounded-2" style="background-color: white; height: 210px;margin-top:8rem">
 
         <div class="container mt-4 rounded-2" style="background-color: white; height: auto">
             <div class="container rounded-2 d-flex justify-content-between align-items-center">

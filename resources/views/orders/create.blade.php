@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="container pt-1 rounded-2" style="background-color: white; height: 310px; margin-top:3rem;margin-left:-1.2rem">
+    <div class="container pt-1 rounded-2" style="background-color: white; height: 310px; margin-top:5.5rem">
         <form method="POST" action="{{ url('orders') }}">
             @csrf
 
@@ -47,7 +47,7 @@
                 </div>
 
                 <div class="container mb-2 mt-2 d-flex justify-content-start align-items-center"
-                    style="margin-top: -10px; gap:8.1rem">
+                    style="margin-top: -10px; gap:7.5rem">
                     <div class="d-flex flex-column mb-2">
                         <label for="" class="form-label b-1">Alamat</label>
                         <textarea name="alamat" id="alamat" cols="30" rows="10" class="rounded-2"
