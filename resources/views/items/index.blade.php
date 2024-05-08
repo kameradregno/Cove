@@ -19,6 +19,7 @@
 
                 <thead>
                     <tr>
+                        <th>No</th>
                         <th>Nama Sprei</th>
                         <th>Harga</th>
                         <th>Bahan</th>
@@ -30,9 +31,10 @@
                 </thead>
                 <tbody>
 
+                    @php $counter = 1 @endphp
                     @foreach ($items as $item)
                         <tr>
-
+                            <td>{{ $counter++ }}</td>
                             <td>{{ $item->nama_sprei }}</td>
                             <td>{{ $item->harga_sprei }}</td>
                             <td>{{ $item->bahan_sprei }}</td>
