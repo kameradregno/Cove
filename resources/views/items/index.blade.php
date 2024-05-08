@@ -74,7 +74,7 @@
                                 <button type="button" class="d-flex align-items-center" data-bs-toggle="modal"
                                     data-bs-target="#staticBackdropItem"
                                     style="font-size: 25px; border: 1px solid white; background-color:white;"><i
-                                        class="bx bx-x text-danger"></i></button>
+                                        class="bx bx-trash text-danger"></i></button>
                             </td>
 
                         </tr>
