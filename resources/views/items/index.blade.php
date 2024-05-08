@@ -19,7 +19,7 @@
 
                 <thead>
                     <tr>
-                        <th>No</th>
+                        <th>Tanggal</th>
                         <th>Nama Sprei</th>
                         <th>Harga</th>
                         <th>Bahan</th>
@@ -31,10 +31,9 @@
                 </thead>
                 <tbody>
 
-                    @php $counter = 1 @endphp
                     @foreach ($items as $item)
                         <tr>
-                            <td>{{ $counter++ }}</td>
+                            <td>{{ date('d/m/y', strtotime($item->created_at)) }}</td>
                             <td>{{ $item->nama_sprei }}</td>
                             <td>{{ $item->harga_sprei }}</td>
                             <td>{{ $item->bahan_sprei }}</td>
