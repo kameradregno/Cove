@@ -101,7 +101,11 @@ class ItemController extends Controller
             'harga_sprei' =>  $request->input('harga_sprei'),
             'catatan' =>  $request->input('catatan'),
             'bahan_sprei' =>  $request->input('bahan_sprei'),
-            'ukuran_sprei' =>  $request->input('ukuran_sprei')
+            'ukuran_sprei' =>  $request->input('ukuran_sprei'),
+            'bahan_bantal' =>  $request->input('bahan_bantal'),
+            'jenis_bantal' =>  $request->input('jenis_bantal'),
+            'jumlah_bantal' =>  $request->input('jumlah_bantal'),
+
         ]);
 
         return redirect("items/$id_order");
