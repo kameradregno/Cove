@@ -173,6 +173,7 @@
                                             background-color: #f0f0f0;
                                         "
                                             class="rounded-2" id="bahan_bantal">
+                                            <option value="">Kosong</option>
                                             <option value="Katun">Katun</option>
                                             <option value="Wol">Wol</option>
                                         </select>
@@ -244,6 +245,7 @@
                                             background-color: #f0f0f0;
                                         "
                                             class="rounded-2" id="bahan_bedcover">
+                                            <option value="">Kosong</option>
                                             <option value="Katun">Katun</option>
                                             <option value="Wol">Wol</option>
                                         </select>
@@ -314,7 +316,8 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                            class="rounded-2" id="bahan_inner">
+                                            class="rounded-2" id="bahan_inner" value="{{ $data->bahan_inner }}">
+                                            <option value="">Kosong</option>
                                             <option value="Katun">Katun</option>
                                             <option value="Wol">Wol</option>
                                         </select>
@@ -334,7 +337,7 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                            name="jumlah_inner" id="jumlah_inner" aria-describedby="helpId"
+                                            name="jumlah_inner" value="{{ $data->jumlah_inner }}" id="jumlah_inner" aria-describedby="helpId"
                                             placeholder="" />
                                     </td>
                                     <td style="background-color: #f0f0f0">
@@ -385,7 +388,8 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                            class="rounded-2" id="bahan_quilt">
+                                            class="rounded-2" id="bahan_quilt" value="{{ $data->bahan_quilt }}">
+                                            <option value="">Kosong</option>
                                             <option value="Katun">Katun</option>
                                             <option value="Wol">Wol</option>
                                         </select>

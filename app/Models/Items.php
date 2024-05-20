@@ -17,7 +17,21 @@ class Items extends Model
         'harga_sprei',
         'catatan',
         'bahan_sprei',
-        'ukuran_sprei',  
+        'ukuran_sprei', 
+        'bahan_bantal',
+        'jenis_bantal',
+        'jumlah_bantal',
+        'bahan_bedcover',
+        'jenis_bedcover',
+        'jumlah_bedcover',  
+        'bahan_inner',
+        'jenis_inner',
+        'jumlah_inner', 
+        'bahan_quilt',
+        'jenis_quilt',
+        'jumlah_quilt', 
+        'jumlah_box',
+        'jenis_karet'
     ];
 
     public function order(): BelongsTo

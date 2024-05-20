@@ -198,10 +198,10 @@
                                                         <p>{{ $data->bahan_bedcover }}</p>
                                                     </td>
                                                     <td style="background-color: #f0f0f0">
-                                                        {{ $data->bahan_bedcover }}
+                                                        {{ $data->jenis_bedcover }}
                                                     </td>
                                                     <td style="background-color: #f0f0f0">
-                                                        {{ $data->bahan_bedcover }}
+                                                        {{ $data->jumlah_bantal }}
                                                     </td>
                                                     <td style="background-color: #f0f0f0;"></td>
                                                     <td style="background-color: #f0f0f0;"></td>
@@ -252,10 +252,10 @@
                                                         <p>{{ $data->bahan_inner }}</p>
                                                     </td>
                                                     <td style="background-color: #f0f0f0">
-                                                        <p>{{ $data->bahan_inner }}</p>
+                                                        <p>{{ $data->jenis_inner }}</p>
                                                     </td>
                                                     <td style="background-color: #f0f0f0">
-                                                        <p>{{ $data->bahan_inner }}</p>
+                                                        <p>{{ $data->jumlah_inner }}</p>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -304,10 +304,10 @@
                                                         <p>{{ $data->bahan_quilt }}</p>
                                                     </td>
                                                     <td style="background-color: #f0f0f0">
-                                                        <p>{{ $data->bahan_quilt }}</p>
+                                                        <p>{{ $data->jenis_quilt }}</p>
                                                     </td>
                                                     <td style="background-color: #f0f0f0">
-                                                        <p>{{ $data->bahan_quilt }}</p>
+                                                        <p>{{ $data->jumlah_quilt }}</p>
                                                     </td>
                                                 </tr>
                                             </tbody>

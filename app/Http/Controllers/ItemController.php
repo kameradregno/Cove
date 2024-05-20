@@ -47,6 +47,8 @@ class ItemController extends Controller
     {
         $data = $request->all();
 
+        // dd($data);
+
         $id = $request->route('id');
         Items::create($data);
         
@@ -105,7 +107,17 @@ class ItemController extends Controller
             'bahan_bantal' =>  $request->input('bahan_bantal'),
             'jenis_bantal' =>  $request->input('jenis_bantal'),
             'jumlah_bantal' =>  $request->input('jumlah_bantal'),
-
+            'bahan_bedcover' =>  $request->input('bahan_bedcover'),
+            'jenis_bedcover' =>  $request->input('jenis_bedcover'),
+            'jumlah_bedcover' =>  $request->input('jumlah_bantal'),
+            'bahan_inner' =>  $request->input('bahan_inner'),
+            'jenis_inner' =>  $request->input('jenis_inner'),
+            'jumlah_inner' =>  $request->input('jumlah_inner'),
+            'bahan_quilt' =>  $request->input('bahan_quilt'),
+            'jenis_quilt' =>  $request->input('jenis_quilt'),
+            'jumlah_quilt' =>  $request->input('jumlah_quilt'),
+            'jumlah_box' =>  $request->input('jumlah_box'),
+            'jenis_karet' =>  $request->input('jenis_karet'),
         ]);
 
         return redirect("items/$id_order");

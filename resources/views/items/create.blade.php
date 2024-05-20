@@ -176,6 +176,7 @@
                                             background-color: #f0f0f0;
                                         "
                                             class="rounded-2" id="bahan_bantal">
+                                            <option value="">Kosong</option>
                                             <option value="Katun">Katun</option>
                                             <option value="Wol">Wol</option>
                                         </select>
@@ -247,6 +248,7 @@
                                             background-color: #f0f0f0;
                                         "
                                             class="rounded-2" id="bahan_bedcover">
+                                            <option value="">Kosong</option>
                                             <option value="Katun">Katun</option>
                                             <option value="Wol">Wol</option>
                                         </select>
@@ -318,6 +320,7 @@
                                             background-color: #f0f0f0;
                                         "
                                             class="rounded-2" id="bahan_inner">
+                                            <option value="">Kosong</option>
                                             <option value="Katun">Katun</option>
                                             <option value="Wol">Wol</option>
                                         </select>
@@ -389,6 +392,7 @@
                                             background-color: #f0f0f0;
                                         "
                                             class="rounded-2" id="bahan_quilt">
+                                            <option value="">Kosong</option>
                                             <option value="Katun">Katun</option>
                                             <option value="Wol">Wol</option>
                                         </select>
@@ -482,6 +486,7 @@
                                             background-color: #f0f0f0;
                                         "
                                             class="rounded-2" id="jenis_karet">
+                                            <option value="">Kosong</option>
                                             <option value="Keliling">Keliling</option>
                                             <option value="Anti Geser">Anti Geser</option>
                                         </select>
