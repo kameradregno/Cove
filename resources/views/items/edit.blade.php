@@ -70,7 +70,7 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                            name="harga_sprei" value="" id="harga_sprei" aria-describedby="helpId" placeholder="" />
+                                            name="harga_sprei" value="{{ $data->harga_sprei }}" id="harga_sprei" aria-describedby="helpId" placeholder="" />
                                     </td>
                                     <td style="background-color: #f0f0f0">
                                         <textarea name="catatan" class="rounded-2"
@@ -78,7 +78,7 @@
                                             height: 37.33px;
                                             background-color: #f0f0f0;
                                         "
-                                            id="catatan" cols="30" rows="10"></textarea>
+                                            id="catatan" cols="30" rows="10">{{ $data->catatan }}</textarea>
                                     </td>
                                     <td style="background-color: #f0f0f0;"></td>
                                     <td style="background-color: #f0f0f0;"></td>
@@ -125,7 +125,7 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                            name="ukuran_sprei" value="" id="ukuran_sprei" aria-describedby="helpId"
+                                            name="ukuran_sprei" value="{{ $data->ukuran_sprei }}" id="ukuran_sprei" aria-describedby="helpId"
                                             placeholder="Cari Ukuran" />
                                     </td>
                                     <td style="background-color: #f0f0f0"></td>
@@ -186,7 +186,7 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                            name="jenis_bantal" value="" id="jenis_bantal" aria-describedby="helpId"
+                                            name="jenis_bantal" value="{{ $data->jenis_bantal }}" id="jenis_bantal" aria-describedby="helpId"
                                             placeholder="" />
                                     </td>
                                     <td style="background-color: #f0f0f0">
@@ -195,7 +195,7 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                            name="jumlah_bantal" id="jumlah_bantal" aria-describedby="helpId"
+                                            name="jumlah_bantal" value="{{ $data->jumlah_bantal }}" id="jumlah_bantal" aria-describedby="helpId"
                                             placeholder="" />
                                     </td>
                                     <td style="background-color: #f0f0f0">
@@ -257,7 +257,7 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                            name="jenis_bedcover" id="jenis_bedcover" aria-describedby="helpId"
+                                            name="jenis_bedcover" value="{{ $data->jenis_bedcover }}" id="jenis_bedcover" aria-describedby="helpId"
                                             placeholder="" />
                                     </td>
                                     <td style="background-color: #f0f0f0">
@@ -266,7 +266,7 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                            name="jumlah_bedcover" id="jumlah_bedcover" aria-describedby="helpId"
+                                            name="jumlah_bedcover" value="{{ $data->jumlah_bedcover }}" id="jumlah_bedcover" aria-describedby="helpId"
                                             placeholder="" />
                                     </td>
                                     <td style="background-color: #f0f0f0">
@@ -328,7 +328,7 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                            name="jenis_inner" id="jenis_inner" aria-describedby="helpId"
+                                            name="jenis_inner" value="{{ $data->jenis_inner }}" id="jenis_inner" aria-describedby="helpId"
                                             placeholder="" />
                                     </td>
                                     <td style="background-color: #f0f0f0">
@@ -399,7 +399,7 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                            name="jenis_quilt" id="jenis_quilt" aria-describedby="helpId"
+                                            name="jenis_quilt" value="{{ $data->jenis_quilt }}" id="jenis_quilt" aria-describedby="helpId"
                                             placeholder="" />
                                     </td>
                                     <td style="background-color: #f0f0f0">
@@ -444,7 +444,7 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                            name="jumlah_box" id="jumlah_box" aria-describedby="helpId"
+                                            name="jumlah_box" value="{{ $data->jumlah_box }}" id="jumlah_box" aria-describedby="helpId"
                                             placeholder="" />
                                     </td>
                                     <td style="background-color: #f0f0f0">
