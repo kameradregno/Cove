@@ -358,7 +358,7 @@
 
 
             <div class="mt-3 d-flex justify-content-end">
-                <a class="btn btn-primary d-flex align-items-center" href="{{ url('orders') }}">
+                <a class="btn btn-primary d-flex align-items-center" href="{{ url("items/$data->order_id") }}">
                     <i class="bx bx-check" style="font-size: 25px;"></i>
                 </a>
             </div>

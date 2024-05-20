@@ -495,10 +495,10 @@
 
 
                 <div class="mt-3 d-flex justify-content-end">
-                    <a class="btn btn-danger d-flex align-items-center" href="{{ url("items/$id") }}">
+                    <a class="btn btn-danger d-flex align-items-center" href="{{ url("items/$id_order") }}">
                         <i class="bx bx-x" style="font-size: 25px;"></i>
                     </a>
-                    <button type="submit" href="{{ url("items/$id") }}"
+                    <button type="submit"
                         class="btn btn-success ms-1 d-flex align-items-center">
                         <i class="bx bx-save" style="font-size: 25px;"></i>
                     </button>

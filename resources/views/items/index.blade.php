@@ -65,7 +65,7 @@
                             </td>
 
                             <td>
-                                <a href="{{ url("items/$item->id") }}" style="text-decoration:none;">
+                                <a href="{{ url("items/show/$item->id") }}" style="text-decoration:none;">
                                     <i class="bx bx-detail text-secondary" style="font-size: 25px;"></i>
                                 </a>
                             </td>
