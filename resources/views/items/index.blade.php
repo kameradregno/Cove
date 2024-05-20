@@ -59,7 +59,7 @@
                             <td>{{ $item->ukuran_sprei }}</td>
                             <td>
 
-                                <a href="{{ url("items/$item->id/edit") }}" style="text-decoration:none;">
+                                <a href="{{ url("items/edit/$item->id/$item->order_id") }}" style="text-decoration:none;">
                                     <i class="bx bx-pencil text-warning" style="font-size: 25px;"></i>
                                 </a>
                             </td>

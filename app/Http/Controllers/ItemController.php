@@ -68,22 +68,34 @@ class ItemController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
-        $chosen_item = Items::where('id', $id)->first();
+        $id_string = $request->route('id');
+        $id_order_string = $request->route('id_order');
+
+
+        $items = Items::where('id', $id_string)->first();;
+        // $itemfilter = $itemsemua->where('id', 'like',"$id_string");
 
         $data = [
-            'item' => $chosen_item,
+            'data' => $items,
         ];
+        $id = ['id' => $id_string, 'id_order' => $id_order_string];
+        // $id_order = ['id_order' => $id_order_string];
 
-        return view('items.edit', $data);
+        // dd($data);
+
+        return view('items.edit', $data, $id);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
+        $id = $request->route('id');
+        $id_order = $request->route('id_order');
+
         Items::where('id', $id)->update([
             'nama_sprei' =>  $request->input('nama_sprei'),
             'harga_sprei' =>  $request->input('harga_sprei'),
@@ -92,7 +104,7 @@ class ItemController extends Controller
             'ukuran_sprei' =>  $request->input('ukuran_sprei')
         ]);
 
-        return redirect('items');
+        return redirect("items/$id_order");
     }
 
     /**
