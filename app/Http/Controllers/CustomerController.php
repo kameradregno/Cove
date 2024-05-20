@@ -12,13 +12,20 @@ class CustomerController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $customers = Customers::all();
-        
-        return view('customer.index', ['customers' => $customers]);
+        $search = $request->query('searchcustomer', ''); // Get search term with default empty string
+        $customers = Customers::query(); // Start building the query
+    
+        if ($search) {
+            $customers->where('nama', 'LIKE', "%{$search}%"); // Perform search on 'nama_customer'
+        }
+    
+        $customers = $customers->get(); // Retrieve all matching customers
+    
+        return view('customer.index', compact('customers', 'search'));
     }
-
+        
     /**
      * Show the form for creating a new resource.
      */

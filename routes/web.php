@@ -23,7 +23,7 @@ Route::get('/', function () {
 
 // customer
 
-Route::get('customer', [CustomerController::class, 'index']);
+Route::get('customer', [CustomerController::class, 'index'])->name('customers.index');
 
 Route::get('customer/create', [CustomerController::class, 'create']);
 
