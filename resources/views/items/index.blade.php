@@ -14,8 +14,11 @@
 
     <div class="container" style="background-color: white; border-radius: 6px 6px 0px 0px;">
         <div class="container pb-4 pt-3 align-items-center justify-content-between d-flex">
-            <input type="search" name="" id="" class="form-control rounded-2 border-secondary"
-                placeholder="Cari Barang" style="width: 160px; height: 32px">
+            <div class="input-group" style="width: 190px">
+                <input type="search" name="" id="" class="form-control border-secondary"
+                    placeholder="Cari Barang" style="height: 32px">
+                <button class="btn btn-secondary btn-sm" type="button"><i class="bx bx-search"></i></button>
+            </div>
             <div class="dropdown">
                 <button class="btn btn-white border-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
