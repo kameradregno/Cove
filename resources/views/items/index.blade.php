@@ -13,14 +13,15 @@
     </div>
 
     <div class="container" style="background-color: white; border-radius: 6px 6px 0px 0px;">
-        <div class="container pb-4 pt-3 align-items-center justify-content-between d-flex">
+        {{-- <div class="container pb-4 pt-3 align-items-center justify-content-between d-flex">
             <form action="{{ url("items/$id") }}" method="GET">
                 <div class="input-group" style="width: 190px;">
-                  <input type="search" name="searchitem" id="searchitem" class="form-control border-secondary"
-                         placeholder="Cari Item" style="height: 32px;">
-                  <button class="btn btn-secondary btn-sm" type="submit"><i class="bx bx-search"></i></button>
+                    <input type="search" name="searchitem" id="searchitem" class="form-control border-secondary"
+                        placeholder="Cari Item" style="height: 32px;">
+                    <button class="btn btn-secondary btn-sm" type="submit"><i class="bx bx-search"></i></button>
                 </div>
-              </form>            <div class="dropdown">
+            </form>
+            <div class="dropdown">
                 <button class="btn btn-white border-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     <i class='bx bx-filter-alt'></i> Cari Berdasarkan...
@@ -31,12 +32,12 @@
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
             </div>
-        </div>
+        </div> --}}
 
     </div>
 
     <div class="container"
-        style="height: 465px; background-color:white; overflow-y:scroll;  border-radius: 0px 0px 6px 6px ;">
+        style="height: 465px; background-color:white; overflow-y:scroll;  border-radius: 6px 6px 6px 6px ;">
         <div class="table-responsive rounded-2">
             <table id="example" class="table data-table rounded-2">
 
@@ -76,7 +77,7 @@
 
                             <td>
                                 <button type="button" class="d-flex align-items-center" data-bs-toggle="modal"
-                                    data-bs-target="#staticBackdropItem{{$item->id}}"
+                                    data-bs-target="#staticBackdropItem{{ $item->id }}"
                                     style="font-size: 25px; border: 1px solid white; background-color:white;"><i
                                         class="bx bx-trash text-danger"></i></button>
                             </td>
@@ -85,8 +86,9 @@
 
                         <!-- Modal -->
 
-                        <div class="modal fade" id="staticBackdropItem{{$item->id}}" data-bs-backdrop="static" data-bs-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal fade" id="staticBackdropItem{{ $item->id }}" data-bs-backdrop="static"
+                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                            aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
 
@@ -99,7 +101,7 @@
                                     </div>
 
                                     <div class="modal-body">
-                                        Anda yakin ingin menghapus barang ini? 
+                                        Anda yakin ingin menghapus barang ini?
                                     </div>
 
                                     <div class="modal-footer">
