@@ -18,7 +18,7 @@
                 <div class="input-group" style="width: 190px">
                     <input type="search" name="ordersearch" id="ordersearch" class="form-control border-secondary"
                         placeholder="Cari Pesanan" style="height: 32px">
-                    <button class="btn btn-secondary btn-sm" type="button"><i class="bx bx-search"></i></button>
+                    <button class="btn btn-secondary btn-sm" type="submit"><i class="bx bx-search"></i></button>
                 </div>
             </form>
             <div class="dropdown">
