@@ -14,11 +14,13 @@
 
     <div class="container" style="background-color: white; border-radius: 6px 6px 0px 0px;">
         <div class="container pb-4 pt-3 align-items-center justify-content-between d-flex">
-            <div class="input-group" style="width: 190px">
-                <input type="search" name="" id="" class="form-control border-secondary"
-                    placeholder="Cari Pesanan" style="height: 32px">
-                <button class="btn btn-secondary btn-sm" type="button"><i class="bx bx-search"></i></button>
-            </div>
+            <form action="{{ route('orders.index') }}" method="GET">
+                <div class="input-group" style="width: 190px">
+                    <input type="search" name="ordersearch" id="ordersearch" class="form-control border-secondary"
+                        placeholder="Cari Pesanan" style="height: 32px">
+                    <button class="btn btn-secondary btn-sm" type="button"><i class="bx bx-search"></i></button>
+                </div>
+            </form>
             <div class="dropdown">
                 <button class="btn btn-white border-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
@@ -42,8 +44,8 @@
                 <thead>
                     <tr>
                         <th>Tanggal</th>
-                        <th>Nama Pembeli</th>
                         <th>Nama Pesanan</th>
+                        <th>Nama Pembeli</th>
                         <th>Total Harga</th>
                         <th>Total Pesanan</th>
                         <th></th>
@@ -57,8 +59,8 @@
                         <tr>
 
                             <td>{{ date('d/m/y', strtotime($order->created_at)) }}</td>
-                            <td>{{ $order->customername->nama }}</td>
                             <td>{{ $order->nama_pesanan }}</td>
+                            <td>{{ $order->customername->nama }}</td>
                             <td>5m zimbabwe</td>
                             <td>100</td>
                             <td>

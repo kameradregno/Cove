@@ -14,11 +14,18 @@ class OrdersController extends Controller
      * Display a listing of the resource.
      */
 
-    public function index()
+    public function index(Request $request)
     {
-        $orders = Orders::all();
+        $search = $request->query('ordersearch', ''); 
+        $orders = Orders::query();
+
+        if ($search) {
+            $orders->where('nama_pesanan', 'LIKE', "%{$search}%"); // Perform search on 'nama_customer'
+        }
+
+        $orders = $orders->get();
         
-        return view('orders.index', ['orders' => $orders]);
+        return view('orders.index', compact('orders', 'search'));
     }
 
     /**

@@ -12,20 +12,37 @@ class ItemController extends Controller
      */
     public function index(Request $request)
     {
+        $search = $request->query('searchitem', ''); // Get search term with default empty string
         $idtaker = $request->route('id');
 
         $id = ['id' => $idtaker]; // Assuming you only need the ID
         // $hitam = Items::all();
 
+        // dd($search);
+
+        // $itemsemua = Items::whereIn('order_id', 'like', $idtaker);
+
+        // $itemkk = $itemfilter;
+
+        // dd($itemkk);
         $itemsemua = Items::all();
-        $itemfilter = $itemsemua->where('order_id', 'like',"$idtaker");
 
         // $hitam = Items::where('order_id', 'like', '1');
+        if ($search) {
+            $itemjadi = $itemsemua->whereIn('order_id', $idtaker) // Remove 'like' here
+            ->where('nama_sprei', 'like', "%{$search}%");
+        dd($itemjadi);
+        }else{
+            $itemjadi = $itemsemua->where('order_id', 'like',"$idtaker");
+            
+            // dd($itemjadi);
+        }
 
-        
+
         $items = [
-            'items' => $itemfilter
+            'items' => $itemjadi
         ];
+        // dd($items);
         return view('items.index', $id, $items); 
     }   
 

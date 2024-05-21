@@ -14,12 +14,13 @@
 
     <div class="container" style="background-color: white; border-radius: 6px 6px 0px 0px;">
         <div class="container pb-4 pt-3 align-items-center justify-content-between d-flex">
-            <div class="input-group" style="width: 190px">
-                <input type="search" name="" id="" class="form-control border-secondary"
-                    placeholder="Cari Barang" style="height: 32px">
-                <button class="btn btn-secondary btn-sm" type="button"><i class="bx bx-search"></i></button>
-            </div>
-            <div class="dropdown">
+            <form action="{{ url("items/$id") }}" method="GET">
+                <div class="input-group" style="width: 190px;">
+                  <input type="search" name="searchitem" id="searchitem" class="form-control border-secondary"
+                         placeholder="Cari Item" style="height: 32px;">
+                  <button class="btn btn-secondary btn-sm" type="submit"><i class="bx bx-search"></i></button>
+                </div>
+              </form>            <div class="dropdown">
                 <button class="btn btn-white border-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     <i class='bx bx-filter-alt'></i> Cari Berdasarkan...

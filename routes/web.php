@@ -37,7 +37,7 @@ Route::patch('customer/{id}', [CustomerController::class, 'update']);
 
 // order
 
-Route::get('orders', [OrdersController::class, 'index']);
+Route::get('orders', [OrdersController::class, 'index'])->name('orders.index');
 
 Route::get('orders/create', [OrdersController::class, 'create']);
 
