@@ -112,6 +112,7 @@
                                             background-color: #f0f0f0;
                                         "
                                             class="rounded-2" id="bahan_sprei">
+                                            <option value="{{ $data->bahan_quilt }}">{{ $data->bahan_quilt }}</option>
                                             <option value="Katun">Katun</option>
                                             <option value="Wol">Wol</option>
                                         </select>
@@ -173,6 +174,7 @@
                                             background-color: #f0f0f0;
                                         "
                                             class="rounded-2" id="bahan_bantal">
+                                            <option value="{{ $data->bahan_bantal }}">{{ $data->bahan_bantal }}</option>
                                             <option value="">Kosong</option>
                                             <option value="Katun">Katun</option>
                                             <option value="Wol">Wol</option>
@@ -245,6 +247,7 @@
                                             background-color: #f0f0f0;
                                         "
                                             class="rounded-2" id="bahan_bedcover">
+                                            <option value="{{ $data->bahan_bedcover }}">{{ $data->bahan_bedcover }}</option>
                                             <option value="">Kosong</option>
                                             <option value="Katun">Katun</option>
                                             <option value="Wol">Wol</option>
@@ -316,7 +319,8 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                            class="rounded-2" id="bahan_inner" value="{{ $data->bahan_inner }}">
+                                            class="rounded-2" id="bahan_inner">
+                                            <option value="{{ $data->bahan_inner }}">{{ $data->bahan_inner }}</option>
                                             <option value="">Kosong</option>
                                             <option value="Katun">Katun</option>
                                             <option value="Wol">Wol</option>
@@ -388,7 +392,8 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                            class="rounded-2" id="bahan_quilt" value="{{ $data->bahan_quilt }}">
+                                            class="rounded-2" id="bahan_quilt">
+                                            <option value="{{ $data->bahan_quilt }}">{{ $data->bahan_quilt }}</option>
                                             <option value="">Kosong</option>
                                             <option value="Katun">Katun</option>
                                             <option value="Wol">Wol</option>
@@ -409,7 +414,7 @@
                                             width: 155px;
                                             background-color: #f0f0f0;
                                         "
-                                            name="jumlah_quilt" id="jumlah_quilt" aria-describedby="helpId"
+                                            name="jumlah_quilt" value="{{ $data->jumlah_quilt }}" id="jumlah_quilt" aria-describedby="helpId"
                                             placeholder="" />
                                     </td>
                                     <td style="background-color: #f0f0f0">
@@ -483,6 +488,8 @@
                                             background-color: #f0f0f0;
                                         "
                                             class="rounded-2" id="jenis_karet">
+                                            <option value="{{ $data->jenis_karet }}">{{ $data->jenis_karet }}</option>
+                                            <option value="">Kosong</option>
                                             <option value="Keliling">Keliling</option>
                                             <option value="Anti Geser">Anti Geser</option>
                                         </select>
