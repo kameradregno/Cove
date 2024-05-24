@@ -21,10 +21,10 @@ class PendapatanPerBulanChart
         $Bulan = date('m');
         for ($i = 1; $i <= $Bulan; $i++) {
             $totalpendapatan = Items::
-            // sum('harga_sprei');
-            whereYear('created_at', $tahun)
-            ->whereMonth('created_at', $i)
-            ->sum('harga_sprei');
+                // sum('harga_sprei');
+                whereYear('created_at', $tahun)
+                ->whereMonth('created_at', $i)
+                ->sum('harga_sprei');
 
             $dataBulan[] = $i;
             $dataTotalpendapatan[] = $totalpendapatan;

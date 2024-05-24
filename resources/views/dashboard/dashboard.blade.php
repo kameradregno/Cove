@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('js')
-<script src="{{ $chart->cdn() }}"></script>
-{{ $chart->script() }}
+    <script src="{{ $chart->cdn() }}"></script>
+    {{ $chart->script() }}
 @endsection
 
 @section('title', 'Dashboard')
@@ -10,6 +10,7 @@
 @section('content')
 
     <div class="container mt-4ht pt-3">
+
         <body>
             <div class="container-fluid">
                 <div class="row">
@@ -33,9 +34,9 @@
                             <div class="container">
                                 <div>{!! $chart->container() !!}</div>
                             </div>
-                                
-                                {{-- <canvas class="chart" width="400" height="200"> --}}
-                                {{-- </canvas> --}}
+
+                            {{-- <canvas class="chart" width="400" height="200"> --}}
+                            {{-- </canvas> --}}
                         </div>
                     </div>
                 </div>
@@ -74,11 +75,11 @@
 
             <div class="card-body">
             </div>
-        </div>
-            @yield('js')
-        </body>
+    </div>
+    @yield('js')
+    </body>
     </div>
 
-    
+
 
 @endsection
