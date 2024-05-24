@@ -3,15 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use ArielMejiaDev\LarapexCharts\LarapexChart;
+use App\Charts\PendapatanPerBulanChart;
+
 
 class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(PendapatanPerBulanChart $chart)
     {
-        return view('dashboard.dashboard');
+        return view('dashboard.dashboard', ['chart' => $chart->build()]);
     }
 
     /**

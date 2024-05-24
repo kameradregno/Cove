@@ -1,10 +1,16 @@
 @extends('layouts.app')
 
+@section('js')
+<script src="{{ $chart->cdn() }}"></script>
+{{ $chart->script() }}
+@endsection
+
 @section('title', 'Dashboard')
 
 @section('content')
 
     <div class="container mt-4ht pt-3">
+        <body>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6 mb-3">
@@ -24,9 +30,12 @@
                                 <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
                                 Pendapatan Tertinggi
                             </div>
-                            <div class="card-body">
-                                <canvas class="chart" width="400" height="200"></canvas>
+                            <div class="container">
+                                <div>{!! $chart->container() !!}</div>
                             </div>
+                                
+                                {{-- <canvas class="chart" width="400" height="200"> --}}
+                                {{-- </canvas> --}}
                         </div>
                     </div>
                 </div>
@@ -66,6 +75,8 @@
             <div class="card-body">
             </div>
         </div>
+            @yield('js')
+        </body>
     </div>
 
     
