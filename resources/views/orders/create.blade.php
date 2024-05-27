@@ -1,80 +1,80 @@
-@extends('layouts.app')
+ @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-@section('title', 'Tambah Pesanan')
+ <body class="font-sans antialiased dark:bg-gray-900 dark:text-white">
 
-@section('content')
+     <div class="flex justify-center items-center min-h-screen pt-10 px-4 md:px-0">
+         <!-- Added px-4 for padding on small screens -->
 
-    <div class="container pt-1 rounded-2" style="background-color: white; height: 310px; margin-top:5.5rem">
-        <form method="POST" action="{{ url('orders') }}">
-            @csrf
+         <div
+             class="p-4 border-2 border-gray-200 rounded-lg dark:border-gray-700 flex flex-col items-center w-full md:w-full lg:max-w-7xl">
+             <!-- Adjusted max-width for large screens -->
 
-            <div class="container mt-4 rounded-2" style="background-color: white; height: auto">
-                <div class="container mt-4 rounded-2 d-flex justify-content-between align-items-center">
-                    <h5 class="">Tambah Pesanan</h5>
-                </div>
+             <!-- Heading -->
+             <h2 class="text-2xl font-bold mb-5 text-gray-900 dark:text-white">Tambah Pesanan</h2>
 
-                <div class="container rounded-2 mt-4 d-flex justify-content-between align-items-center">
+             <form class="w-full" method="POST" action="{{ url('orders') }}">
+                @csrf
+                 <div class="mb-5">
+                     <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama
+                         Pembeli</label>
+                     <select name="customer_id" id="nama_pembeli"
+                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                         required>
+                         @foreach ($customers as $customer)
+                             <option value="{{ $customer['id'] }}">{{ $customer['nama'] }}</option>
+                         @endforeach
+                     </select>
+                 </div>
 
-                    <div class="d-flex flex-column mb-2">
-                        <label for="" class="form-label b-1">Nama Pembeli</label>
+                 <div class="mb-5">
+                     <label for="order-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama
+                         Pesanan</label>
+                     <input type="text" name="nama_pesanan" id="nama_pesanan"
+                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                         required />
+                 </div>
 
-                        <select name="customer_id" id="nama_pembeli" class="form-control" style="width: 206.67px">
-                            @foreach ($customers as $customer)
-                                <option value="{{ $customer['id'] }}">{{ $customer['nama'] }}</option>
-                            @endforeach
-                        </select>
-                    </div>
+                 <div class="mb-5">
+                     <label for="payment-method"
+                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Metode
+                         Pembayaran</label>
+                     <select name="metode_pembayaran" id="metode_pembayaran"
+                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                         required>
+                         <option value="TRANSFER">Transfer</option>
+                         <option value="COD">COD</option>
+                     </select>
+                 </div>
 
-                    <div class="d-flex justify-content-between">
+                 <div class="mb-5">
+                     <label for="address"
+                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Alamat</label>
+                     <textarea name="alamat" id="alamat"
+                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                         required></textarea>
+                 </div>
 
-                        <div class="d-flex flex-column mb-2">
-                            <label for="" class="form-label b-1">Nama Pesanan</label>
-                            <input class="form-control form-sm border-secondary" type="text" placeholder="Nama Pesanan"
-                                name="nama_pesanan" id="nama_pesanan" />
-                        </div>
+                 <div class="mb-5">
+                     <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jenis
+                         Pengiriman</label>
+                     <select name="jenis_pengiriman" id="jenis_pengiriman"
+                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                         required>
+                         <option value="JNE">JNE</option>
+                         <option value="POS">POS</option>
+                         <option value="TIKI">TIKI</option>
+                     </select>
+                 </div>
 
-                    </div>
+                 <div class="flex justify-center">
+                     <button type="submit"
+                         class="mt-5 text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Simpan</button>
+                 </div>
 
-                    <div class="d-flex flex-column mb-2">
-                        <label for="" class="form-label b-1">Metode Pembayaran</label>
-                        <select name="metode_pembayaran" id="metode_pembayaran" class="rounded-2"
-                            style="height: 37.6px; width: 206.67px">
-                            <option value="TRANSFER">Transfer</option>
-                            <option value="COD">COD</option>
-                        </select>
-                    </div>
+             </form>
 
-                </div>
+         </div>
 
-                <div class="container mb-2 mt-2 d-flex justify-content-start align-items-center"
-                    style="margin-top: -10px; gap:7.5rem">
-                    <div class="d-flex flex-column mb-2">
-                        <label for="" class="form-label b-1">Alamat</label>
-                        <textarea name="alamat" id="alamat" cols="30" rows="10" class="rounded-2"
-                            style="height: 37.35px;width: 206.67px"></textarea>
-                    </div>
+     </div>
 
-                    <div class="d-flex justify-content-start">
-                        <div class="d-flex flex-column mb-2">
-                            <label for="" class="form-label mb-1">Jenis Pengiriman</label>
-                            <select name="jenis_pengiriman" id="jenis_pengiriman" class="rounded-2"
-                                style="height: 37.35px; width: 206.67px">
-                                <option value="JNE">JNE</option>
-                                <option value="POS">POS</option>
-                                <option value="TIKI">TIKI</option>
-
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="d-flex-justify-content-between pt-4">
-                        <button type="submit" class="btn btn-primary btn-md text-center" style="width:206px"><i
-                                class="bx bx-plus"></i>
-                            Tambah</button>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-
-@endsection
+ </body>
