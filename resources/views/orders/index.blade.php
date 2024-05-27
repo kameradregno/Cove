@@ -6,7 +6,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <div class="p-3 sm:ml-60">
+    <div class="p-3 pt-5 sm:ml-60">
         <div class="p-3 border-2 border-gray-200 rounded-lg dark:border-gray-700 mt-14">
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                 <div
