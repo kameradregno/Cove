@@ -6,8 +6,8 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <div class="p-5 sm:ml-60">
-        <div class="p-4 border-2 border-gray-200 rounded-lg dark:border-gray-700 mt-14">
+    <div class="p-3 sm:ml-60">
+        <div class="p-3 border-2 border-gray-200 rounded-lg dark:border-gray-700 mt-14">
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                 <div
                     class="flex flex-col sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between pb-4 pt-1 px-2">
@@ -150,7 +150,7 @@
                                 <td class="px-6 py-4">
                                     100
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="px-50 py-4">
 
                                     <a href="{{ url("orders/$order->id/edit") }}"><button
                                             class="text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Edit</button></a>
