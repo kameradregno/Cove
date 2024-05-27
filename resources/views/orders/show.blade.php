@@ -41,7 +41,7 @@
                                 Pembayaran</label>
                             <select name="metode_pembayaran" id="metode_pembayaran"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                @readonly(true)>
+                                disabled>
                                 <option value="{{ $data->metode_pembayaran }}">{{ $data->metode_pembayaran }}</option>
                             </select>
                         </div>
@@ -59,14 +59,14 @@
                                 Pengiriman</label>
                             <select name="jenis_pengiriman" id="jenis_pengiriman"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                @readonly(true)>
+                                disabled>
                                 <option value="{{ $data->jenis_pengiriman }}">{{ $data->jenis_pengiriman }}</option>
                             </select>
                         </div>
 
                         <div class="flex justify-center">
                             <a href="{{ url("items/$data->id") }}"
-                                class="mt-5 text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Barang
+                                class="mt-5 text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Ke Daftar Barang
                                 Pesanan</a>
                         </div>
 

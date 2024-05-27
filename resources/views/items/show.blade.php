@@ -3,6 +3,7 @@
 @section('title', 'Tambah Item')
 
 @section('content')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <div class="container mt-2 mb-1 rounded-2" style="background-color: white; height: 525px">
         <div class="container pt-4 rounded-2" style="background-color: white; height: auto">
@@ -49,7 +50,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            
+
                             <tr class="border-secondary">
                                 <td style="background-color: #f0f0f0">
                                     <p>{{ $data->nama_sprei }}</p>
@@ -102,277 +103,272 @@
                             </tr>
                         </tbody>
                     </table>
-                    @if (! $data->bahan_bantal == null)
-                    <!-- + bantal -->
-                    <div class="container">
-                        <h5 style="font-weight: 500">Bantal Tambahan</h5>
-                    </div>
-                    <table class="table">
-                        <thead class="border-none">
-                            <tr>
-                                <th scope="col"
-                                    style="
+                    @if (!$data->bahan_bantal == null)
+                        <!-- + bantal -->
+                        <div class="container">
+                            <h5 style="font-weight: 500">Bantal Tambahan</h5>
+                        </div>
+                        <table class="table">
+                            <thead class="border-none">
+                                <tr>
+                                    <th scope="col"
+                                        style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
                                         "
-                                    class="fw-bold">
-                                    Bahan Bantal
-                                </th>
-                                <th scope="col"
-                                    style="
+                                        class="fw-bold">
+                                        Bahan Bantal
+                                    </th>
+                                    <th scope="col"
+                                        style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
                                         "
-                                    class="fw-bold">
-                                    Jenis Bantal
-                                </th>
-                                <th scope="col"
-                                    style="
+                                        class="fw-bold">
+                                        Jenis Bantal
+                                    </th>
+                                    <th scope="col"
+                                        style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
                                         "
-                                    class="fw-bold">
-                                    Jumlah Bantal
-                                </th>
-                                <th style="background-color: #f0f0f0"></th>
-                                <th style="background-color: #f0f0f0"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-secondary">
-                                <td style="background-color: #f0f0f0">
-                                    {{ $data->bahan_bantal }}
-                                </td>
-                                <td style="background-color: #f0f0f0">
-                                    <p>{{ $data->jenis_bantal }}</p>
-                                </td>
-                                <td style="background-color: #f0f0f0">
-                                    <p>{{ $data->jumlah_bantal }}</p>
-                                </td>
-                                <td style="background-color: #f0f0f0;"></td>
-                                <td style="background-color: #f0f0f0;"></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                        class="fw-bold">
+                                        Jumlah Bantal
+                                    </th>
+                                    <th style="background-color: #f0f0f0"></th>
+                                    <th style="background-color: #f0f0f0"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-secondary">
+                                    <td style="background-color: #f0f0f0">
+                                        {{ $data->bahan_bantal }}
+                                    </td>
+                                    <td style="background-color: #f0f0f0">
+                                        <p>{{ $data->jenis_bantal }}</p>
+                                    </td>
+                                    <td style="background-color: #f0f0f0">
+                                        <p>{{ $data->jumlah_bantal }}</p>
+                                    </td>
+                                    <td style="background-color: #f0f0f0;"></td>
+                                    <td style="background-color: #f0f0f0;"></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     @endif
-                    @if (! $data->bahan_bedcover == null)
-                                        <!-- + bc -->
-                                        <div class="container">
-                                            <h5 style="font-weight: 500">Bed Cover</h5>
-                                        </div>
-                                        <table class="table">
-                                            <thead class="border-none">
-                    
-                                                <tr>
-                                                    <th scope="col"
-                                                        style="
-                                                                background-color: #f0f0f0;
-                                                                font-weight: 400;
-                                                            "
-                                                        class="fw-bold">
-                                                        Bahan Bed Cover
-                                                    </th>
-                                                    <th scope="col"
-                                                        style="
-                                                                background-color: #f0f0f0;
-                                                                font-weight: 400;
-                                                            "
-                                                        class="fw-bold">
-                                                        Jenis Bed Cover
-                                                    </th>
-                                                    <th scope="col"
-                                                        style="
-                                                                background-color: #f0f0f0;
-                                                                font-weight: 400;
-                                                            "
-                                                        class="fw-bold">
-                                                        Jumlah Bed Cover
-                                                    </th>
-                                                    <th style="background-color: #f0f0f0"></th>
-                                                    <th style="background-color: #f0f0f0"></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="border-secondary">
-                                                    <td style="background-color: #f0f0f0">
-                                                        <p>{{ $data->bahan_bedcover }}</p>
-                                                    </td>
-                                                    <td style="background-color: #f0f0f0">
-                                                        {{ $data->jenis_bedcover }}
-                                                    </td>
-                                                    <td style="background-color: #f0f0f0">
-                                                        {{ $data->jumlah_bantal }}
-                                                    </td>
-                                                    <td style="background-color: #f0f0f0;"></td>
-                                                    <td style="background-color: #f0f0f0;"></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                    
-                    @endif
+                    @if (!$data->bahan_bedcover == null)
+                        <!-- + bc -->
+                        <div class="container">
+                            <h5 style="font-weight: 500">Bed Cover</h5>
+                        </div>
+                        <table class="table">
+                            <thead class="border-none">
 
-                    @if (! $data->bahan_inner == null)
-                                        <!-- + inner cover -->
-                                        <div class="container">
-                                            <h5 style="font-weight: 500">Inner Cover</h5>
-                                        </div>
-                                        <table class="table">
-                                            <thead class="border-none">
-                    
-                                                <tr>
-                                                    <th scope="col"
-                                                        style="
+                                <tr>
+                                    <th scope="col"
+                                        style="
                                                                 background-color: #f0f0f0;
                                                                 font-weight: 400;
                                                             "
-                                                        class="fw-bold">
-                                                        Bahan Inner Cover
-                                                    </th>
-                                                    <th scope="col"
-                                                        style="
+                                        class="fw-bold">
+                                        Bahan Bed Cover
+                                    </th>
+                                    <th scope="col"
+                                        style="
                                                                 background-color: #f0f0f0;
                                                                 font-weight: 400;
                                                             "
-                                                        class="fw-bold">
-                                                        Jenis Inner Cover
-                                                    </th>
-                                                    <th scope="col"
-                                                        style="
+                                        class="fw-bold">
+                                        Jenis Bed Cover
+                                    </th>
+                                    <th scope="col"
+                                        style="
                                                                 background-color: #f0f0f0;
                                                                 font-weight: 400;
                                                             "
-                                                        class="fw-bold">
-                                                        Jumlah Inner Cover
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="border-secondary">
-                                                    <td style="background-color: #f0f0f0">
-                                                        <p>{{ $data->bahan_inner }}</p>
-                                                    </td>
-                                                    <td style="background-color: #f0f0f0">
-                                                        <p>{{ $data->jenis_inner }}</p>
-                                                    </td>
-                                                    <td style="background-color: #f0f0f0">
-                                                        <p>{{ $data->jumlah_inner }}</p>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                    
+                                        class="fw-bold">
+                                        Jumlah Bed Cover
+                                    </th>
+                                    <th style="background-color: #f0f0f0"></th>
+                                    <th style="background-color: #f0f0f0"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-secondary">
+                                    <td style="background-color: #f0f0f0">
+                                        <p>{{ $data->bahan_bedcover }}</p>
+                                    </td>
+                                    <td style="background-color: #f0f0f0">
+                                        {{ $data->jenis_bedcover }}
+                                    </td>
+                                    <td style="background-color: #f0f0f0">
+                                        {{ $data->jumlah_bantal }}
+                                    </td>
+                                    <td style="background-color: #f0f0f0;"></td>
+                                    <td style="background-color: #f0f0f0;"></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     @endif
 
-                    @if (! $data->bahan_quilt == null)
-                                        <!-- + quilt cover -->
-                                        <div class="container">
-                                            <h5 style="font-weight: 500">Quilt Cover</h5>
-                                        </div>
-                                        <table class="table">
-                                            <thead class="border-none">
-                    
-                                                <tr>
-                                                    <th scope="col"
-                                                        style="
+                    @if (!$data->bahan_inner == null)
+                        <!-- + inner cover -->
+                        <div class="container">
+                            <h5 style="font-weight: 500">Inner Cover</h5>
+                        </div>
+                        <table class="table">
+                            <thead class="border-none">
+
+                                <tr>
+                                    <th scope="col"
+                                        style="
                                                                 background-color: #f0f0f0;
                                                                 font-weight: 400;
                                                             "
-                                                        class="fw-bold">
-                                                        Bahan Quilt Cover
-                                                    </th>
-                                                    <th scope="col"
-                                                        style="
+                                        class="fw-bold">
+                                        Bahan Inner Cover
+                                    </th>
+                                    <th scope="col"
+                                        style="
                                                                 background-color: #f0f0f0;
                                                                 font-weight: 400;
                                                             "
-                                                        class="fw-bold">
-                                                        Jenis Quilt Cover
-                                                    </th>
-                                                    <th scope="col"
-                                                        style="
+                                        class="fw-bold">
+                                        Jenis Inner Cover
+                                    </th>
+                                    <th scope="col"
+                                        style="
                                                                 background-color: #f0f0f0;
                                                                 font-weight: 400;
                                                             "
-                                                        class="fw-bold">
-                                                        Jumlah Quilt Cover
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="border-secondary">
-                                                    <td style="background-color: #f0f0f0">
-                                                        <p>{{ $data->bahan_quilt }}</p>
-                                                    </td>
-                                                    <td style="background-color: #f0f0f0">
-                                                        <p>{{ $data->jenis_quilt }}</p>
-                                                    </td>
-                                                    <td style="background-color: #f0f0f0">
-                                                        <p>{{ $data->jumlah_quilt }}</p>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                    
+                                        class="fw-bold">
+                                        Jumlah Inner Cover
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-secondary">
+                                    <td style="background-color: #f0f0f0">
+                                        <p>{{ $data->bahan_inner }}</p>
+                                    </td>
+                                    <td style="background-color: #f0f0f0">
+                                        <p>{{ $data->jenis_inner }}</p>
+                                    </td>
+                                    <td style="background-color: #f0f0f0">
+                                        <p>{{ $data->jumlah_inner }}</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     @endif
 
-                    @if (! $data->jumlah_box == null)
-                    
-                    <!-- + box sprei -->
-                    <div class="container">
-                        <h5 style="font-weight: 500">Box Sprei</h5>
-                    </div>
-                    <table class="table">
-                        <thead class="border-none">
+                    @if (!$data->bahan_quilt == null)
+                        <!-- + quilt cover -->
+                        <div class="container">
+                            <h5 style="font-weight: 500">Quilt Cover</h5>
+                        </div>
+                        <table class="table">
+                            <thead class="border-none">
 
-                            <tr>
-                                <th scope="col"
-                                    style="
+                                <tr>
+                                    <th scope="col"
+                                        style="
+                                                                background-color: #f0f0f0;
+                                                                font-weight: 400;
+                                                            "
+                                        class="fw-bold">
+                                        Bahan Quilt Cover
+                                    </th>
+                                    <th scope="col"
+                                        style="
+                                                                background-color: #f0f0f0;
+                                                                font-weight: 400;
+                                                            "
+                                        class="fw-bold">
+                                        Jenis Quilt Cover
+                                    </th>
+                                    <th scope="col"
+                                        style="
+                                                                background-color: #f0f0f0;
+                                                                font-weight: 400;
+                                                            "
+                                        class="fw-bold">
+                                        Jumlah Quilt Cover
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-secondary">
+                                    <td style="background-color: #f0f0f0">
+                                        <p>{{ $data->bahan_quilt }}</p>
+                                    </td>
+                                    <td style="background-color: #f0f0f0">
+                                        <p>{{ $data->jenis_quilt }}</p>
+                                    </td>
+                                    <td style="background-color: #f0f0f0">
+                                        <p>{{ $data->jumlah_quilt }}</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    @endif
+
+                    @if (!$data->jumlah_box == null)
+                        <!-- + box sprei -->
+                        <div class="container">
+                            <h5 style="font-weight: 500">Box Sprei</h5>
+                        </div>
+                        <table class="table">
+                            <thead class="border-none">
+
+                                <tr>
+                                    <th scope="col"
+                                        style="
                                             background-color: #f0f0f0;
                                             font-weight: 400;
                                         "
-                                    class="fw-bold">
-                                    Jumlah Box Sprei
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-secondary">
-                                <td style="background-color: #f0f0f0">
-                                    <p>{{ $data->jumlah_box }}</p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                        class="fw-bold">
+                                        Jumlah Box Sprei
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-secondary">
+                                    <td style="background-color: #f0f0f0">
+                                        <p>{{ $data->jumlah_box }}</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     @endif
 
-                    @if (! $data->jenis_karet == null)
-                                        <!-- + karet -->
-                                        <div class="container">
-                                            <h5 style="font-weight: 500">Karet</h5>
-                                        </div>
-                                        <table class="table">
-                                            <thead class="border-none">
-                    
-                                                <tr>
-                                                    <th scope="col"
-                                                        style="
+                    @if (!$data->jenis_karet == null)
+                        <!-- + karet -->
+                        <div class="container">
+                            <h5 style="font-weight: 500">Karet</h5>
+                        </div>
+                        <table class="table">
+                            <thead class="border-none">
+
+                                <tr>
+                                    <th scope="col"
+                                        style="
                                                                 background-color: #f0f0f0;
                                                                 font-weight: 400;
                                                             "
-                                                        class="fw-bold">
-                                                        Jenis Karet
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="border-secondary">
-                                                    <td style="background-color: #f0f0f0">
-                                                        <p>{{ $data->jenis_karet }}</p>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                    
+                                        class="fw-bold">
+                                        Jenis Karet
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-secondary">
+                                    <td style="background-color: #f0f0f0">
+                                        <p>{{ $data->jenis_karet }}</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     @endif
                 </div>
             </div>
