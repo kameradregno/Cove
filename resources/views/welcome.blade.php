@@ -1,75 +1,83 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beranda</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <link rel="shortcut icon" href="/frontend/images/logo.png" type="image/x-icon" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
-    <style>
-        body {
-            background-color: #f0f0f0;
-        }
-    </style>
-</head>
+@section('title', 'Pesanan')
 
-<body>
+@section('content')
 
-    @extends('layouts.app')
+    <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-    @section('content')
-        <div class="container mt-4">
-            <h6 class="text-center">Halo, User</h6>
-            <h4 class="text-center fw-light">
-                Aktivitas apa yang ingin anda lakukan hari ini?
-            </h4>
-        </div>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="card border-light mx-auto mb-3" style="width: 22rem; height: 167px;">
-                    <div class="card-body d-flex align-items-center justify-content-center">
-                        <h4 class="card-title text-center"><a href="{{ url('customer') }}" style="color: black; text-decoration:none">Tambah Customer</a></h4>
+        <title>Laravel</title>
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    </head>
+
+    <body class="font-sans antialiased dark:bg-gray-800 dark:text-dark/50">
+
+        <div class="p-4 sm:ml-64">
+            <div class="p-4 border-2 border-gray-200 rounded-lg dark:border-gray-700 mt-14">
+
+                <h1 class="font-medium text-center"> Halo Rakha Nurrahma Rizki </h1>
+                <p class="text-center">Aktivitas apa yang ingin anda lakukan ?</p>
+
+            </div>
+
+            <!-- Cards Section -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+
+                <!-- Dashboard Card -->
+
+                <div
+                    class="max-w-sm mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 hover:shadow-lg transition-shadow duration-300">
+                    <div class="p-6">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Dashboard</h5>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Manage your dashboard settings and view
+                            your statistics.</p>
+                        <a href="#"
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Go to Dashboard
+                        </a>
                     </div>
                 </div>
-                <div class="card border-light mx-auto mb-3" style="width: 22rem; height: 167px;">
-                    <div class="card-body d-flex align-items-center justify-content-center">
-                        <h4 class="card-title text-center"><a href="{{ url('orders') }}" style="color: black; text-decoration:none">Tambah Pesanan</a></h4>
+
+                <!-- Customer Card -->
+
+                <div
+                    class="max-w-sm mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 hover:shadow-lg transition-shadow duration-300">
+                    <div class="p-6">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Customer</h5>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">View and manage your customer
+                            information.</p>
+                        <a href="#"
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Go to Customer
+                        </a>
                     </div>
                 </div>
-                <div class="card border-light mx-auto mb-3" style="width: 22rem; height: 167px;">
-                    <div class="card-body d-flex align-items-center justify-content-center">
-                        <h4 class="card-title text-center">Pendapatan Bulan Ini</h4>
+
+                <!-- Pesanan Card -->
+
+                <div
+                    class="max-w-sm mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 hover:shadow-lg transition-shadow duration-300">
+                    <div class="p-6">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Pesanan</h5>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">View and manage your Pesanan
+                            information.</p>
+                        <a href="#"
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Go to Pesanan
+                        </a>
                     </div>
                 </div>
-                <div class="card border-light mx-auto mb-3" style="width: 22rem; height: 167px;">
-                    <div class="card-body d-flex align-items-center justify-content-center">
-                        <h4 class="card-title text-center">Note Dari Ibu</h4>
-                    </div>
-                </div>
+
             </div>
         </div>
-    @endsection
 
+    </body>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
-    </script>
+    </html>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
-    <script src="js/jquery-3.5.1.js"></script>
-    <script src="js/jquery.dataTables.min.js"></script>
-    <script src="js/dataTables.bootstrap5.min.js"></script>
-    <script src="js/script.js"></script>
-
-</body>
-
-</html>
+@endsection

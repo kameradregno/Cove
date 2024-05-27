@@ -9,6 +9,8 @@
 
 @section('content')
 
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
     <div class="container mt-4ht pt-3">
 
         <body>

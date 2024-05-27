@@ -6,7 +6,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <div class="p-4 sm:ml-64">
+    <div class="p-5 sm:ml-60">
         <div class="p-4 border-2 border-gray-200 rounded-lg dark:border-gray-700 mt-14">
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                 <div
@@ -97,7 +97,7 @@
                             </div>
 
                             <a href=" {{ url('customer/create') }} "
-                                class="text-white bg-green-500 hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Create</a>
+                                class="text-white bg-green-500 hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Create</a>
                         </div>
                     </form>
 
@@ -148,10 +148,10 @@
                                 </td>
                                 <td class="px-6 py-4">
                                     <a href="{{ url("customer/$customer->id/edit") }}"><button
-                                            class="text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Edit</button></a>
+                                            class="text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Edit</button></a>
                                     <button type="button" data-modal-target="modal-customer"
                                         data-modal-toggle="modal-customer"
-                                        class="text-white bg-red-500 hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Delete</button>
+                                        class="text-white bg-red-500 hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Delete</button>
                                 </td>
                             </tr>
 
