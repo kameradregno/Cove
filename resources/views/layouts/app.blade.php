@@ -12,9 +12,8 @@
 </head>
 
 <body>
-    <div class="wrapper d-flex align-items-stretch"> {{-- sidebar --}} @include('layouts.app.header') <div
-            id="content" class="p-4" style="width: 1000px;"> @yield('content') </div>
-    </div>
+    @include('layouts.app.header')
+    @yield('content')
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
     </script>
