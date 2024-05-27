@@ -1,385 +1,151 @@
 @extends('layouts.app')
 
-@section('title', 'Tambah Item')
+@section('title', 'Customer')
 
 @section('content')
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <div class="container mt-2 mb-1 rounded-2" style="background-color: white; height: 525px">
-        <div class="container pt-4 rounded-2" style="background-color: white; height: auto">
+    <div class="p-4 sm:ml-64">
 
-            <div class="container rounded-2 pt-3" style="background-color: #f0f0f0">
-                <div class="container  rounded-2 pb-2 align-items-center">
-                    <h5 class="fw-bold">Daftar Barang Pesanan</h5>
-                </div>
+        <div class="mt-14">
 
-                <div class="table-responsive-sm pb-5 pt-2" style="overflow-y: scroll; height: 370px">
-                    <div class="container">
-                        <h5 style="font-weight: 500">Sprei</h5>
+        <div class="flex min-h-screen pt-10 px-4 md:px-0">
+            <!-- Added px-4 for padding on small screens -->
+
+            <div
+                class="p-4 border-2 border-gray-200 rounded-lg dark:border-gray-700 flex flex-col w-full md:w-full lg:max-w-7xl">
+                <!-- Adjusted max-width for large screens -->
+
+                    <h2 class="text-2xl font-bold mb-5 text-gray-900 dark:text-white">Sprei</h2>
+
+                    <div class="mb-5">
+                        <h2 class="mb-2 font-bold">Nama Sprei</h2>
+                        <p>{{ $data->nama_sprei }}</p>
                     </div>
-                    <table class="table">
-                        <thead class="border-none">
 
-                            <tr>
-                                <th scope="col"
-                                    style="
-                                            background-color: #f0f0f0;
-                                            font-weight: 400;
-                                        "
-                                    class="fw-bold">
-                                    Nama Sprei
-                                </th>
-                                <th scope="col"
-                                    style="
-                                            background-color: #f0f0f0;
-                                            font-weight: 400;
-                                        "
-                                    class="fw-bold">
-                                    Harga
-                                </th>
-                                <th scope="col"
-                                    style="
-                                            background-color: #f0f0f0;
-                                            font-weight: 400;
-                                        "
-                                    class="fw-bold">
-                                    Catatan
-                                </th>
-                                <th style="background-color: #f0f0f0"></th>
-                                <th style="background-color: #f0f0f0"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
+                    <div class="mb-5">
+                        <h2 class="mb-2 font-bold">Harga</h2>
+                        <p>Rp.{{ $data->harga_sprei }}</p>
+                    </div>
 
-                            <tr class="border-secondary">
-                                <td style="background-color: #f0f0f0">
-                                    <p>{{ $data->nama_sprei }}</p>
-                                </td>
-                                <td style="background-color: #f0f0f0">
-                                    Rp.{{ $data->harga_sprei }}
-                                </td>
-                                <td style="background-color: #f0f0f0">
-                                    {{ $data->catatan }}
-                                </td>
-                                <td style="background-color: #f0f0f0;"></td>
-                                <td style="background-color: #f0f0f0;"></td>
-                            </tr>
-                        </tbody>
-                        <!-- bahan dll -->
+                    <div class="mb-5">
+                        <h2 class="mb-2 font-bold">Catatan</h2>
+                        <p>{{ $data->catatan }}</p>
+                    </div>
 
-                        <thead class="border-none">
-                            <tr>
-                                <th scope="col"
-                                    style="
-                                            background-color: #f0f0f0;
-                                            font-weight: 400;
-                                        "
-                                    class="fw-bold">
-                                    Jenis Bahan Sprei
-                                </th>
-                                <th scope="col"
-                                    style="
-                                            background-color: #f0f0f0;
-                                            font-weight: 400;
-                                        "
-                                    class="fw-bold">
-                                    Ukuran Sprei
-                                </th>
-                                <th style="background-color: #f0f0f0"></th>
-                                <th style="background-color: #f0f0f0"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-secondary">
-                                <td style="background-color: #f0f0f0">
-                                    {{ $data->bahan_sprei }}
-                                </td>
-                                <td style="background-color: #f0f0f0">
-                                    <p>{{ $data->ukuran_sprei }}</p>
-                                </td>
-                                <td style="background-color: #f0f0f0"></td>
-                                <td style="background-color: #f0f0f0"></td>
-                                <td style="background-color: #f0f0f0"></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="mb-5">
+                        <h2 class="mb-2 font-bold">Bahan Sprei</h2>
+                        <p>{{ $data->bahan_sprei }}</p>
+                    </div>
+
+                    <div class="mb-5">
+                        <h2 class="mb-2 font-bold">Ukuran Sprei</h2>
+                        <p>{{ $data->ukuran_sprei }}</p>
+                    </div>
+
                     @if (!$data->bahan_bantal == null)
-                        <!-- + bantal -->
-                        <div class="container">
-                            <h5 style="font-weight: 500">Bantal Tambahan</h5>
-                        </div>
-                        <table class="table">
-                            <thead class="border-none">
-                                <tr>
-                                    <th scope="col"
-                                        style="
-                                            background-color: #f0f0f0;
-                                            font-weight: 400;
-                                        "
-                                        class="fw-bold">
-                                        Bahan Bantal
-                                    </th>
-                                    <th scope="col"
-                                        style="
-                                            background-color: #f0f0f0;
-                                            font-weight: 400;
-                                        "
-                                        class="fw-bold">
-                                        Jenis Bantal
-                                    </th>
-                                    <th scope="col"
-                                        style="
-                                            background-color: #f0f0f0;
-                                            font-weight: 400;
-                                        "
-                                        class="fw-bold">
-                                        Jumlah Bantal
-                                    </th>
-                                    <th style="background-color: #f0f0f0"></th>
-                                    <th style="background-color: #f0f0f0"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-secondary">
-                                    <td style="background-color: #f0f0f0">
-                                        {{ $data->bahan_bantal }}
-                                    </td>
-                                    <td style="background-color: #f0f0f0">
-                                        <p>{{ $data->jenis_bantal }}</p>
-                                    </td>
-                                    <td style="background-color: #f0f0f0">
-                                        <p>{{ $data->jumlah_bantal }}</p>
-                                    </td>
-                                    <td style="background-color: #f0f0f0;"></td>
-                                    <td style="background-color: #f0f0f0;"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    @endif
-                    @if (!$data->bahan_bedcover == null)
-                        <!-- + bc -->
-                        <div class="container">
-                            <h5 style="font-weight: 500">Bed Cover</h5>
-                        </div>
-                        <table class="table">
-                            <thead class="border-none">
+                    <h2 class="text-2xl font-bold mb-5 text-gray-900 dark:text-white">Bantal Tambahan</h2>
 
-                                <tr>
-                                    <th scope="col"
-                                        style="
-                                                                background-color: #f0f0f0;
-                                                                font-weight: 400;
-                                                            "
-                                        class="fw-bold">
-                                        Bahan Bed Cover
-                                    </th>
-                                    <th scope="col"
-                                        style="
-                                                                background-color: #f0f0f0;
-                                                                font-weight: 400;
-                                                            "
-                                        class="fw-bold">
-                                        Jenis Bed Cover
-                                    </th>
-                                    <th scope="col"
-                                        style="
-                                                                background-color: #f0f0f0;
-                                                                font-weight: 400;
-                                                            "
-                                        class="fw-bold">
-                                        Jumlah Bed Cover
-                                    </th>
-                                    <th style="background-color: #f0f0f0"></th>
-                                    <th style="background-color: #f0f0f0"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-secondary">
-                                    <td style="background-color: #f0f0f0">
-                                        <p>{{ $data->bahan_bedcover }}</p>
-                                    </td>
-                                    <td style="background-color: #f0f0f0">
-                                        {{ $data->jenis_bedcover }}
-                                    </td>
-                                    <td style="background-color: #f0f0f0">
-                                        {{ $data->jumlah_bantal }}
-                                    </td>
-                                    <td style="background-color: #f0f0f0;"></td>
-                                    <td style="background-color: #f0f0f0;"></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="mb-5">
+                        <h2 class="mb-2 font-bold">Bahan Bantal</h2>
+                        <p>{{ $data->bahan_bantal }}</p>
+                    </div>
+
+                    <div class="mb-5">
+                        <h2 class="mb-2 font-bold">Jenis Bantal</h2>
+                        <p>{{ $data->jenis_bantal }}</p>
+                    </div>
+
+                    <div class="mb-5">
+                        <h2 class="mb-2 font-bold">Jumlah Bantal</h2>
+                        <p>{{ $data->jumlah_bantal }}</p>
+                    </div>
+                    @endif
+
+                    @if (!$data->bahan_bedcover == null)
+                    <h2 class="text-2xl font-bold mb-5 text-gray-900 dark:text-white">Bed Cover</h2>
+
+
+                    <div class="mb-5">
+                        <h2 class="mb-2 font-bold">Bahan Bed Cover</h2>
+                        <p>{{ $data->bahan_bedcover }}</p>
+                    </div>
+
+
+                    <div class="mb-5">
+                        <h2 class="mb-2 font-bold">Jenis Bed Cover</h2>
+                        <p>{{ $data->jenis_bedcover }}</p>
+                    </div>
+
+
+                    <div class="mb-5">
+                        <h2 class="mb-2 font-bold">Jumlah Bed Cover</h2>
+                        <p>{{ $data->jumlah_bedcover }}</p>
+                    </div>
                     @endif
 
                     @if (!$data->bahan_inner == null)
-                        <!-- + inner cover -->
-                        <div class="container">
-                            <h5 style="font-weight: 500">Inner Cover</h5>
-                        </div>
-                        <table class="table">
-                            <thead class="border-none">
+                    <h2 class="text-2xl font-bold mb-5 text-gray-900 dark:text-white">Inner Cover</h2>
 
-                                <tr>
-                                    <th scope="col"
-                                        style="
-                                                                background-color: #f0f0f0;
-                                                                font-weight: 400;
-                                                            "
-                                        class="fw-bold">
-                                        Bahan Inner Cover
-                                    </th>
-                                    <th scope="col"
-                                        style="
-                                                                background-color: #f0f0f0;
-                                                                font-weight: 400;
-                                                            "
-                                        class="fw-bold">
-                                        Jenis Inner Cover
-                                    </th>
-                                    <th scope="col"
-                                        style="
-                                                                background-color: #f0f0f0;
-                                                                font-weight: 400;
-                                                            "
-                                        class="fw-bold">
-                                        Jumlah Inner Cover
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-secondary">
-                                    <td style="background-color: #f0f0f0">
-                                        <p>{{ $data->bahan_inner }}</p>
-                                    </td>
-                                    <td style="background-color: #f0f0f0">
-                                        <p>{{ $data->jenis_inner }}</p>
-                                    </td>
-                                    <td style="background-color: #f0f0f0">
-                                        <p>{{ $data->jumlah_inner }}</p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="mb-5">
+                        <h2 class="mb-2 font-bold">Bahan Inner Cover</h2>
+                        <p>{{ $data->bahan_inner }}</p>
+                    </div>
+
+                    <div class="mb-5">
+                        <h2 class="mb-2 font-bold">Jenis Inner Cover</h2>
+                        <p>{{ $data->jenis_inner }}</p>
+                    </div>
+
+                    <div class="mb-5">
+                        <h2 class="mb-2 font-bold">Jumlah Inner Cover</h2>
+                        <p>{{ $data->jumlah_inner }}</p>
+                    </div>
                     @endif
 
                     @if (!$data->bahan_quilt == null)
-                        <!-- + quilt cover -->
-                        <div class="container">
-                            <h5 style="font-weight: 500">Quilt Cover</h5>
-                        </div>
-                        <table class="table">
-                            <thead class="border-none">
+                    <h2 class="text-2xl font-bold mb-5 text-gray-900 dark:text-white">Quilt Cover</h2>
 
-                                <tr>
-                                    <th scope="col"
-                                        style="
-                                                                background-color: #f0f0f0;
-                                                                font-weight: 400;
-                                                            "
-                                        class="fw-bold">
-                                        Bahan Quilt Cover
-                                    </th>
-                                    <th scope="col"
-                                        style="
-                                                                background-color: #f0f0f0;
-                                                                font-weight: 400;
-                                                            "
-                                        class="fw-bold">
-                                        Jenis Quilt Cover
-                                    </th>
-                                    <th scope="col"
-                                        style="
-                                                                background-color: #f0f0f0;
-                                                                font-weight: 400;
-                                                            "
-                                        class="fw-bold">
-                                        Jumlah Quilt Cover
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-secondary">
-                                    <td style="background-color: #f0f0f0">
-                                        <p>{{ $data->bahan_quilt }}</p>
-                                    </td>
-                                    <td style="background-color: #f0f0f0">
-                                        <p>{{ $data->jenis_quilt }}</p>
-                                    </td>
-                                    <td style="background-color: #f0f0f0">
-                                        <p>{{ $data->jumlah_quilt }}</p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="mb-5">
+                        <h2 class="mb-2 font-bold">Bahan Quilt Cover</h2>
+                        <p>{{ $data->bahan_quilt }}</p>
+                    </div>
+
+                    <div class="mb-5">
+                        <h2 class="mb-2 font-bold">Jenis Quilt Cover</h2>
+                        <p>{{ $data->bahan_quilt }}</p>
+                    </div>
+
+                    <div class="mb-5">
+                        <h2 class="mb-2 font-bold">Jumlah Quilt Cover</h2>
+                        <p>{{ $data->bahan_quilt }}</p>
+                    </div>
                     @endif
 
                     @if (!$data->jumlah_box == null)
-                        <!-- + box sprei -->
-                        <div class="container">
-                            <h5 style="font-weight: 500">Box Sprei</h5>
-                        </div>
-                        <table class="table">
-                            <thead class="border-none">
+                    <h2 class="text-2xl font-bold mb-5 text-gray-900 dark:text-white">Box Sprei</h2>
 
-                                <tr>
-                                    <th scope="col"
-                                        style="
-                                            background-color: #f0f0f0;
-                                            font-weight: 400;
-                                        "
-                                        class="fw-bold">
-                                        Jumlah Box Sprei
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-secondary">
-                                    <td style="background-color: #f0f0f0">
-                                        <p>{{ $data->jumlah_box }}</p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="mb-5">
+                        <h2 class="mb-2 font-bold">Jumlah Box</h2>
+                        <p>{{ $data->jumlah_box }}</p>
+                    </div>
                     @endif
 
                     @if (!$data->jenis_karet == null)
-                        <!-- + karet -->
-                        <div class="container">
-                            <h5 style="font-weight: 500">Karet</h5>
-                        </div>
-                        <table class="table">
-                            <thead class="border-none">
+                    <h2 class="text-2xl font-bold mb-5 text-gray-900 dark:text-white">Karet</h2>
 
-                                <tr>
-                                    <th scope="col"
-                                        style="
-                                                                background-color: #f0f0f0;
-                                                                font-weight: 400;
-                                                            "
-                                        class="fw-bold">
-                                        Jenis Karet
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-secondary">
-                                    <td style="background-color: #f0f0f0">
-                                        <p>{{ $data->jenis_karet }}</p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="mb-5">
+                        <h2 class="mb-2 font-bold">Jenis Karet</h2>
+                        <p>{{ $data->jenis_karet }}</p>
+                    </div>
                     @endif
-                </div>
             </div>
 
-
-            <div class="mt-3 d-flex justify-content-end">
-                <a class="btn btn-primary d-flex align-items-center" href="{{ url("items/$data->order_id") }}">
-                    <i class="bx bx-check" style="font-size: 25px;"></i>
-                </a>
-            </div>
         </div>
+
+        </div>
+
     </div>
 
-@endsection
+    @endsection
