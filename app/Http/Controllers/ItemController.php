@@ -15,16 +15,8 @@ class ItemController extends Controller
         $search = $request->query('searchitem', ''); // Get search term with default empty string
         $idtaker = $request->route('id');
 
-        $id = ['id' => $idtaker]; // Assuming you only need the ID
-        // $hitam = Items::all();
+        $id = ['id' => $idtaker]; 
 
-        // dd($search);
-
-        // $itemsemua = Items::whereIn('order_id', 'like', $idtaker);
-
-        // $itemkk = $itemfilter;
-
-        // dd($itemkk);
         $itemsemua = Items::all();
 
         // $hitam = Items::where('order_id', 'like', '1');
@@ -38,9 +30,15 @@ class ItemController extends Controller
             // dd($itemjadi);
         }
 
+        if ($id) {
+            $itemCount = Items::where('order_id', $id)->count(); // Count items for this order
+        } else {
+            $itemCount = 0; // Handle cases where no order ID is provided
+        }
 
         $items = [
-            'items' => $itemjadi
+            'items' => $itemjadi,
+            'itemCount' => $itemCount,
         ];
         // dd($items);
         return view('items.index', $id, $items); 

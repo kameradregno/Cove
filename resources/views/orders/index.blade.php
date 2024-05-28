@@ -147,7 +147,7 @@
                                     5m zimbabwe
                                 </td>
                                 <td class="px-6 py-4">
-                                    100
+                                    {{ $order->items->count() }}
                                 </td>
                                 <td class="px-50 py-4">
 
