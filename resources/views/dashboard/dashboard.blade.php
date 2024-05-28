@@ -14,23 +14,27 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>Laravel</title>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-
     </head>
 
     <body class="font-sans antialiased dark:bg-white dark:text-dark/50">
 
         <div class="p-4 sm:ml-60">
 
-            <div class="p-4 border-2 border-gray-200 rounded-lg dark:border-gray-700 mt-14">
+            {{-- <div class="p-4 border-2 border-gray-200 rounded-lg dark:border-gray-700 mt-14">
                 <p>Chart 1</p>
-            </div>
+            </div> --}}
 
-            <div class="p-4 border-2 border-gray-200 rounded-lg dark:border-gray-700 mt-4">
-                <h3 class="font-bold">Pendapatan Tiap Bulan</h3>
-                <div>{!! $chart->container() !!}</div>
+            <div class="flex flex-wrap p-4 border-2 border-gray-200 rounded-lg dark:border-gray-700 mt-20 space-x-4 ">
+                <div class="flex-1">
+                    <h3 class="font-bold">Pendapatan Tiap Bulan</h3>
+                    <div>{!! $chart->container() !!}</div>
+                </div>
+                <div class="flex-1">
+                    <!-- Add another div for more charts or content if needed -->
+                    <h3 class="font-bold">Pendapatan Tiap Tahun</h3>
+                </div>
             </div>
 
             <div class="p-4 border-2 border-gray-200 rounded-lg dark:border-gray-700 mt-4">
@@ -112,7 +116,6 @@
                             </div>
                         </div>
 
-                        {{-- <form action="{{ route('customers.index') }}" method="GET"> --}}
                         <label for="table-search" class="sr-only">Search</label>
 
                         <div class="relative flex items-center space-x-2">
@@ -126,9 +129,6 @@
                                 </button>
                             </div>
                         </div>
-                        {{-- </form> --}}
-
-
                     </div>
                     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -207,6 +207,7 @@
                 </nav>
             </div>
             @yield('js')
+        </div>
     </body>
 
     </html>
