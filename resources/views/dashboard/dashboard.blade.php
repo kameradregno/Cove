@@ -5,7 +5,7 @@
     {{ $chart->script() }}
 @endsection
 
-@section('title', 'dashboard')
+@section('title', 'Dashboard')
 
 @section('content')
 

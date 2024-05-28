@@ -34,7 +34,7 @@ class PendapatanPerBulanChart
 
         return $this->chart->lineChart()
             ->setColors(['#386BBF'])
-            ->addData('total pendapatan', $dataTotalpendapatan)
+            ->addData('Total Pendapatan', $dataTotalpendapatan)
             ->setHeight(250)
             ->setXAxis($dataBulan);
     }
