@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('js')
+<script src="{{ $chart->cdn() }}"></script>
+{{ $chart->script() }}
+@endsection
+
 @section('title', 'dashboard')
 
 @section('content')
@@ -24,7 +29,8 @@
             </div>
 
             <div class="p-4 border-2 border-gray-200 rounded-lg dark:border-gray-700 mt-4">
-                <p>Chart 2</p>
+                <h3 class="font-bold">Pendapatan Tiap Bulan</h3>
+                <div>{!! $chart->container() !!}</div>
             </div>
 
             <div class="p-4 border-2 border-gray-200 rounded-lg dark:border-gray-700 mt-4">
@@ -216,7 +222,7 @@
                     </ul>
                 </nav>
             </div>
-
+            @yield('js')
     </body>
 
     </html>
