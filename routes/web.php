@@ -5,6 +5,8 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\welcomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +19,20 @@ use App\Http\Controllers\ItemController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Menampilkan Form Login //
+Route::get('login', [AuthController::class, 'login']);
+// menangani proses autentikasi user //
+Route::post('login', [AuthController::class, 'authenticate']);
+// memproses permintaan logout dari user //
+Route::get('logout', [AuthController::class, 'logout']);
+// menampilkan form registrasi user baru //
+Route::get('register', [AuthController::class,'register_form']);
+// menangani proses registrasi user baru. //
+Route::post('register', [AuthController::class,'register']);
+
+// Welcome
+
+Route::get('/', [welcomeController::class, 'index']);
 
 // customer
 

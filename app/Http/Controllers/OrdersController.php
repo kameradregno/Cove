@@ -7,6 +7,7 @@ use App\Models\Customers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
 class OrdersController extends Controller
 {
@@ -16,6 +17,11 @@ class OrdersController extends Controller
 
     public function index(Request $request)
     {
+
+          if(!Auth::check()){
+            return redirect('login');
+        }
+
         $search = $request->query('ordersearch', ''); 
         $orders = Orders::query();
 
@@ -35,6 +41,10 @@ class OrdersController extends Controller
     public function create()
     {
 
+          if(!Auth::check()){
+            return redirect('login');
+        }
+
     $data['customers'] = Customers::all();
     return view('orders.create', $data);
 
@@ -46,6 +56,11 @@ class OrdersController extends Controller
 
     public function store(Request $request)
     {
+
+          if(!Auth::check()){
+            return redirect('login');
+        }
+
         $data = $request->all();
 
         Orders::create($data);
@@ -59,6 +74,11 @@ class OrdersController extends Controller
     
     public function show($id)
     {
+
+          if(!Auth::check()){
+            return redirect('login');
+        }
+
         $data = Orders::where( 'id', $id )->first();
 
         return view('orders.show', compact('data'));
@@ -70,6 +90,11 @@ class OrdersController extends Controller
      */
     public function edit($id)
     {
+
+          if(!Auth::check()){
+            return redirect('login');
+        }
+
         $chosen_order = Orders::where('id', $id)->first();
 
         $data = [
@@ -84,6 +109,11 @@ class OrdersController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+          if(!Auth::check()){
+            return redirect('login');
+        }
+
         Orders::where('id', $id)->update([
             'nama_pesanan' =>  $request->input('nama_pesanan'),
             'metode_pembayaran' =>  $request->input('metode_pembayaran'),
@@ -100,6 +130,11 @@ class OrdersController extends Controller
     
     public function destroy(string $id)
     {
+
+          if(!Auth::check()){
+            return redirect('login');
+        }
+
         Orders::SelectedById($id)->delete();
 
         return redirect('orders');

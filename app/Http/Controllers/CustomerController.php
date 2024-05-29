@@ -6,6 +6,7 @@ use App\Models\Customers;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
 class CustomerController extends Controller
 {
@@ -14,6 +15,11 @@ class CustomerController extends Controller
      */
     public function index(Request $request)
     {
+
+          if(!Auth::check()){
+            return redirect('login');
+        }
+
         $search = $request->query('searchcustomer', ''); // Get search term with default empty string
         $customers = Customers::query(); // Start building the query
     
@@ -32,6 +38,11 @@ class CustomerController extends Controller
 
     public function create()
     {
+
+          if(!Auth::check()){
+            return redirect('login');
+        }
+
         return view('customer.create');
     }
 
@@ -41,6 +52,11 @@ class CustomerController extends Controller
 
     public function store(Request $request)
     {
+
+          if(!Auth::check()){
+            return redirect('login');
+        }
+
         Customers::create([
             'nama' =>  $request->input('nama'),
             'telp' =>  $request->input('telp'),
@@ -57,6 +73,11 @@ class CustomerController extends Controller
     
     public function edit($id)
     {
+
+          if(!Auth::check()){
+            return redirect('login');
+        }
+
         $chosen_customer = Customers::where('id', $id)->first();
 
         $data = [
@@ -72,6 +93,11 @@ class CustomerController extends Controller
 
     public function update(Request $request, $id)
     {
+
+          if(!Auth::check()){
+            return redirect('login');
+        }
+
         Customers::where('id', $id)->update([
             'nama' =>  $request->input('nama'),
             'telp' =>  $request->input('telp'),
@@ -88,6 +114,11 @@ class CustomerController extends Controller
     
     public function destroy(string $id)
     {
+
+          if(!Auth::check()){
+            return redirect('login');
+        }
+
         Customers::SelectedById($id)->delete();
 
         return redirect('customer');

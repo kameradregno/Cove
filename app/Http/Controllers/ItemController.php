@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Items;
+use Illuminate\Support\Facades\Auth;
 
 class ItemController extends Controller
 {
@@ -12,6 +13,11 @@ class ItemController extends Controller
      */
     public function index(Request $request)
     {
+
+          if(!Auth::check()){
+            return redirect('login');
+        }
+
         $search = $request->query('searchitem', ''); // Get search term with default empty string
         $idtaker = $request->route('id');
 
@@ -50,6 +56,10 @@ class ItemController extends Controller
     public function create(Request $request)
     {
 
+          if(!Auth::check()){
+            return redirect('login');
+        }
+
         $id = ['id' => $request->route('id')]; // Assuming you only need the ID
     
         return view('items.create', $id);
@@ -60,6 +70,11 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
+
+          if(!Auth::check()){
+            return redirect('login');
+        }
+
         $data = $request->all();
 
         // dd($data);
@@ -75,6 +90,11 @@ class ItemController extends Controller
      */
     public function show(Request $request) // Assuming you're not using route model binding
     {
+
+          if(!Auth::check()){
+            return redirect('login');
+        }
+
         $id = $request->route('id');
 
         $data = Items::where( 'id', $id )->first();
@@ -87,6 +107,11 @@ class ItemController extends Controller
      */
     public function edit(Request $request)
     {
+
+          if(!Auth::check()){
+            return redirect('login');
+        }
+
         $id_string = $request->route('id');
         $id_order_string = $request->route('id_order');
 
@@ -110,6 +135,11 @@ class ItemController extends Controller
      */
     public function update(Request $request)
     {
+
+          if(!Auth::check()){
+            return redirect('login');
+        }
+
         $id = $request->route('id');
         $id_order = $request->route('id_order');
 
@@ -143,6 +173,11 @@ class ItemController extends Controller
      */
     public function destroy(Request $request)
     {
+
+          if(!Auth::check()){
+            return redirect('login');
+        }
+
         $id = $request->route('id');
         $id_order = $request->route('id_order');
 
