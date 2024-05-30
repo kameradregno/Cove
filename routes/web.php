@@ -25,7 +25,7 @@ use App\Http\Controllers\ForgetPasswordManagerController;
 
  // Welcome
 
-Route::get('/', [welcomeController::class, 'index']);
+// Route::get('/', [welcomeController::class, 'index']);
 
 // customer
 
@@ -58,7 +58,7 @@ Route::put('items/update/{id}/{id_order}', [ItemController::class, 'update'])->n
 
 // Dashboard
 
-Route::get('dashboard', [DashboardController::class, 'index']);
+Route::get('/', [DashboardController::class, 'index']);
 
 // Admin
 
