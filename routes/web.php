@@ -7,6 +7,7 @@ use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\welcomeController;
+use App\Http\Controllers\ForgetPasswordManagerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,7 @@ use App\Http\Controllers\welcomeController;
 */
 
 // Menampilkan Form Login //
-Route::get('login', [AuthController::class, 'login']);
+Route::get('login', [AuthController::class, 'login'])->name('login');
 // menangani proses autentikasi user //
 Route::post('login', [AuthController::class, 'authenticate']);
 // memproses permintaan logout dari user //
@@ -28,7 +29,7 @@ Route::get('logout', [AuthController::class, 'logout']);
 // menampilkan form registrasi user baru //
 Route::get('register', [AuthController::class,'register_form']);
 // menangani proses registrasi user baru. //
-Route::post('register', [AuthController::class,'register']);
+Route::post('register', [AuthController::class,'register'])->name('register');
 
 // Welcome
 
@@ -84,3 +85,9 @@ Route::put('items/update/{id}/{id_order}', [ItemController::class, 'update'])->n
 
 Route::get('dashboard', [DashboardController::class, 'index']);
 
+// ForgotPassword
+
+Route::get('forgetpassword', [ForgetPasswordManagerController::class, 'forgetpassword'])->name('forgetpassword');
+Route::post('forgetpassword', [ForgetPasswordManagerController::class, 'forgetpasswordPost'])->name('forgetpasswordPost');
+Route::get("resetpassword/{token}", [ForgetPasswordManagerController::class, 'resetpassword'])->name('resetpassword');
+Route::post('resetpassword', [ForgetPasswordManagerController::class, 'resetpasswordPost'])->name('resetpasswordPost');
