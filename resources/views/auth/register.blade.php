@@ -13,6 +13,21 @@
                     Sign Up
                 </h1>
 
+                @if (session()->has('success_message'))
+                    <div class="flex items-center p-4 mb-4 text-sm text-green-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-green-400"
+                        role="alert">
+                        <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                        </svg>
+                        <span class="sr-only">Info</span>
+                        <div>
+                            <span class="font-medium">Berhasil bikin akun</span>
+                        </div>
+                    </div>
+                @endif
+
                 <form method="POST" action="{{ url('register') }}" class="space-y-4 md:space-y-6" action="#">
                     @csrf
 
@@ -66,12 +81,6 @@
                         Do you have account? <a href="{{ url('login') }}"
                             class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign In</a>
                     </p>
-
-                    @if (session()->has('error_message'))
-                        <div class="alert alert-danger">
-                            {{ session()->get('error_message') }}
-                        </div>
-                    @endif
 
                 </form>
 

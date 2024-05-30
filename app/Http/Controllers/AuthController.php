@@ -35,7 +35,7 @@ class AuthController extends Controller
                 return redirect('/');
             }
         }else{
-            return redirect('login')->with('error_message', 'Coba Lagi');
+            return redirect('login')->with("error_message", "coba lagi");
         }
 
    }
@@ -71,7 +71,6 @@ class AuthController extends Controller
     return redirect('login');
 }
 
-
      public function register(Request $request) {
 
         // melakukan validasi pada data input yang masuk dari form register. //
@@ -88,7 +87,7 @@ class AuthController extends Controller
             'password' => Hash::make($request->input('password')),
         ]);
 
-        return redirect('login');
+        return redirect('login')->with("success_message", "berhasil bikin akun");
     }
 
 }
