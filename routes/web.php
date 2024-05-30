@@ -7,6 +7,7 @@ use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\welcomeController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ForgetPasswordManagerController;
 
 /*
@@ -20,70 +21,60 @@ use App\Http\Controllers\ForgetPasswordManagerController;
 |
 */
 
-// Menampilkan Form Login //
-Route::get('login', [AuthController::class, 'login'])->name('login');
-// menangani proses autentikasi user //
-Route::post('login', [AuthController::class, 'authenticate']);
-// memproses permintaan logout dari user //
-Route::get('logout', [AuthController::class, 'logout']);
-// menampilkan form registrasi user baru //
-Route::get('register', [AuthController::class,'register_form']);
-// menangani proses registrasi user baru. //
-Route::post('register', [AuthController::class,'register'])->name('register');
+// Route::middleware(['auth'])->group(function(){
 
-// Welcome
+ // Welcome
 
 Route::get('/', [welcomeController::class, 'index']);
 
 // customer
 
 Route::get('customer', [CustomerController::class, 'index'])->name('customers.index');
-
 Route::get('customer/create', [CustomerController::class, 'create']);
-
 Route::post('customer', [CustomerController::class, 'store']);
-
 Route::delete('customer/{id}', [CustomerController::class, 'destroy']);
-
 Route::get('customer/{id}/edit', [CustomerController::class, 'edit']);
-
 Route::patch('customer/{id}', [CustomerController::class, 'update']);
 
 // order
 
 Route::get('orders', [OrdersController::class, 'index'])->name('orders.index');
-
 Route::get('orders/create', [OrdersController::class, 'create']);
-
 Route::post('orders', [OrdersController::class, 'store']);
-
 Route::get('orders/{id}', [OrdersController::class, 'show']);
-
 Route::delete('orders/{id}', [OrdersController::class, 'destroy']);
-
 Route::get('orders/{id}/edit', [OrdersController::class, 'edit']);
-
 Route::put('orders/{id}', [OrdersController::class, 'update'])->name('orders.update');
 
 // Item
 
 Route::get('items/{id}', [ItemController::class, 'index'])->name('items.index');
-
 Route::get('items/create/{id}', [ItemController::class, 'create'])->name('items.create');
-
 Route::post('items/{id}', [ItemController::class, 'store'])->name('items.store');
-
 Route::get('items/show/{id}', [ItemController::class, 'show'])->name('items.show');
-
 Route::delete('items/{id}/{id_order}', [ItemController::class, 'destroy']);
-
 Route::get('items/edit/{id}/{id_order}', [ItemController::class, 'edit'])->name('items.edit');
-
 Route::put('items/update/{id}/{id_order}', [ItemController::class, 'update'])->name('items.update');
 
 // Dashboard
 
 Route::get('dashboard', [DashboardController::class, 'index']);
+
+// Admin
+
+Route::get('admin', [AdminController::class, 'index'])->middleware('UserAkses:owner');
+
+// });
+
+// Route::middleware(['guest'])->group(function(){
+
+// Authentication
+
+Route::get('login', [AuthController::class, 'login'])->name('login');
+Route::post('login', [AuthController::class, 'authenticate']);
+Route::get('logout', [AuthController::class, 'logout']);
+Route::get('register', [AuthController::class,'register_form']);
+Route::post('register', [AuthController::class,'register'])->name('register');
 
 // ForgotPassword
 
@@ -91,3 +82,5 @@ Route::get('forgetpassword', [ForgetPasswordManagerController::class, 'forgetpas
 Route::post('forgetpassword', [ForgetPasswordManagerController::class, 'forgetpasswordPost'])->name('forgetpasswordPost');
 Route::get("resetpassword/{token}", [ForgetPasswordManagerController::class, 'resetpassword'])->name('resetpassword');
 Route::post('resetpassword', [ForgetPasswordManagerController::class, 'resetpasswordPost'])->name('resetpasswordPost');
+
+// });

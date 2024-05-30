@@ -20,7 +20,7 @@
         <div class="p-4 sm:ml-64">
             <div class="p-4 border-2 border-gray-200 rounded-lg dark:border-gray-700 mt-14">
 
-                <h1 class="font-medium text-center"> Halo Rakha Nurrahma Rizki </h1>
+                <h1 class="font-medium text-center"> Halo {{ Auth::user()->name }} </h1>
                 <p class="text-center">Aktivitas apa yang ingin anda lakukan ?</p>
 
             </div>

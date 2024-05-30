@@ -28,8 +28,12 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
 
         // memeriksa apakah kombinasi email dan password pada $credentials cocok dengan data pada database. //
-        if(Auth::attempt($credentials)){
-            return redirect('/');
+        if(Auth::attempt($credentials)) {
+            if(Auth::user()->roles == 'owner'){
+                return redirect('admin');
+            }elseif(Auth::user()->roles == 'admin'){
+                return redirect('/');
+            }
         }else{
             return redirect('login')->with('error_message', 'Coba Lagi');
         }
