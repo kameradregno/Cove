@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Orders;
 use App\Models\Customers;
+use App\Models\Items;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
@@ -133,6 +134,11 @@ class OrdersController extends Controller
 
           if(!Auth::check()){
             return redirect('login');
+        }
+
+        $item = Items::where('order_id', $id);
+        if ($item) {
+            $item->delete();
         }
 
         Orders::SelectedById($id)->delete();
