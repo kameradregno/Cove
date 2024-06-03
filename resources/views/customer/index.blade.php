@@ -149,20 +149,20 @@
                                 <td class="px-6 py-4">
                                     <a href="{{ url("customer/$customer->id/edit") }}"><button
                                             class="text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Edit</button></a>
-                                    <button type="button" data-modal-target="modal-customer"
-                                        data-modal-toggle="modal-customer"
+                                    <button type="button" data-modal-target="modal-customer{{ $customer->id }}"
+                                        data-modal-toggle="modal-customer{{ $customer->id }}"
                                         class="text-white bg-red-500 hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Delete</button>
                                 </td>
                             </tr>
 
                             <!-- Modal -->
-                            <div id="modal-customer" tabindex="-1"
+                            <div id="modal-customer{{ $customer->id }}" tabindex="-1"
                                 class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
                                 <div class="relative p-4 w-full max-w-md max-h-full">
                                     <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                                         <button type="button"
                                             class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                                            data-modal-hide="popup-modal">
+                                            data-modal-hide="modal-customer{{ $customer->id }}">
                                             <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                                 fill="none" viewBox="0 0 14 14">
                                                 <path stroke="currentColor" stroke-linecap="round"
@@ -184,12 +184,12 @@
                                             <form action="{{ url("customer/$customer->id") }}" method="POST">
                                                 @method('delete')
                                                 @csrf
-                                                <button data-modal-hide="popup-modal" type="submit"
+                                                <button data-modal-hide="modal-customer{{ $customer->id }}" type="submit"
                                                     class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center">
                                                     Ya
                                                 </button>
                                             </form>
-                                            <button data-modal-hide="popup-modal" type="button"
+                                            <button data-modal-hide="modal-customer{{ $customer->id }}" type="button"
                                                 class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Tidak</button>
                                         </div>
                                     </div>
