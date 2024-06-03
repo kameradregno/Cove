@@ -144,7 +144,7 @@
                                     {{ $order->customername->nama }}
                                 </td>
                                 <td class="px-6 py-4">
-                                    {{ $order->items->sum('harga_sprei')}}
+                                    {{ $order->items->sum('harga_sprei') }}
                                 </td>
                                 <td class="px-6 py-4">
                                     {{ $order->items->count() }}
@@ -155,7 +155,7 @@
                                             class="text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Edit</button></a>
 
                                     <a href="{{ url("orders/$order->id") }}"><button
-                                                class="text-white bg-gray-500 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Detail</button></a>
+                                            class="text-white bg-gray-500 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Detail</button></a>
 
                                     <button type="button" data-modal-target="modal-order{{ $order->id }}"
                                         data-modal-toggle="modal-order{{ $order->id }}"
@@ -178,7 +178,7 @@
                                                     stroke-linejoin="round" stroke-width="2"
                                                     d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
                                             </svg>
-                                            <span class="sr-only" >Tutup</span>
+                                            <span class="sr-only">Tutup</span>
                                         </button>
                                         <div class="p-4 md:p-5 text-center">
                                             <svg class="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200"
@@ -208,43 +208,12 @@
                     </tbody>
                 </table>
             </div>
-            <nav class="flex items-center flex-col flex-wrap md:flex-row justify-between pt-4"
-                aria-label="Table navigation">
-                <span
-                    class="text-sm font-normal text-gray-500 dark:text-gray-400 mb-4 md:mb-0 block w-full md:inline md:w-auto">Showing
-                    <span class="font-semibold text-gray-900 dark:text-white">1-10</span> of <span
-                        class="font-semibold text-gray-900 dark:text-white">1000</span></span>
-                <ul class="inline-flex -space-x-px rtl:space-x-reverse text-sm h-8">
-                    <li>
-                        <a href="#"
-                            class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
-                    </li>
-                    <li>
-                        <a href="#" aria-current="page"
-                            class="flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
-                    </li>
-                </ul>
+            <nav class="items-center flex-col flex-wrap md:flex-row justify-between pt-4" aria-label="Table navigation">
+
+                {{ $orders->links('pagination::tailwind') }}
+
             </nav>
+
         </div>
     </div>
 @endsection

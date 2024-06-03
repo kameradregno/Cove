@@ -16,24 +16,24 @@ class OrdersController extends Controller
      * Display a listing of the resource.
      */
 
-    public function index(Request $request)
-    {
-
-          if(!Auth::check()){
-            return redirect('login');
-        }
-
-        $search = $request->query('ordersearch', ''); 
-        $orders = Orders::query();
-
-        if ($search) {
-            $orders->where('nama_pesanan', 'LIKE', "%{$search}%"); // Perform search on 'nama_customer'
-        }
-
-        $orders = $orders->get();
-        
-        return view('orders.index', compact('orders', 'search'));
+   public function index(Request $request)
+{
+    if(!Auth::check()){
+        return redirect('login');
     }
+
+    $search = $request->query('ordersearch', ''); // Dapatkan istilah pencarian dengan string kosong default
+    $ordersQuery = Orders::query(); // Mulai membangun kueri
+
+    if ($search) {
+        $ordersQuery->where('nama_pesanan', 'LIKE', "%{$search}%"); // Lakukan pencarian pada 'nama_pesanan'
+    }
+
+    // Gunakan paginate() untuk pagination dengan 5 items per halaman
+    $orders = $ordersQuery->paginate(3);
+
+    return view('orders.index', compact('orders', 'search'));
+}
 
     /**
      * Show the form for creating a new resource.

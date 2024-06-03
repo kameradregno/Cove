@@ -12,27 +12,24 @@ use Illuminate\Support\Facades\Auth;
 
 class CustomerController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index(Request $request)
-    {
-
-          if(!Auth::check()){
-            return redirect('login');
-        }
-
-        $search = $request->query('searchcustomer', ''); // Get search term with default empty string
-        $customers = Customers::query(); // Start building the query
     
-        if ($search) {
-            $customers->where('nama', 'LIKE', "%{$search}%"); // Perform search on 'nama_customer'
-        }
-    
-        $customers = $customers->get(); // Retrieve all matching customers
-    
-        return view('customer.index', compact('customers', 'search'));
+ public function index(Request $request)
+{
+    if(!Auth::check()){
+        return redirect('login');
     }
+
+    $search = $request->query('searchcustomer', ''); // Dapatkan istilah pencarian dengan string kosong default
+    $customers = Customers::query(); // Mulai membangun kueri
+
+    if ($search) {
+        $customers->where('nama', 'LIKE', "%{$search}%"); // Lakukan pencarian pada 'nama_customer'
+    }
+
+    $customers = $customers->paginate(3);
+
+    return view('customer.index', compact('customers', 'search'));
+}
         
     /**
      * Show the form for creating a new resource.

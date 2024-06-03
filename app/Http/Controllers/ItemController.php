@@ -13,44 +13,39 @@ class ItemController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
-    {
+   public function index(Request $request)
+{
+    if (!Auth::check()) {
+        return redirect('login');
+    }
 
-          if(!Auth::check()){
-            return redirect('login');
-        }
+    $search = $request->query('searchitem', ''); // Dapatkan istilah pencarian dengan string kosong default
+    $idtaker = $request->route('id');
 
-        $search = $request->query('searchitem', ''); // Get search term with default empty string
-        $idtaker = $request->route('id');
+    $id = ['id' => $idtaker];
 
-        $id = ['id' => $idtaker]; 
+    // Ambil semua item
+    $itemsQuery = Items::where('order_id', $idtaker);
 
-        $itemsemua = Items::all();
+    // Jika ada istilah pencarian, tambahkan kondisi pencarian
+    if ($search) {
+        $itemsQuery->where('nama_sprei', 'like', "%{$search}%");
+    }
 
-        // $hitam = Items::where('order_id', 'like', '1');
-        if ($search) {
-            $itemjadi = $itemsemua->whereIn('order_id', $idtaker) // Remove 'like' here
-            ->where('nama_sprei', 'like', "%{$search}%");
-        dd($itemjadi);
-        }else{
-            $itemjadi = $itemsemua->where('order_id', 'like',"$idtaker");
-            
-            // dd($itemjadi);
-        }
+    // Lakukan pagination dengan 5 items per halaman
+    $items = $itemsQuery->paginate(3);
 
-        if ($id) {
-            $itemCount = Items::where('order_id', $id)->count(); // Count items for this order
-        } else {
-            $itemCount = 0; // Handle cases where no order ID is provided
-        }
+    // Hitung jumlah total item
+    $itemCount = $itemsQuery->count();
 
-        $items = [
-            'items' => $itemjadi,
-            'itemCount' => $itemCount,
-        ];
-        // dd($items);
-        return view('items.index', $id, $items); 
-    }   
+    // Pass data ke view
+    return view('items.index', [
+        'id' => $id['id'],
+        'items' => $items,
+        'itemCount' => $itemCount,
+        'search' => $search,
+    ]);
+}
 
     /**
      * Show the form for creating a new resource.
