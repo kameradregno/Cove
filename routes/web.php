@@ -58,11 +58,11 @@ Route::put('items/update/{id}/{id_order}', [ItemController::class, 'update'])->n
 
 // Dashboard
 
-Route::get('/', [DashboardController::class, 'index']);
+Route::get('/', [DashboardController::class, 'index'])->middleware('UserAkses:admin');
 
 // Admin
 
-Route::get('admin', [AdminController::class, 'index'])->middleware('UserAkses:owner');
+Route::get('/', [AdminController::class, 'index'])->middleware('UserAkses:owner');
 
 // });
 
