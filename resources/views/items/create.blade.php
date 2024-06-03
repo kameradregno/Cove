@@ -30,6 +30,7 @@
                             <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama
                                 Sprei</label>
                             <input type="hidden" name="order_id" id="order_id" value="{{ $id }}">
+                            <input type="hidden" name="customer_id" id="customer_id" value="{{ $customerid }}">
                             <input type="text" name="nama_sprei" id="nama_sprei"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 required />

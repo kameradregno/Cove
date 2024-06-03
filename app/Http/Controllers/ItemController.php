@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customers;
 use Illuminate\Http\Request;
 use App\Models\Items;
+use App\Models\Orders;
 use Illuminate\Support\Facades\Auth;
 
 class ItemController extends Controller
@@ -60,9 +62,14 @@ class ItemController extends Controller
             return redirect('login');
         }
 
-        $id = ['id' => $request->route('id')]; // Assuming you only need the ID
+        $idorder = $request->route('id');
+        $idcustomer = Orders::where('id', $idorder)->get('customer_id');
+        $customer_id = substr($idcustomer, strpos($idcustomer, ':') + 1, -1);
+        $customerid = str_replace('}', '', $customer_id);
+
+        $id = ['id' => $idorder, 'customerid' => $customerid]; // Assuming you only need the ID
     
-        return view('items.create', $id);
+        return view('items.create', $id,);
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Orders;
+use App\Models\Customers;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -13,6 +14,7 @@ class Items extends Model
 
     protected $fillable = [
         'order_id',
+        'customer_id',
         'nama_sprei',
         'harga_sprei',
         'catatan',
@@ -37,6 +39,11 @@ class Items extends Model
     public function order(): BelongsTo
     {
         return $this->belongsTo(Orders::class, 'order_id', 'id');
+    }
+
+    public function customer(): BelongsTo
+    {
+        return $this->belongsTo(Customers::class, 'customer_id', 'id');
     }
 
     public function scopeSelectedById($query, $id) {

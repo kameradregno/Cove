@@ -121,21 +121,20 @@ class CustomerController extends Controller
             return redirect('login');
         }
 
-        // $order = Orders::where('customer_id', $id);
-        // $order_id = $order->get('id');
-        // // $orderr = $order_id->gettype('id');
-        // $item = Items::where('order_id', $order_id[0]);
-        // // $get_item = $item->get();
-        // // dd($order_id);
+        $order = Orders::where('customer_id', $id);
+        // $orderr = $order_id->gettype('id');
+        $item = Items::where('customer_id', $id);
+        // $get_item = $item->get();
+        // dd($order_id);
         // dd($item);
 
-        // if ($item) {
-        //     $item->delete();
-        //     $order->delete();
+        if ($item) {
+            $item->delete();
+            $order->delete();
         
-        // }else if ($order) {
-        //     $order->delete();
-        // }
+        }else if ($order) {
+            $order->delete();
+        }
         
         Customers::SelectedById($id)->delete();
 

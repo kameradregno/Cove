@@ -26,6 +26,11 @@ class Customers extends Model
         return $this->hasMany(Orders::class, 'customer_id', 'id');
     }
 
+    public function items(): HasMany
+    {
+        return $this->hasMany(Items::class, 'customer_id', 'id');
+    }
+
     public function scopeSelectedById($query, $id) {
 
         return $query->where('id', $id);

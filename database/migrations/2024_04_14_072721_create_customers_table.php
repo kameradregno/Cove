@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
-            $table->string('nama', 255);
+            $table->string('nama', 255)->unique();
             $table->string('telp', 255);
             $table->string('alamat', 500);
             $table->string('type')->enum(['Reseller','RO','New', 'Shopee'])->default('Reseller');
