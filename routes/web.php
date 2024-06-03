@@ -6,7 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\welcomeController;
+// use App\Http\Controllers\welcomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ForgetPasswordManagerController;
 
