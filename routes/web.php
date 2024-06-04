@@ -62,7 +62,7 @@ Route::get('/', [DashboardController::class, 'index'])->middleware('UserAkses:ad
 
 // Admin
 
-Route::get('/', [AdminController::class, 'index'])->middleware('UserAkses:owner');
+Route::get('owner', [AdminController::class, 'index'])->middleware('UserAkses:owner');
 
 // });
 
