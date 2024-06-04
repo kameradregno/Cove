@@ -30,7 +30,7 @@ class OrdersController extends Controller
     }
 
     // Gunakan paginate() untuk pagination dengan 5 items per halaman
-    $orders = $ordersQuery->paginate(3);
+    $orders = $ordersQuery->paginate(6);
 
     return view('orders.index', compact('orders', 'search'));
 }

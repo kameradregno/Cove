@@ -32,7 +32,7 @@ class AuthController extends Controller
         // memeriksa apakah kombinasi email dan password pada $credentials cocok dengan data pada database. //
         if(Auth::attempt($credentials)) {
             if(Auth::user()->roles == 'owner'){
-                return redirect('admin');
+                return redirect('owner');
             }elseif(Auth::user()->roles == 'admin'){
                 return redirect('/');
             }

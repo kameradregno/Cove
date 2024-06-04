@@ -3,8 +3,8 @@
 namespace App\Charts;
 
 use ArielMejiaDev\LarapexCharts\LarapexChart;
-
 use App\Models\Items;
+use Carbon\Carbon;
 
 class PendapatanPerBulanChart
 {
@@ -26,12 +26,12 @@ class PendapatanPerBulanChart
                 ->whereMonth('created_at', $i)
                 ->sum('harga_sprei');
 
-            $dataBulan[] = $i;
-            $dataTotalpendapatan[] = $totalpendapatan;
+                $dataBulan[] = Carbon::create()->month($i)->format('F');
+                $dataTotalpendapatan[] = $totalpendapatan;
         }
         // dd($dataTotalpendapatan);
 
-
+// jhjjjjh
         return $this->chart->lineChart()
             ->setColors(['#386BBF'])
             ->addData('Total Pendapatan', $dataTotalpendapatan)

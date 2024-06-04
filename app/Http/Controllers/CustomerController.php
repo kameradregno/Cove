@@ -26,7 +26,7 @@ class CustomerController extends Controller
         $customers->where('nama', 'LIKE', "%{$search}%"); // Lakukan pencarian pada 'nama_customer'
     }
 
-    $customers = $customers->paginate(3);
+    $customers = $customers->paginate(6);
 
     return view('customer.index', compact('customers', 'search'));
 }

@@ -29,6 +29,16 @@ use App\Http\Controllers\ForgetPasswordManagerController;
 
 // customer
 
+// Dashboard
+
+
+
+Route::get('/', [DashboardController::class, 'index'])->middleware('UserAkses');
+Route::get('/admin', [DashboardController::class, 'index']);
+
+// Admin
+Route::get('/owner', [AdminController::class, 'index']);
+
 Route::get('customer', [CustomerController::class, 'index'])->name('customers.index');
 Route::get('customer/create', [CustomerController::class, 'create']);
 Route::post('customer', [CustomerController::class, 'store']);
@@ -56,13 +66,7 @@ Route::delete('items/{id}/{id_order}', [ItemController::class, 'destroy']);
 Route::get('items/edit/{id}/{id_order}', [ItemController::class, 'edit'])->name('items.edit');
 Route::put('items/update/{id}/{id_order}', [ItemController::class, 'update'])->name('items.update');
 
-// Dashboard
 
-Route::get('/', [DashboardController::class, 'index']);
-
-// Admin
-
-Route::get('admin', [AdminController::class, 'index'])->middleware('UserAkses:owner');
 
 // });
 

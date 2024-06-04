@@ -33,7 +33,7 @@ class ItemController extends Controller
     }
 
     // Lakukan pagination dengan 5 items per halaman
-    $items = $itemsQuery->paginate(3);
+    $items = $itemsQuery->paginate(6);
 
     // Hitung jumlah total item
     $itemCount = $itemsQuery->count();

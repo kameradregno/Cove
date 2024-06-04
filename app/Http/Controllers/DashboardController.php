@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Customers;
+use App\Models\Orders;
 use ArielMejiaDev\LarapexCharts\LarapexChart;
 use App\Charts\PendapatanPerBulanChart;
 use Illuminate\Support\Facades\Auth;
@@ -15,12 +17,21 @@ class DashboardController extends Controller
      */
     public function index(PendapatanPerBulanChart $chart)
     {
-
+        // dd(Auth::user()->roles);
         if(!Auth::check()){
             return redirect('login');
+        }elseif(Auth::user()->roles != 'admin') {
+            return redirect('/owner');
         }
+            $customers = Customers::query(); // Mulai membangun kueri
+            // $ordersQuery = Orders::query(); // Mulai membangun kueri
+        
+            $customers = $customers->paginate(6);    
+    
+            return view('dashboard.dashboard', ['chart' => $chart->build()], compact('customers'));    
+        
+        // dd(Auth::user()->roles);
 
-        return view('dashboard.dashboard', ['chart' => $chart->build()]);
     }
 
     /**

@@ -13,13 +13,15 @@ class UserAkses
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next, $role): Response
+    public function handle(Request $request, Closure $next): Response
     {
-
-        if(auth()->user()->roles == $role ) {
-            return $next($request);
-        }   
-        return redirect('/');
+        if (!auth()->check()) { // Check if user is authenticated
+            return redirect('/login'); // Redirect to login page
+        }elseif (auth()->user()->roles = 'admin') {
+            return redirect('/admin'); // Redirect to login page
+        } else {
+            return redirect('/owner'); // Redirect to login page
+        }
         
     }
 
