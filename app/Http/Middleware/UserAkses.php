@@ -15,12 +15,15 @@ class UserAkses
      */
     public function handle(Request $request, Closure $next, $role): Response
     {
-
-        if(auth()->user()->roles == $role ) {
+        if (!auth()->check()) { // Check if user is authenticated
+            return redirect('/login'); // Redirect to login page
+        }
+    
+        if (auth()->user()->roles == $role) {
             return $next($request);
-        }   
-        return redirect('/');
-        
+        }
+    
+        return redirect('/'); // Redirect to default page
     }
 
 }
