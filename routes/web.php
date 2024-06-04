@@ -66,6 +66,9 @@ Route::delete('items/{id}/{id_order}', [ItemController::class, 'destroy']);
 Route::get('items/edit/{id}/{id_order}', [ItemController::class, 'edit'])->name('items.edit');
 Route::put('items/update/{id}/{id_order}', [ItemController::class, 'update'])->name('items.update');
 
+// Dashboard
+
+// Admin
 
 
 // });

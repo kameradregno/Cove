@@ -15,6 +15,7 @@ class UserAkses
      */
     public function handle(Request $request, Closure $next): Response
     {
+
         if (!auth()->check()) { // Check if user is authenticated
             return redirect('/login'); // Redirect to login page
         }elseif (auth()->user()->roles = 'admin') {
