@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Buat Akun')
+@section('title', 'Edit Akun')
 
 @section('content')
 
@@ -17,7 +17,7 @@
                 <!-- Adjusted max-width for large screens -->
 
                 <!-- Heading -->
-                <h2 class="text-2xl font-bold mb-5 text-gray-900 dark:text-white">Buat Akun</h2>
+                <h2 class="text-2xl font-bold mb-5 text-gray-900 dark:text-white">Edit Akun</h2>
 
                 <!-- @if ($errors->any())
                 <div id="alert-border-2" class="w-full flex items-center p-4 mb-4 text-red-800 border-t-4 border-red-300 bg-red-50 dark:text-red-400 dark:bg-gray-800 dark:border-red-800" role="alert">
@@ -36,27 +36,23 @@
                 </div>
                 @endif -->
 
-                <form class="w-full" method="POST" action="{{ url('owner') }}">
+                <form class="w-full" method="post" action="{{ url("owner/$user->id") }}">
+                    @method('patch')
                     @csrf
                     <div class="mb-5">
                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Username</label>
-                        <input type="name" name="name" id="name" value="{{ old('name') }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-                        @if ($errors->has('name'))
-                        <span class="text-danger">{{ $errors->first('name') }}</span>
-                        @endif
+                        <input type="name" name="name" id="name" value="{{ $user->name }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                     </div>
 
                     <div class="mb-5">
                         <label for="order-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-                        @if ($errors->has('email'))
-                        <span class="text-danger">{{ $errors->first('email') }}</span>
-                        @endif
+                        <input type="email" name="email" id="email" value="{{ $user->email }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                     </div>
 
                     <div class="mb-5">
                         <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Peran</label>
                         <select name="roles" id="roles" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                            <option value="{{ old('roles') }}">{{ $user->roles }}</option>
                             <option value="Admin">Admin</option>
                             <option value="Owner">Owner</option>
                         </select>
@@ -64,20 +60,12 @@
 
                     <div class="mb-5">
                         <label for="type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kata Sandi</label>
-                        <input type="password" name="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-                        @if ($errors->has('password'))
-                        <span class="text-danger">{{ $errors->first('password') }}</span>
-                        @endif
-                    </div>
-
-                    <div class="mb-5">
-                        <label for="type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kata Sandi</label>
-                        <input type="password" name="password_confirmation" id="password_confirmation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                        <input type="password" name="password" id="password" placeholder="Buat Baru Jika Lupa" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
                     </div>
 
                     <div class="flex
                             justify-center">
-                        <button type="submit" class="mt-5 text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Buat Akun</button>
+                        <button type="submit" class="mt-5 text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Simpan</button>
                     </div>
 
                 </form>

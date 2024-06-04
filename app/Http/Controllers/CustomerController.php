@@ -69,7 +69,7 @@ class CustomerController extends Controller
             return redirect('customer/create')->withErrors($errorMessage);
         }
 
-        return redirect('customer/create');
+        return redirect('customer');
     }
 
     /**

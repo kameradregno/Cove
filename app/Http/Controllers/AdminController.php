@@ -18,12 +18,15 @@ class AdminController extends Controller
     public function index(PendapatanPerBulanChart $chart)
     {
         // dd(Auth::check());
-        if(!Auth::check()){
+        if (!Auth::check()) {
             return redirect('login');
-        }elseif(Auth::user()->roles != 'Owner') {
+        } elseif (Auth::user()->roles != 'Owner') {
             return redirect('/admin');
         }
-        return view('owner.owner', ['chart' => $chart->build()]);
+
+        $users = User::all();
+
+        return view('owner.owner', ['chart' => $chart->build()], compact('users')); 
     }
 
     public function usercreate()
@@ -51,8 +54,45 @@ class AdminController extends Controller
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'password' => Hash::make($request->input('password')),
+            'roles' => $request->input('roles'),
         ]);
 
         return redirect('owner')->with("success_message", "berhasil membuat akun");
+    }
+
+    public function useredit($id)
+    {
+        if (!Auth::check()) {
+            return redirect('login');
+        }
+
+        $chosen_user = User::where('id', $id)->first();
+
+        $user = [
+            'user' => $chosen_user,
+        ];
+
+        return view('owner.edit', $user);
+    }
+
+    public function userupdate(Request $request, $id)
+    {
+        if (!Auth::check()) {
+            return redirect('login');
+        }
+
+        $request->validate([
+            'name' => 'required|min:4|max:20',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:3|max:10',
+        ]);
+
+        User::where('id', $id)->update([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'roles' => $request->input('roles'),
+        ]);
+
+        return redirect('owner')->with("success_message", "berhasil mengedit akun");
     }
 }
