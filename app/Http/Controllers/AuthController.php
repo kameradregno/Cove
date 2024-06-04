@@ -15,9 +15,8 @@ use Illuminate\Support\Facades\Storage;
 class AuthController extends Controller
 {
     public function login() {
-
     if (auth()->check()) {
-        return redirect('/');
+        return redirect('/admin');
     } else {
         return view('auth.login');
     }
@@ -31,11 +30,7 @@ class AuthController extends Controller
 
         // memeriksa apakah kombinasi email dan password pada $credentials cocok dengan data pada database. //
         if(Auth::attempt($credentials)) {
-            if(Auth::user()->roles == 'owner'){
-                return redirect('owner');
-            }elseif(Auth::user()->roles == 'admin'){
-                return redirect('/');
-            }
+            return redirect('/');
         }else{
             return redirect('login')->with("error_message", "coba lagi");
         }
