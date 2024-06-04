@@ -61,8 +61,10 @@ class ItemController extends Controller
         $idcustomer = Orders::where('id', $idorder)->get('customer_id');
         $customer_id = substr($idcustomer, strpos($idcustomer, ':') + 1, -1);
         $customerid = str_replace('}', '', $customer_id);
+        
+        $userid = Auth::user()->id;
 
-        $id = ['id' => $idorder, 'customerid' => $customerid]; // Assuming you only need the ID
+        $id = ['id' => $idorder, 'customerid' => $customerid, 'userid' => $userid]; // Assuming you only need the ID
     
         return view('items.create', $id,);
     }
