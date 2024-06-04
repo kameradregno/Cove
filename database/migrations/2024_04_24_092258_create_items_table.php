@@ -16,6 +16,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('order_id');
             $table->unsignedBigInteger('customer_id');
+            $table->unsignedBigInteger('user_id');
             
             $table->string('nama_sprei');
             $table->string('harga_sprei');
@@ -40,6 +41,7 @@ return new class extends Migration
 
             $table->foreign('order_id')->references('id')->on('orders');
             $table->foreign('customer_id')->references('id')->on('customers');
+            $table->foreign('user_id')->references('id')->on('users');
 
         });
     }
