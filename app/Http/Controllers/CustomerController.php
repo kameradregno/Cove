@@ -9,28 +9,29 @@ use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\QueryException;
 
 class CustomerController extends Controller
 {
-    
- public function index(Request $request)
-{
-    if(!Auth::check()){
-        return redirect('login');
+
+    public function index(Request $request)
+    {
+        if (!Auth::check()) {
+            return redirect('login');
+        }
+
+        $search = $request->query('searchcustomer', ''); // Dapatkan istilah pencarian dengan string kosong default
+        $customers = Customers::query(); // Mulai membangun kueri
+
+        if ($search) {
+            $customers->where('nama', 'LIKE', "%{$search}%"); // Lakukan pencarian pada 'nama_customer'
+        }
+
+        $customers = $customers->paginate(6);
+
+        return view('customer.index', compact('customers', 'search'));
     }
 
-    $search = $request->query('searchcustomer', ''); // Dapatkan istilah pencarian dengan string kosong default
-    $customers = Customers::query(); // Mulai membangun kueri
-
-    if ($search) {
-        $customers->where('nama', 'LIKE', "%{$search}%"); // Lakukan pencarian pada 'nama_customer'
-    }
-
-    $customers = $customers->paginate(6);
-
-    return view('customer.index', compact('customers', 'search'));
-}
-        
     /**
      * Show the form for creating a new resource.
      */
@@ -38,7 +39,7 @@ class CustomerController extends Controller
     public function create()
     {
 
-          if(!Auth::check()){
+        if (!Auth::check()) {
             return redirect('login');
         }
 
@@ -52,28 +53,33 @@ class CustomerController extends Controller
     public function store(Request $request)
     {
 
-          if(!Auth::check()){
+        if (!Auth::check()) {
             return redirect('login');
         }
 
-        Customers::create([
-            'nama' =>  $request->input('nama'),
-            'telp' =>  $request->input('telp'),
-            'alamat' =>  $request->input('alamat'),
-            'type' =>  $request->input('type'),
-        ]);
+        try {
+            Customers::create([
+                'nama' => $request->input('nama'),
+                'telp' => $request->input('telp'),
+                'alamat' => $request->input('alamat'),
+                'type' => $request->input('type'),
+            ]);
+        } catch (QueryException $e) {
+            $errorMessage = 'Nama customer sudah dibuat!';
+            return redirect('customer/create')->withErrors($errorMessage);
+        }
 
-        return redirect('customer'); 
+        return redirect('customer/create');
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    
+
     public function edit($id)
     {
 
-          if(!Auth::check()){
+        if (!Auth::check()) {
             return redirect('login');
         }
 
@@ -93,7 +99,7 @@ class CustomerController extends Controller
     public function update(Request $request, $id)
     {
 
-          if(!Auth::check()){
+        if (!Auth::check()) {
             return redirect('login');
         }
 
@@ -110,11 +116,11 @@ class CustomerController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    
+
     public function destroy(string $id)
     {
 
-          if(!Auth::check()){
+        if (!Auth::check()) {
             return redirect('login');
         }
 
@@ -128,11 +134,10 @@ class CustomerController extends Controller
         if ($item) {
             $item->delete();
             $order->delete();
-        
-        }else if ($order) {
+        } else if ($order) {
             $order->delete();
         }
-        
+
         Customers::SelectedById($id)->delete();
 
         return redirect('customer');
