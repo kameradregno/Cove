@@ -16,23 +16,21 @@ use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
-    public function index(PendapatanPerBulanChart $chart)
-    {
-        // dd(Auth::check());
-        if (!Auth::check()) {
-            return redirect('login');
-        } elseif (Auth::user()->roles != 'Owner') {
-            return redirect('/admin');
-        }
-
-        $customers = Customers::all();
-
-        $users = User::query();
-
-        $users = User::all();
-
-        return view('owner.owner', ['chart' => $chart->build()], compact('users', 'customers')); 
+   public function index(PendapatanPerBulanChart $chart)
+{
+    // dd(Auth::check());
+    if (!Auth::check()) {
+        return redirect('login');
+    } elseif (Auth::user()->roles != 'Owner') {
+        return redirect('/admin');
     }
+
+    $customers = Customers::paginate(3); 
+
+    $users = User::paginate(3); 
+
+    return view('owner.owner', ['chart' => $chart->build()], compact('users', 'customers')); 
+}
 
     public function usercreate()
     {
