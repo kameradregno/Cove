@@ -40,24 +40,24 @@
                     @csrf
                     <div class="mb-5">
                         <input type="hidden" name="user_id" id="user_id" value="{{ $userid }}">
-                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama</label>
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama <span class="text-red-500">*</span></label>
                         <input type="text" id="nama" name="nama" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                     </div>
 
                     <div class="mb-5">
                         <label for="order-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nomer
-                            Telepon</label>
+                            Telepon <span class="text-red-500">*</span></label>
                         <input type="number" id="telp" name="telp" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                     </div>
 
                     <div class="mb-5">
-                        <label for="type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Alamat</label>
+                        <label for="type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Alamat <span class="text-red-500">*</span></label>
                         <textarea id="alamat" name="alamat" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required></textarea>
                     </div>
 
                     <div class="mb-5">
                         <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tipe
-                            Customer</label>
+                            Customer <span class="text-red-500">*</span></label>
                         <select name="type" id="type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                             <option value="Reseller">Reseller</option>
                             <option value="RO">RO</option>

@@ -39,7 +39,7 @@
                 <form class="w-full" method="POST" action="{{ url('owner') }}">
                     @csrf
                     <div class="mb-5">
-                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Username</label>
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Username <span class="text-red-500">*</span></label>
                         <input type="name" name="name" id="name" value="{{ old('name') }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                         @if ($errors->has('name'))
                         <span class="text-danger">{{ $errors->first('name') }}</span>
@@ -47,7 +47,7 @@
                     </div>
 
                     <div class="mb-5">
-                        <label for="order-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                        <label for="order-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email <span class="text-red-500">*</span></label>
                         <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                         @if ($errors->has('email'))
                         <span class="text-danger">{{ $errors->first('email') }}</span>
@@ -55,7 +55,7 @@
                     </div>
 
                     <div class="mb-5">
-                        <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Peran</label>
+                        <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Peran <span class="text-red-500">*</span></label>
                         <select name="roles" id="roles" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                             <option value="Admin">Admin</option>
                             <option value="Owner">Owner</option>
@@ -63,7 +63,7 @@
                     </div>
 
                     <div class="mb-5">
-                        <label for="type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kata Sandi</label>
+                        <label for="type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kata Sandi <span class="text-red-500">*</span></label>
                         <input type="password" name="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                         @if ($errors->has('password'))
                         <span class="text-danger">{{ $errors->first('password') }}</span>
@@ -71,7 +71,7 @@
                     </div>
 
                     <div class="mb-5">
-                        <label for="type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Konfirmasi Kata Sandi</label>
+                        <label for="type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Konfirmasi Kata Sandi <span class="text-red-500">*</span></label>
                         <input type="password" name="password_confirmation" id="password_confirmation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                     </div>
 

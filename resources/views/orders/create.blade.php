@@ -33,7 +33,7 @@
                     <form class="w-full" method="POST" action="{{ url('orders') }}">
                         @csrf
                         <div class="mb-5">
-                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Pembeli</label>
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Pembeli <span class="text-red-500">*</span></label>
                             <select name="customer_id" id="nama_pembeli" class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 js-example-basic-single">
                                 @foreach ($customers as $customer)
                                     <option value="{{ $customer['id'] }}">{{ $customer['nama'] }}</option>
@@ -44,7 +44,7 @@
                         <div class="mb-5">
                             <label for="order-name"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama
-                                Pesanan</label>
+                                Pesanan <span class="text-red-500">*</span></label>
                             <input type="text" name="nama_pesanan" id="nama_pesanan"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 required />
@@ -53,7 +53,7 @@
                         <div class="mb-5">
                             <label for="payment-method"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Metode
-                                Pembayaran</label>
+                                Pembayaran <span class="text-red-500">*</span></label>
                             <select name="metode_pembayaran" id="metode_pembayaran"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 required>
@@ -64,7 +64,7 @@
 
                         <div class="mb-5">
                             <label for="address"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Alamat</label>
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Alamat <span class="text-red-500">*</span></label>
                             <textarea name="alamat" id="alamat"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 required></textarea>
@@ -72,7 +72,7 @@
 
                         <div class="mb-5">
                             <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jenis
-                                Pengiriman</label>
+                                Pengiriman <span class="text-red-500">*</span></label>
                             <select name="jenis_pengiriman" id="jenis_pengiriman"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 required>
