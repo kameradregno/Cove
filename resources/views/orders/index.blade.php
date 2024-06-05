@@ -10,6 +10,10 @@
     <div class="p-3 border-2 border-gray-200 rounded-lg dark:border-gray-700 mt-14">
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <div class="flex flex-col sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between pb-4 pt-1 px-2">
+                
+                <div>
+                    <strong class="ps-2">Daftar Pesanan</strong>
+                </div>
 
                 <div>
                     <form action="{{ route('orders.index') }}" method="GET">
