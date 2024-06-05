@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\CustomerExport;
 use App\Models\Customers;
 use App\Models\Orders;
 use App\Models\Items;
@@ -10,6 +11,7 @@ use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\QueryException;
+use Maatwebsite\Excel\Facades\Excel;
 
 class CustomerController extends Controller
 {
@@ -142,4 +144,22 @@ class CustomerController extends Controller
 
         return redirect('customer');
     }
+
+    function export_excel() {
+        return Excel::download(new CustomerExport, "customer.xlsx");
+    }
+
+
+    // Debug isi Tabel
+    public function tabel(Request $request)
+    {
+        if (!Auth::check()) {
+            return redirect('login');
+        }
+
+        $customers = ['customers' => Customers::all()];
+
+        return view('customer.tabel', $customers);
+    }
+
 }

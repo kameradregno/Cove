@@ -50,6 +50,9 @@ Route::post('customer', [CustomerController::class, 'store']);
 Route::delete('customer/{id}', [CustomerController::class, 'destroy']);
 Route::get('customer/{id}/edit', [CustomerController::class, 'edit']);
 Route::patch('customer/{id}', [CustomerController::class, 'update']);
+Route::get('customer/export/excel', [CustomerController::class, 'export_excel']);
+Route::get('customer/tabel', [CustomerController::class, 'tabel']); //debug tabel
+
 
 // order
 
