@@ -177,6 +177,7 @@
                                                 </svg>
                                                 <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Apakah
                                                     anda yakin ingin menghapus akun ini?</h3>
+                                                    <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Data pada customer juga akan terhapus!</h3>
                                                 <form action="{{ url("owner/$user->id") }}" method="POST">
                                                     @method('delete')
                                                     @csrf
