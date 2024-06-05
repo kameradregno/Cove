@@ -95,4 +95,15 @@ class AdminController extends Controller
 
         return redirect('owner')->with("success_message", "berhasil mengedit akun");
     }
+
+    public function userdestroy($id)
+    {
+        if (!Auth::check()) {
+            return redirect('login');
+        }
+
+        User::SelectedById($id)->delete();
+
+        return redirect('owner');
+    }
 }

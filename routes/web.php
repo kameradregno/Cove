@@ -42,6 +42,7 @@ Route::get('owner/create', [AdminController::class, 'usercreate']);
 Route::post('owner', [AdminController::class, 'userstore']);
 Route::get('owner/{id}/edit', [AdminController::class, 'useredit']);
 Route::patch('owner/{id}', [AdminController::class, 'userupdate']);
+Route::delete('owner/{id}', [AdminController::class, 'userdestroy']);
 
 Route::get('customer', [CustomerController::class, 'index'])->name('customers.index');
 Route::get('customer/create', [CustomerController::class, 'create']);
