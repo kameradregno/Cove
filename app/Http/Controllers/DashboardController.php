@@ -26,10 +26,15 @@ class DashboardController extends Controller
         // dd(Auth::user()->roles);
         $customers = Customers::query(); // Mulai membangun kueri
         // $ordersQuery = Orders::query(); // Mulai membangun kueri
+
+        $customerurut = Customers::with('items')->get()
+        ->sortByDesc(function ($customer) {
+            return $customer->items->sum('harga_sprei');
+        });
     
         $customers = $customers->paginate(3);    
 
-        return view('dashboard.dashboard', ['chart' => $chart->build()], compact('customers'));    
+        return view('dashboard.dashboard', ['chart' => $chart->build()], compact('customers', 'customerurut'));    
     
     // dd(Auth::user()->roles);
 

@@ -122,6 +122,7 @@
 
                         <tbody>
                             @foreach ($users as $user)
+                                
                                 <tr
                                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                     <td class="px-6 py-4">
@@ -134,14 +135,17 @@
                                         {{ $user->roles }}
                                     </td>
                                     <td class="px-6 py-4">
-                                        p
+                                    {{ $user->items->sum('harga_sprei') }}
                                     </td>
                                     <td class="px-6 py-4">
-                                        <a href="{{ url("owner/$user->id/edit") }}"><button
+                                    <a href="{{ url("owner/$user->id/edit") }}"><button
                                                 class="text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Edit</button></a>
+
+                                    @if($user->id != auth()->user()->id)
                                         <button type="button" data-modal-target="modal-user{{ $user->id }}"
                                             data-modal-toggle="modal-user{{ $user->id }}"
                                             class="text-white bg-red-500 hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Delete</button>
+                                    @endif
                                     </td>
                                 </tr>
 

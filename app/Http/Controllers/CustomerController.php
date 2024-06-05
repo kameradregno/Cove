@@ -22,8 +22,11 @@ class CustomerController extends Controller
             return redirect('login');
         }
 
+        $id = Auth::user()->id;
+        // dd($id);
+
         $search = $request->query('searchcustomer', ''); // Dapatkan istilah pencarian dengan string kosong default
-        $customers = Customers::query(); // Mulai membangun kueri
+        $customers = Customers::where('user_id', $id); // Mulai membangun kueri
 
         if ($search) {
             $customers->where('nama', 'LIKE', "%{$search}%"); // Lakukan pencarian pada 'nama_customer'

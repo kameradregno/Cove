@@ -54,7 +54,7 @@
                             </thead>
                             <tbody>
                             @php $counter = 1 @endphp
-                                @foreach ($customers as $customer) 
+                                @foreach ($customerurut as $customer) 
                                 <tr
                                     class="bg-white border-b dark:bg-gray-800 text-center dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                     <td class="px-1.5 py-1">

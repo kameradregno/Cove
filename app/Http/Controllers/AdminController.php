@@ -25,7 +25,10 @@ class AdminController extends Controller
         return redirect('/admin');
     }
 
-    $customers = Customers::all(); 
+    $customers = Customers::with('items')->get()
+        ->sortByDesc(function ($customer) {
+            return $customer->items->sum('harga_sprei');
+        });
 
     $users = User::paginate(3); 
 
