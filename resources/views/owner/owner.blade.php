@@ -85,6 +85,7 @@
                     <div
                         class="flex flex-col sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between pb-4 pt-1 px-2">
                         <div>
+                            <strong class="ps-2">Daftar Akun</strong>
                         </div>
 
                         <form action="{{ url('owner') }}" method="GET">
@@ -92,7 +93,7 @@
                             <div class="relative flex items-center space-x-2">
 
                                 <a href=" {{ url('owner/create') }} "
-                                    class="text-white bg-green-500 hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Create</a>
+                                    class="text-white bg-green-500 hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Tambah Akun</a>
                             </div>
                         </form>
 
