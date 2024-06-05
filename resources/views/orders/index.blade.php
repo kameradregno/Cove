@@ -74,7 +74,7 @@
                             {{ $order->nama_pesanan }}
                         </td>
                         <td class="px-6 py-4">
-                            {{ $order->customername->nama }}
+                            {{ $order->customer->nama }}
                         </td>
                         <td class="px-6 py-4">
                             {{ $order->items->sum('harga_sprei') }}

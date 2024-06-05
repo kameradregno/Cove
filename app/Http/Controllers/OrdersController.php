@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Orders;
 use App\Models\Customers;
 use App\Models\Items;
+use App\Exports\OrderExport;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
+use Maatwebsite\Excel\Facades\Excel;
 
 class OrdersController extends Controller
 {
@@ -145,5 +147,24 @@ class OrdersController extends Controller
 
         return redirect('orders');
     }
+
+    function export_excel() {
+        return Excel::download(new OrderExport, "order.xlsx");
+    }
+
+
+    public function tabel()
+    {
+        if (!Auth::check()) {
+            return redirect('login');
+        }
+
+        $data = Items::all();
+
+        $items = ['items' => $data];
+
+        return view('orders.tabel', $items);
+    }
+
 
 }

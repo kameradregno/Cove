@@ -57,12 +57,14 @@ Route::get('customer/tabel', [CustomerController::class, 'tabel']); //debug tabe
 // order
 
 Route::get('orders', [OrdersController::class, 'index'])->name('orders.index');
+Route::get('orders/export/excel', [OrdersController::class, 'export_excel']);
 Route::get('orders/create', [OrdersController::class, 'create']);
 Route::post('orders', [OrdersController::class, 'store']);
 Route::get('orders/{id}', [OrdersController::class, 'show']);
 Route::delete('orders/{id}', [OrdersController::class, 'destroy']);
 Route::get('orders/{id}/edit', [OrdersController::class, 'edit']);
 Route::put('orders/{id}', [OrdersController::class, 'update'])->name('orders.update');
+Route::get('orders/tabel/debug', [OrdersController::class, 'tabel']); //debug tabel
 
 // Item
 
