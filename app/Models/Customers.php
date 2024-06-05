@@ -15,6 +15,7 @@ class Customers extends Model
     protected $fillable = 
     [
         'id',
+        'user_id',
         'nama' ,
         'telp',
         'alamat',
@@ -29,6 +30,11 @@ class Customers extends Model
     public function items(): HasMany
     {
         return $this->hasMany(Items::class, 'customer_id', 'id');
+    }
+
+    public function user(): HasMany
+    {
+        return $this->hasMany(Items::class, 'user_id', 'id');
     }
 
     public function scopeSelectedById($query, $id) {
