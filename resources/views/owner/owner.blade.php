@@ -77,13 +77,6 @@
                         </table>
                     </div>
 
-                    <nav class="items-center flex-col flex-wrap md:flex-row justify-between pt-1"
-                        aria-label="Table navigation">
-
-                        {{ $customers->links('pagination::tailwind') }}
-
-                    </nav>
-
                 </div>
             </div>
 

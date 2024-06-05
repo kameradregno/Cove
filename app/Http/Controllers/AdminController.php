@@ -25,7 +25,7 @@ class AdminController extends Controller
         return redirect('/admin');
     }
 
-    $customers = Customers::paginate(3); 
+    $customers = Customers::all(); 
 
     $users = User::paginate(3); 
 
