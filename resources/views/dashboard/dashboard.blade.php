@@ -82,6 +82,7 @@
                 <div
                     class="flex flex-col sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between pb-4 pt-1 px-2">
                     <div>
+                        <strong class="ps-3">Tambah Customer</p>
                     </div>
 
                     <form action="{{ route('customers.index') }}" method="GET">

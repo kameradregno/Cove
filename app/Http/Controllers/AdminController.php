@@ -7,6 +7,7 @@ use ArielMejiaDev\LarapexCharts\LarapexChart;
 use App\Charts\PendapatanPerBulanChart;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\Customers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Cookie;
@@ -24,9 +25,13 @@ class AdminController extends Controller
             return redirect('/admin');
         }
 
+        $customers = Customers::all();
+
+        $users = User::query();
+
         $users = User::all();
 
-        return view('owner.owner', ['chart' => $chart->build()], compact('users')); 
+        return view('owner.owner', ['chart' => $chart->build()], compact('users', 'customers')); 
     }
 
     public function usercreate()
@@ -96,13 +101,14 @@ class AdminController extends Controller
         return redirect('owner');
     }
 
-    public function userdestroy($id)
+    public function userdestroy(string $id)
     {
         if (!Auth::check()) {
             return redirect('login');
         }
 
-        User::SelectedById($id)->delete();
+        $user = User::find($id);
+        $user->delete();
 
         return redirect('owner');
     }
