@@ -81,11 +81,11 @@ class AdminController extends Controller
             return redirect('login');
         }
 
-        $request->validate([
-            'name' => 'required|min:4|max:20',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:3|max:10',
-        ]);
+        // $request->validate([
+        //     'name' => 'required|min:4|max:20',
+        //     'email' => 'required|email|unique:users',
+        //     'password' => 'required|min:3|max:10',
+        // ]);
 
         User::where('id', $id)->update([
             'name' => $request->input('name'),
@@ -93,7 +93,7 @@ class AdminController extends Controller
             'roles' => $request->input('roles'),
         ]);
 
-        return redirect('owner')->with("success_message", "berhasil mengedit akun");
+        return redirect('owner');
     }
 
     public function userdestroy($id)
