@@ -45,7 +45,11 @@ class CustomerController extends Controller
             return redirect('login');
         }
 
-        return view('customer.create');
+        $userid = Auth::user()->id;
+        $id = ['userid' => $userid]; // Assuming you only need the ID
+
+
+        return view('customer.create', $id);
     }
 
     /**
@@ -62,6 +66,7 @@ class CustomerController extends Controller
         try {
             Customers::create([
                 'nama' => $request->input('nama'),
+                'user_id' => $request->input('user_id'),
                 'telp' => $request->input('telp'),
                 'alamat' => $request->input('alamat'),
                 'type' => $request->input('type'),
