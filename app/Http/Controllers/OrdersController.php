@@ -159,7 +159,7 @@ class OrdersController extends Controller
             return redirect('login');
         }
 
-        $data = Items::all();
+        $data = Items::orderBy('order_id')->get();
 
         $items = ['items' => $data];
 

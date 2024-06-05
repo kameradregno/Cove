@@ -10,7 +10,7 @@ class OrderExport implements FromView
 {
     public function view(): View
     {
-        $data = Items::all();
+        $data = Items::orderBy('order_id')->get();
 
         $items = ['items' => $data];
 
