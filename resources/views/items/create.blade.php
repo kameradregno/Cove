@@ -28,7 +28,7 @@
 
                         <div class="mb-5">
                             <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama
-                                Sprei</label>
+                                Sprei <span class="text-red-500">*</span></label>
                             <input type="hidden" name="order_id" id="order_id" value="{{ $id }}">
                             <input type="hidden" name="customer_id" id="customer_id" value="{{ $customerid }}">
                             <input type="hidden" name="user_id" id="user_id" value="{{ $userid }}">
@@ -39,7 +39,7 @@
 
                         <div class="mb-5">
                             <label for="payment-method"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Catatan</label>
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Catatan <span class="text-red-500">*</span></label>
                             <textarea name="catatan" id="catatan"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 required></textarea>
@@ -47,7 +47,7 @@
 
                         <div class="mb-5">
                             <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Bahan
-                                Sprei</label>
+                                Sprei <span class="text-red-500">*</span></label>
                             <select name="bahan_sprei" id="bahan_sprei"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 required>
@@ -59,7 +59,7 @@
                         <div class="mb-5">
                             <label for="address"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ukuran
-                                Sprei</label>
+                                Sprei <span class="text-red-500">*</span></label>
                             <input type="text" name="ukuran_sprei" id="ukuran_sprei"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 required />
@@ -68,7 +68,7 @@
                         <div class="mb-5">
                             <label for="order-name"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Harga
-                                Total</label>
+                                Total <span class="text-red-500">*</span></label>
                             <input type="number" name="harga_sprei" id="harga_sprei"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 required />
