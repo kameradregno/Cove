@@ -91,8 +91,6 @@ Route::put('items/update/{id}/{id_order}', [ItemController::class, 'update'])->n
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('login', [AuthController::class, 'authenticate']);
 Route::get('logout', [AuthController::class, 'logout']);
-Route::get('register', [AuthController::class,'register_form']);
-Route::post('register', [AuthController::class,'register'])->name('register');
 
 // ForgotPassword
 

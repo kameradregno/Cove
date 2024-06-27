@@ -20,7 +20,7 @@ return new class extends Migration
             
             $table->string('nama_sprei');
             $table->string('harga_sprei');
-            $table->longText('catatan');
+            $table->longText('catatan')->nullable();
             $table->string('bahan_sprei')->enum(['Katun','Wol']);
             $table->string('ukuran_sprei');
             $table->string('bahan_bantal')->enum(['Katun','Wol'])->nullable();

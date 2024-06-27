@@ -37,15 +37,6 @@ class AuthController extends Controller
 
    }
 
-     public function register_form() {
-
-        if(Auth()->check()){
-            return redirect('/');
-        } else {
-        return view('auth.register');
-        }
-        
-    }
     
     public function logout(Request $request) {
     // Menghapus semua data yang disimpan dalam sesi, termasuk status autentikasi pengguna.
@@ -67,24 +58,5 @@ class AuthController extends Controller
 
     return redirect('login');
 }
-
-     public function register(Request $request) {
-
-        // melakukan validasi pada data input yang masuk dari form register. //
-        $request->validate([
-            'name' => 'required|min:4|max:20',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:3|max:10|confirmed',
-        ]);
-
-        //  proses pendaftaran user baru , menyimpan data tersebut ke dalam tabel 'users' menggunakan method create() pada model User. //
-        User::create([
-            'name' => $request->input('name'),
-            'email' => $request->input('email'),
-            'password' => Hash::make($request->input('password')),
-        ]);
-
-        return redirect('login')->with("success_message", "berhasil bikin akun");
-    }
 
 }

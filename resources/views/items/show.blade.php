@@ -30,10 +30,12 @@
                     </div>
                 </div>
 
+                @if ($data->catatan)
                 <div class="mb-5">
                     <h2 class="mb-2 font-bold">Catatan</h2>
                     <p>{{ $data->catatan }}</p>
                 </div>
+                @endif
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="mb-5">
