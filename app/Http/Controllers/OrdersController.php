@@ -23,11 +23,16 @@ class OrdersController extends Controller
     if(!Auth::check()){
         return redirect('login');
     }
+    $id = Auth::user()->id;
+    // dd($id);
 
     $search = $request->query('ordersearch', ''); // Dapatkan istilah pencarian dengan string kosong default
+    // $ordersQuery = Orders::where('user_id', $id); // Mulai membangun kueri
     $ordersQuery = Orders::query(); // Mulai membangun kueri
+    // dd($ordersQuery);
 
     if ($search) {
+        
         $ordersQuery->where('nama_pesanan', 'LIKE', "%{$search}%"); // Lakukan pencarian pada 'nama_pesanan'
     }
 

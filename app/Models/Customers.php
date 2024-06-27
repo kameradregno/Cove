@@ -36,7 +36,7 @@ class Customers extends Model
     {
         return $this->hasMany(Items::class, 'user_id', 'id');
     }
-
+    
     public function scopeSelectedById($query, $id) {
 
         return $query->where('id', $id);

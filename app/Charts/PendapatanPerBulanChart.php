@@ -4,6 +4,7 @@ namespace App\Charts;
 
 use ArielMejiaDev\LarapexCharts\LarapexChart;
 use App\Models\Items;
+use App\Models\Orders;
 use Carbon\Carbon;
 
 class PendapatanPerBulanChart

@@ -46,13 +46,6 @@
                                             </div>
                                         </a>
                                     </li>
-                                    <li>
-                                        <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                                            <a href="">
-                                                <label for="filter-radio-example-1" class="w-full ms-2 text-sm font-medium text-green-900 rounded dark:text-green-300">.CSV</label>
-                                            </a>
-                                        </div>
-                                    </li>
                                 </ul>
                             </div>
                             <div class="input-group flex items-center space-x-2">

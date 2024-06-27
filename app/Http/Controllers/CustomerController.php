@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Exports\CustomerExport;
+use App\Imports\CustomersImport;
 use App\Models\Customers;
 use App\Models\Orders;
 use App\Models\Items;
@@ -155,6 +156,17 @@ class CustomerController extends Controller
 
     function export_excel() {
         return Excel::download(new CustomerExport, "customer.xlsx");
+    }
+
+    function import_excel(Request $request) {
+        $file =  $request->file('file');
+        // dd($file);
+        
+        Excel::import(new CustomersImport, $file);
+
+        return redirect('/')->withStatus('file is All good!');
+
+
     }
 
 
